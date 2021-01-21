@@ -1,16 +1,87 @@
 html,
 body {
+  height: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: 'Alegreya', serif;
+  font-size: 16px;
+  color: #3D4549;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: #C65A60;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.page__sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: #FFFBF1;
+}
+
+.sidebar__top {
+  flex: 1;
+}
+
+.sidebar__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.social-icon {
+  margin: .5rem;
+}
+
+.page__body {
+  flex: 1;
+  box-shadow: 0 -1px 6px rgba(0,0,0,.2);
+}
+
+.navbar {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.navbar__list {
+  list-style: none;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.navbar__item {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__link {
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #3D4549;
+  transition: color linear .1s;
+}
+
+.navbar__link:hover {
+  padding: 0 1rem;
+  color: #C65A60;
+}
+
+.navbar__link--active {
+  font-style: italic;
+  color: #C65A60; 
 }
