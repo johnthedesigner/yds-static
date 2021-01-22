@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import Head from 'next/head'
 
 import Navbar from '../components/navbar'
 import { getUrl } from '../pages'
@@ -9,6 +10,10 @@ import IconIG from '../public/icon-ig.svg'
 export default function Page(props) {
     return (
         <div className="page">
+            <head>
+                <title>{props.page.title}</title>
+                <meta name="description" content={props.page.description} />
+            </head>
             <div className="page__sidebar">
                 <div className="sidebar__top">
                     <a href={getUrl()} title="Yankee Dahlia Society | Home">
