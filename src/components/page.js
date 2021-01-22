@@ -10,10 +10,10 @@ import IconIG from '../public/icon-ig.svg'
 export default function Page(props) {
     return (
         <div className="page">
-            <head>
+            <Head>
                 <title>{props.page.title}</title>
                 <meta name="description" content={props.page.description} />
-            </head>
+            </Head>
             <div className="page__sidebar">
                 <div className="sidebar__top">
                     <a href={getUrl()} title="Yankee Dahlia Society | Home">
@@ -38,7 +38,7 @@ export default function Page(props) {
                 </div>
             </div>
             <main className="page__body">
-                <Navbar currentUrl={props.currentUrl} />
+                <Navbar currentUrl={props.page.url} />
                 {props.children}
             </main>
         </div>

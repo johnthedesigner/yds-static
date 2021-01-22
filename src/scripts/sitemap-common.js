@@ -20,7 +20,6 @@ const formatted = (sitemap) => prettier.format(sitemap, { parser: 'html' })
     const pagesSitemap = `
     ${pages
         .map((page) => {
-            console.log(page)
             const path = page
                 .replace('pages/', '')
                 .replace('.js', '')
