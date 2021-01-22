@@ -5,7 +5,7 @@ export const pageTitle = (segment) => {
 
 export const pageUrl = (path) => {
     // let base = 'http://yankeedahliasociety.com';
-    let base = 'http://localhost:3000/';
+    let base = process.env.DOMAIN;
     return ( path ? `${base}${path}` : base )
   }
   
@@ -18,22 +18,22 @@ const pages = {
     membership: {
       label: "Membership",
       title: pageTitle("Membership"),
-      url: pageUrl("membership/")
+      url: pageUrl("/membership")
     },
     events: {
       label: "Events",
       title: pageTitle("Events"),
-      url: pageUrl("events/")
+      url: pageUrl("/events")
     },
     about: {
       label: "About Us",
       title: pageTitle("About Us"),
-      url: pageUrl("about/")
+      url: pageUrl("/about")
     },
     contact: {
       label: "Contact Us",
       title: pageTitle("Contact Us"),
-      url: pageUrl("contact/")
+      url: pageUrl("/contact")
     }
   }
   
