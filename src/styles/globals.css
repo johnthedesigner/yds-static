@@ -11,7 +11,7 @@ body {
     color: #3d4549;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     html,
     body {
         font-size: 16px;
@@ -42,12 +42,53 @@ a {
     box-sizing: border-box;
 }
 
+/* Page Styles */
+
 .page {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+}
+
+[class*='page__body--flower']:before {
+    content: ' ';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-origin: content-box;
+    background-size: 20rem auto;
+    background-position: bottom -4rem left 4rem;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+@media screen and (max-width: 800px) {
+    [class*='page__body--flower']:before {
+        background-size: 16rem auto;
+        background-position: bottom -3rem left -3rem;
+        opacity: 0.2;
+    }
+}
+
+.page__body--flower1:before {
+    background-image: url('/flower-1.jpg');
+}
+
+.page__body--flower2:before {
+    background-image: url('/flower-2.jpg');
+}
+
+.page__body--flower3:before {
+    background-image: url('/flower-3.jpg');
+}
+
+.page__body--flower4:before {
+    background-image: url('/flower-4.jpg');
 }
 
 .page__sidebar {
@@ -57,7 +98,7 @@ a {
     background: #fffbf1;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .page__sidebar {
         width: 1rem;
         padding: 0;
@@ -78,7 +119,7 @@ a {
     padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .sidebar__bottom {
         display: none;
     }
@@ -89,6 +130,7 @@ a {
 }
 
 .page__body {
+    position: relative;
     flex: 1;
     box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.2);
     box-sizing: margin-box;
@@ -174,13 +216,13 @@ a {
     color: #c65a60;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .navbar--desktop {
         display: none;
     }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 801px) {
     .navbar--mobile {
         display: none;
     }
@@ -188,4 +230,12 @@ a {
 
 .page__content {
     padding: 0 4rem 4rem;
+    margin-left: 14rem;
+    max-width: 40rem;
+}
+
+@media screen and (max-width: 800px) {
+    .page__content {
+        margin-left: 0;
+    }
 }

@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
     return (
-        <Page page={pages.home}>
+        <Page page={pages.home} backgroundClass="page__body--flower3">
             <div className={styles.home__body}>
                 <h1>Introducing the Yankee Dahlia Society</h1>
                 <h3>Jan 20, 2021</h3>

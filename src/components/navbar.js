@@ -1,7 +1,8 @@
 import _ from 'lodash'
 import { useState } from 'react'
+import Link from 'next/link'
 
-import pages, { getUrl } from '../pages'
+import pages from '../pages'
 import Hamburger from '../public/hamburger.svg'
 import Logo from '../public/logo-mobile.svg'
 
@@ -17,13 +18,14 @@ const Navbar = (props) => {
         return _.map(pages, (page) => {
             return (
                 <li className="navbar__item" key={page.url}>
-                    <a
-                        className={linkClass(props.currentUrl, page)}
-                        href={page.url}
-                        title={page.title}
-                    >
-                        {page.label}
-                    </a>
+                    <Link href={page.url}>
+                        <a
+                            className={linkClass(props.currentUrl, page)}
+                            title={page.title}
+                        >
+                            {page.label}
+                        </a>
+                    </Link>
                 </li>
             )
         })
@@ -32,9 +34,11 @@ const Navbar = (props) => {
     return (
         <div>
             <nav className="navbar--mobile">
-                <a href={getUrl()} title="Yankee Dahlia Society | Home">
-                    <Logo className="logo--mobile" />
-                </a>
+                <Link href={pages.home.url}>
+                    <a title="Yankee Dahlia Society | Home">
+                        <Logo className="logo--mobile" />
+                    </a>
+                </Link>
                 <div className="menu__button">
                     <Hamburger onClick={() => setMenuOpen(!menuOpen)} />
                 </div>
