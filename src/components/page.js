@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import Navbar from '../components/navbar'
 import { getUrl } from '../pages'
-import Logo from '../public/logo-vertical.svg'
+import Logo from '../public/logo-desktop.svg'
 import IconFB from '../public/icon-fb.svg'
 import IconIG from '../public/icon-ig.svg'
 
@@ -13,6 +13,10 @@ export default function Page(props) {
             <Head>
                 <title>{props.page.title}</title>
                 <meta name="description" content={props.page.description} />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
             </Head>
             <div className="page__sidebar">
                 <div className="sidebar__top">
@@ -39,7 +43,7 @@ export default function Page(props) {
             </div>
             <main className="page__body">
                 <Navbar currentUrl={props.page.url} />
-                {props.children}
+                <div className="page__content">{props.children}</div>
             </main>
         </div>
     )

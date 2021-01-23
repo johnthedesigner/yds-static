@@ -1,87 +1,191 @@
 html,
 body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-  font-family: 'Alegreya', serif;
-  font-size: 16px;
-  color: #3D4549;
+    font-family: 'Alegreya', serif;
+    font-size: 18px;
+    color: #3d4549;
+}
+
+@media screen and (max-width: 600px) {
+    html,
+    body {
+        font-size: 16px;
+    }
+}
+
+h1 {
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+h3 {
+    line-height: 1.5;
+    font-size: 1rem;
+    font-variant: small-caps;
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.5rem;
 }
 
 a {
-  color: #C65A60;
+    color: #c65a60;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .page {
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
 }
 
 .page__sidebar {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  background: #FFFBF1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: #fffbf1;
+}
+
+@media screen and (max-width: 600px) {
+    .page__sidebar {
+        width: 1rem;
+        padding: 0;
+    }
+    .sidebar__top {
+        display: none;
+    }
 }
 
 .sidebar__top {
-  flex: 1;
+    flex: 1;
 }
 
 .sidebar__bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar__bottom {
+        display: none;
+    }
 }
 
 .social-icon {
-  margin: .5rem;
+    margin: 0.5rem;
 }
 
 .page__body {
-  flex: 1;
-  box-shadow: 0 -1px 6px rgba(0,0,0,.2);
+    flex: 1;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.2);
+    box-sizing: margin-box;
+    overflow: auto;
 }
 
-.navbar {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 400;
+/* MOBILE NAV MENU */
+.logo--mobile {
+    margin: 1rem;
+    position: relative;
+    /* z-index: 100; */
 }
 
-.navbar__list {
-  list-style: none;
-  padding: 2rem 0;
-  margin: 0;
+.menu__button {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+}
+
+.navbar--desktop {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.navbar__list--desktop {
+    list-style: none;
+    padding: 2rem 0;
+    margin: 0;
+}
+
+.navbar__list-container--mobile {
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(0.5rem);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    transition: opacity linear 0.2s;
+}
+
+.navbar__list--mobile {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2;
 }
 
 .navbar__item {
-  display: inline;
-  padding: 0;
-  margin: 0;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar__link {
-  padding: 0 1rem;
-  text-decoration: none;
-  color: #3D4549;
-  transition: color linear .1s;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: #3d4549;
+    transition: color linear 0.1s;
 }
 
 .navbar__link:hover {
-  padding: 0 1rem;
-  color: #C65A60;
+    padding: 0 1rem;
+    color: #c65a60;
 }
 
 .navbar__link--active {
-  font-style: italic;
-  color: #C65A60; 
+    font-style: italic;
+    color: #c65a60;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar--desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .navbar--mobile {
+        display: none;
+    }
+}
+
+.page__content {
+    padding: 0 4rem 4rem;
 }
