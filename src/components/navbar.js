@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { useState } from 'react'
 
 import pages, { getUrl } from '../pages'
-import Hamburger from '../public/Hamburger.svg'
+import Hamburger from '../public/hamburger.svg'
 import Logo from '../public/logo-mobile.svg'
 
 export const linkClass = (currentURL, linkedPage) =>
