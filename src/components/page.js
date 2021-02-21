@@ -4,9 +4,8 @@ import Link from 'next/link'
 
 import Navbar from '../components/navbar'
 import pages from '../pages'
-import Logo from '../public/logo-desktop.svg'
-import IconFB from '../public/icon-fb.svg'
-import IconIG from '../public/icon-ig.svg'
+// import IconFB from '../public/icon-fb.svg'
+// import IconIG from '../public/icon-ig.svg'
 
 export default function Page(props) {
     return (
@@ -19,34 +18,9 @@ export default function Page(props) {
                     content="width=device-width, initial-scale=1"
                 />
             </Head>
-            <div className="page__sidebar">
-                <div className="sidebar__top">
-                    <Link href={pages.home.url}>
-                        <a title="Yankee Dahlia Society | Home">
-                            <Logo />
-                        </a>
-                    </Link>
-                </div>
-                <div className="sidebar__bottom">
-                    <a
-                        href="https://www.facebook.com/YankeeDahliaSociety/"
-                        title="Yankee Dahlia Society on Facebook"
-                        target="_blank"
-                    >
-                        <IconFB className="social-icon" />
-                    </a>
-                    <a
-                        href="https://www.instagram.com/yankeedahliasociety/"
-                        title="Yankee Dahlia Society on Instagram"
-                        target="_blank"
-                    >
-                        <IconIG className="social-icon" />
-                    </a>
-                </div>
-            </div>
             <main className={`page__body ${props.backgroundClass}`}>
                 <Navbar currentUrl={props.page.url} />
-                <div className="page__content">{props.children}</div>
+                {props.children}
             </main>
         </div>
     )

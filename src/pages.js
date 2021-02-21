@@ -31,6 +31,12 @@ const pages = {
         description: 'Lorem ipsum dolor sit amet.',
         url: getUrl('/events'),
     },
+    tubers: {
+        label: 'Our Tubers',
+        title: pageTitle('YDS Tubers'),
+        description: 'Lorem ipsum dolor sit amet.',
+        url: getUrl('/tubers'),
+    },
     about: {
         label: 'About Us',
         title: pageTitle('About Us'),

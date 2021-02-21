@@ -4,7 +4,8 @@ import Link from 'next/link'
 
 import pages from '../pages'
 import Hamburger from '../public/hamburger.svg'
-import Logo from '../public/logo-mobile.svg'
+import LogoMobile from '../public/logo-mobile.svg'
+import LogoDesktop from '../public/logo-desktop.svg'
 
 export const linkClass = (currentURL, linkedPage) =>
     linkedPage.url === currentURL
@@ -36,7 +37,7 @@ const Navbar = (props) => {
             <nav className="navbar--mobile">
                 <Link href={pages.home.url}>
                     <a title="Yankee Dahlia Society | Home">
-                        <Logo className="logo--mobile" />
+                        <LogoMobile className="logo--mobile" />
                     </a>
                 </Link>
                 <div className="menu__button">
@@ -56,6 +57,7 @@ const Navbar = (props) => {
                 </div>
             </nav>
             <nav className="navbar--desktop">
+                <LogoDesktop className="logo--desktop" />
                 <ul className="navbar__list--desktop">
                     <Links />
                 </ul>
