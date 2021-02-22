@@ -22,6 +22,9 @@ export default function Page(props) {
                 <Navbar currentUrl={props.page.url} />
                 {props.children}
             </main>
+            <footer className="footer">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </footer>
         </div>
     )
 }

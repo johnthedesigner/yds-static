@@ -1,5 +1,6 @@
 html,
 body {
+    background: #fffbf1;
     width: 100vw;
     height: 100vh;
     padding: 0;
@@ -74,14 +75,13 @@ a {
 
 .page {
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
+    min-height: 100vh;
 }
 
 .page__body {
+    background: white;
     position: relative;
+    min-height: 100vh;
     flex: 1;
     box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.2);
     box-sizing: margin-box;
@@ -92,13 +92,18 @@ a {
 @media screen and (max-width: 800px) {
     .page__body {
         padding-top: 0;
+        min-height: 100vh;
     }
+}
+
+.footer {
+    height: 14rem;
 }
 
 /* MOBILE NAV MENU */
 .logo--mobile {
     background: #fffbf1;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 1rem;
     z-index: 100;
@@ -119,6 +124,7 @@ a {
     z-index: 100;
     top: 1rem;
     right: 1rem;
+    cursor: pointer;
 }
 
 .navbar--desktop {
@@ -149,7 +155,7 @@ a {
     left: 0;
     -webkit-backdrop-filter: blur(0.5rem);
     backdrop-filter: blur(0.5rem);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -180,6 +186,11 @@ a {
     text-decoration: none;
     color: #3d4549;
     transition: color linear 0.1s;
+}
+@media screen and (max-width: 800px) {
+    .navbar__link {
+        color: white;
+    }
 }
 
 .navbar__link:hover {
@@ -231,7 +242,7 @@ a {
 .hero__title {
     position: relative;
     width: 60rem;
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
     color: white;
 }
@@ -251,9 +262,11 @@ a {
 }
 
 .imagelist__image img {
-    background: lightseagreen;
+    background: white;
     width: 20rem;
     height: auto;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 
 .imagelist__text {
@@ -295,9 +308,11 @@ a {
 }
 
 .pingpong__image img {
-    background: lightseagreen;
+    background: white;
     width: 100%;
     height: auto;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 
 .pingpong__text {
