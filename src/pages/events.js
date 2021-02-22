@@ -10,7 +10,7 @@ export default function Events() {
         <Page page={pages.events}>
             <div className={styles.events__body}>
                 <Hero title="Meetings & Events" image="/garden.jpg" />
-                <ImageList image="#">
+                <ImageList image="https://via.placeholder.com/600">
                     <h3>
                         <b>3/28</b> | Our First Meeting
                     </h3>
@@ -21,7 +21,7 @@ export default function Events() {
                         nunc. Donec suscipit nibh a hendrerit mollis.
                     </p>
                 </ImageList>
-                <ImageList image="#">
+                <ImageList image="https://via.placeholder.com/600">
                     <h3>
                         <b>4/25</b> | Lorem ipsum dolor
                     </h3>

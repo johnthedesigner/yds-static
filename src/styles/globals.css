@@ -300,6 +300,7 @@ a {
     max-width: 90%;
     margin: 6rem auto;
     display: flex;
+    align-items: center;
 }
 
 .pingpong--left {

@@ -17,7 +17,7 @@ export default function Home() {
                     overlay="false"
                     height="40vh"
                 />
-                <Pingpong side="left" image="#">
+                <Pingpong side="left" image="https://via.placeholder.com/900">
                     <h3>Lorem Ipsum Dolor Sit Amet.</h3>
                     <p>
                         Nunc efficitur arcu non malesuada placerat. Vivamus a
@@ -29,7 +29,7 @@ export default function Home() {
                         Click me
                     </a>
                 </Pingpong>
-                <Pingpong side="right" image="#">
+                <Pingpong side="right" image="https://via.placeholder.com/900">
                     <h3>Lorem Ipsum Dolor Sit Amet.</h3>
                     <p>
                         Nunc efficitur arcu non malesuada placerat. Vivamus a

@@ -12,7 +12,7 @@ export default function Membership() {
                 <Hero title="YDS Memberships" image="/flowers.jpg" />
                 <Pingpong
                     side="left"
-                    image="#"
+                    image="https://via.placeholder.com/900x1350"
                     ratioWidth="1"
                     ratioHeight="1.5"
                 >
@@ -32,7 +32,7 @@ export default function Membership() {
                         Join YDS Today!
                     </a>
                 </Pingpong>
-                <Pingpong side="right" image="#">
+                <Pingpong side="right" image="https://via.placeholder.com/900">
                     <h3>Come to a meeting!</h3>
                     <p>
                         We will have monthly emails, member meetings, garden
