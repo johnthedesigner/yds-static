@@ -101,21 +101,28 @@ a {
 }
 
 /* MOBILE NAV MENU */
-.logo--mobile {
+.logo-link--mobile {
     background: #fffbf1;
     position: absolute;
     top: 0;
-    left: 1rem;
+    left: 0.5rem;
+    padding: 0.25rem;
     z-index: 100;
     box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.4);
 }
 
-.logo--desktop {
+.logo-link--desktop {
     background: #fffbf1;
     position: absolute;
     top: 0;
     left: 2rem;
+    padding: 0.25rem;
     box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.4);
+}
+
+.logo--mobile,
+.logo--desktop {
+    display: block;
 }
 
 .menu__button {

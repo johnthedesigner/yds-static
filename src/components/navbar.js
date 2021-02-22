@@ -36,7 +36,10 @@ const Navbar = (props) => {
         <div>
             <nav className="navbar--mobile">
                 <Link href={pages.home.url}>
-                    <a title="Yankee Dahlia Society | Home">
+                    <a
+                        title="Yankee Dahlia Society | Home"
+                        className="logo-link--mobile"
+                    >
                         <LogoMobile className="logo--mobile" />
                     </a>
                 </Link>
@@ -57,7 +60,14 @@ const Navbar = (props) => {
                 </div>
             </nav>
             <nav className="navbar--desktop">
-                <LogoDesktop className="logo--desktop" />
+                <Link href={pages.home.url}>
+                    <a
+                        title="Yankee Dahlia Society | Home"
+                        className="logo-link--desktop"
+                    >
+                        <LogoDesktop className="logo--desktop" />
+                    </a>
+                </Link>
                 <ul className="navbar__list--desktop">
                     <Links />
                 </ul>
