@@ -12,7 +12,10 @@ export default function Membership() {
     return (
         <Page page={pages.membership} backgroundClass="page__body--flower4">
             <Head>
-                <meta name="og:image" content="/android-chrome-512x512.png" />
+                <meta
+                    property="og:image"
+                    content="/android-chrome-512x512.png"
+                />
             </Head>
             <div className={styles.home__body}>
                 <Hero title="YDS Memberships" image="/flowers.jpg" />

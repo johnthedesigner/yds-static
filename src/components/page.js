@@ -27,7 +27,10 @@ export default function Page(props) {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <meta name="og:image" content="/android-chrome-192x192.png" />
+                <meta
+                    property="og:image"
+                    content="/android-chrome-192x192.png"
+                />
                 {/* <OGImage /> */}
             </Head>
             <main className={`page__body ${props.backgroundClass}`}>
