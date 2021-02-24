@@ -11,9 +11,8 @@ export default function Events() {
             <div className={styles.events__body}>
                 <Hero title="Meetings & Events" image="/garden.jpg" />
                 <ImageList image="https://via.placeholder.com/600">
-                    <h3>
-                        <b>3/28</b> | Our First Meeting
-                    </h3>
+                    <h4>March 28, 2021</h4>
+                    <h3>Our First Meeting</h3>
                     <p>
                         Nunc efficitur arcu non malesuada placerat. Vivamus a
                         pharetra lectus. Aenean elementum quis ante sit amet
@@ -22,9 +21,8 @@ export default function Events() {
                     </p>
                 </ImageList>
                 <ImageList image="https://via.placeholder.com/600">
-                    <h3>
-                        <b>4/25</b> | Lorem ipsum dolor
-                    </h3>
+                    <h4>April 25, 2021</h4>
+                    <h3>Lorem ipsum dolor</h3>
                     <p>
                         Nunc efficitur arcu non malesuada placerat. Vivamus a
                         pharetra lectus. Aenean elementum quis ante sit amet

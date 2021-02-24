@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import Page from '../components/page'
 import pages from '../pages.js'
 import Hero from '../components/hero'
@@ -39,9 +41,11 @@ export default function Membership() {
                         tours, presentations on all things dahlias and plenty of
                         learning at our growing partner gadens.
                     </p>
-                    <a href="#" className="button">
-                        Explore Meetings & Events
-                    </a>
+                    <Link href="/events">
+                        <a className="button" title="Explore Meetings & Events">
+                            Explore Meetings & Events
+                        </a>
+                    </Link>
                 </Pingpong>
                 <Bumper
                     text="Aenean elementum quis ante sit amet elementum."

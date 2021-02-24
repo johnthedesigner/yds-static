@@ -10,7 +10,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
     return (
         <Page page={pages.home}>
-            <div className={styles.home__body}>
+            <div className={`page--home ${styles.home__body}`}>
                 <Hero
                     title="The Yankee Dahlia Society"
                     image="/bucket.jpg"

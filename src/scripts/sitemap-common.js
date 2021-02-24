@@ -4,7 +4,7 @@ const prettier = require('prettier')
 
 const getDate = new Date().toISOString()
 
-const YOUR_AWESOME_DOMAIN = 'http://yankeedahliasociety.com'
+const DOMAIN = 'http://yankeedahliasociety.com'
 
 const formatted = (sitemap) => prettier.format(sitemap, { parser: 'html' })
 
@@ -15,6 +15,7 @@ const formatted = (sitemap) => prettier.format(sitemap, { parser: 'html' })
         'pages/*.js',
         // exclude
         '!pages/_*.js',
+        '!pages/api/*',
     ])
 
     const pagesSitemap = `
@@ -27,7 +28,7 @@ const formatted = (sitemap) => prettier.format(sitemap, { parser: 'html' })
             const routePath = path === 'index' ? '' : path
             return `
           <url>
-            <loc>${YOUR_AWESOME_DOMAIN}/${routePath}</loc>
+            <loc>${DOMAIN}/${routePath}</loc>
             <lastmod>${getDate}</lastmod>
           </url>
         `

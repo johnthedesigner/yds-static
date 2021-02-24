@@ -3,8 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import Navbar from '../components/navbar'
-import pages from '../pages'
-// import IconFB from '../public/icon-fb.svg'
+import FooterLogo from '../public/logo-footer.svg'
 // import IconIG from '../public/icon-ig.svg'
 
 export default function Page(props) {
@@ -23,7 +22,50 @@ export default function Page(props) {
                 {props.children}
             </main>
             <footer className="footer">
-                <p>Lorem ipsum dolor sit amet.</p>
+                <div className="footer__body">
+                    <FooterLogo />
+                    <ul className="footer__menu">
+                        <li className="footer__menu-item">
+                            <Link href="/">
+                                <a title="Home | Yankee Dahlia Society">Home</a>
+                            </Link>
+                        </li>
+                        <li className="footer__menu-item">
+                            <Link href="/membership/">
+                                <a title="Membership | Yankee Dahlia Society">
+                                    Membership
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="footer__menu-item">
+                            <Link href="/events/">
+                                <a title="Events | Yankee Dahlia Society">
+                                    Events
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="footer__menu-item">
+                            <Link href="/tubers/">
+                                <a title="Our Tubers | Yankee Dahlia Society">
+                                    Our Tubers
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="footer__menu-item">
+                            <Link href="/about/">
+                                <a title="About Us | Yankee Dahlia Society">
+                                    About Us
+                                </a>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="footer__bottom">
+                    <p className="footer__legal-text">
+                        Yankee Dahlia Society, 501(c)3 – © Copyright 2021 Yankee
+                        Dahlia Society
+                    </p>
+                </div>
             </footer>
         </div>
     )

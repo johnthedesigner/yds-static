@@ -31,6 +31,11 @@ h3 {
     font-weight: 400;
 }
 
+h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
 p {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -98,6 +103,35 @@ a {
 
 .footer {
     height: 14rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__body {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+}
+
+.footer__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__menu-item {
+    margin: 1rem 2rem;
+}
+
+.footer__bottom {
+    width: 100%;
+    background: #fbf5e8;
+}
+
+.footer__legal-text {
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 1rem 2rem;
 }
 
 /* MOBILE NAV MENU */
@@ -150,7 +184,7 @@ a {
     padding: 1.5rem 2rem;
     margin: 0;
     background: white;
-    box-shadow: 0 0.25rem 0.25rem rgba(80, 111, 152, 0.1);
+    box-shadow: 0 0.25rem 0.5rem rgba(80, 111, 152, 0.3);
 }
 
 .navbar__list-container--mobile {
@@ -240,6 +274,7 @@ a {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.4);
+    background: rgba(198, 90, 98, 0.8);
 }
 
 .hero__content {
