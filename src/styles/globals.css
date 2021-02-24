@@ -123,6 +123,10 @@ a {
     margin: 1rem 2rem;
 }
 
+.footer__social-icon {
+    margin-right: 1rem;
+}
+
 .footer__bottom {
     width: 100%;
     background: #fbf5e8;

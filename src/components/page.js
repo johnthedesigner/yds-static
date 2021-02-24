@@ -4,7 +4,8 @@ import Link from 'next/link'
 
 import Navbar from '../components/navbar'
 import FooterLogo from '../public/logo-footer.svg'
-// import IconIG from '../public/icon-ig.svg'
+import IconFB from '../public/icon-fb.svg'
+import IconIG from '../public/icon-ig.svg'
 
 export default function Page(props) {
     return (
@@ -55,6 +56,26 @@ export default function Page(props) {
                             <Link href="/about/">
                                 <a title="About Us | Yankee Dahlia Society">
                                     About Us
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="footer__menu-item">
+                            <Link href="http://instagram.com/yankeedahliasociety">
+                                <a
+                                    className="footer__social-icon"
+                                    title="Yankee Dahlia Society on Instagram"
+                                    target="_blank"
+                                >
+                                    <IconIG />
+                                </a>
+                            </Link>
+                            <Link href="http://facebook.com/yankeedahliasociety">
+                                <a
+                                    className="footer__social-icon"
+                                    title="Yankee Dahlia Society on Facebook"
+                                    target="_blank"
+                                >
+                                    <IconFB />
                                 </a>
                             </Link>
                         </li>
