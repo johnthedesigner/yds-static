@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 
 import Page from '../components/page'
 import pages from '../pages.js'
@@ -10,6 +11,9 @@ import styles from '../styles/membership.module.css'
 export default function Membership() {
     return (
         <Page page={pages.membership} backgroundClass="page__body--flower4">
+            <Head>
+                <meta name="og:image" content="/android-chrome-512x512.png" />
+            </Head>
             <div className={styles.home__body}>
                 <Hero title="YDS Memberships" image="/flowers.jpg" />
                 <Pingpong
