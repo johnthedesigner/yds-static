@@ -8,16 +8,6 @@ import IconFB from '../public/icon-fb.svg'
 import IconIG from '../public/icon-ig.svg'
 
 export default function Page(props) {
-    // const OGImage = (props) => {
-    //     if (props.image) {
-    //         return <meta name="og:image" content={props.image} />
-    //     } else {
-    //         return (
-    //             <meta name="og:image" content="/android-chrome-192x192.png" />
-    //         )
-    //     }
-    // }
-
     return (
         <div className="page">
             <Head>
@@ -29,9 +19,9 @@ export default function Page(props) {
                 />
                 <meta
                     property="og:image"
+                    key="og:image"
                     content="/android-chrome-192x192.png"
                 />
-                {/* <OGImage /> */}
             </Head>
             <main className={`page__body ${props.backgroundClass}`}>
                 <Navbar currentUrl={props.page.url} />
@@ -42,7 +32,7 @@ export default function Page(props) {
                     <FooterLogo />
                     <ul className="footer__menu">
                         <li className="footer__menu-item">
-                            <Link href="/">
+                            <Link href="/home">
                                 <a title="Home | Yankee Dahlia Society">Home</a>
                             </Link>
                         </li>

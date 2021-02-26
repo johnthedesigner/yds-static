@@ -14,6 +14,7 @@ export default function Membership() {
             <Head>
                 <meta
                     property="og:image"
+                    key="og:image"
                     content="/android-chrome-512x512.png"
                 />
             </Head>

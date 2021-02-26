@@ -17,18 +17,22 @@ const Navbar = (props) => {
 
     let Links = () => {
         return _.map(pages, (page) => {
-            return (
-                <li className="navbar__item" key={page.url}>
-                    <Link href={page.url}>
-                        <a
-                            className={linkClass(props.currentUrl, page)}
-                            title={page.title}
-                        >
-                            {page.label}
-                        </a>
-                    </Link>
-                </li>
-            )
+            if (page.inMenu) {
+                return (
+                    <li className="navbar__item" key={page.url}>
+                        <Link href={page.url}>
+                            <a
+                                className={linkClass(props.currentUrl, page)}
+                                title={page.title}
+                            >
+                                {page.label}
+                            </a>
+                        </Link>
+                    </li>
+                )
+            } else {
+                return null
+            }
         })
     }
 
