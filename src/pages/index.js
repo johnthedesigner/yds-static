@@ -1,10 +1,6 @@
 import Link from 'next/link'
 
-import Page from '../components/page'
-import pages from '../pages.js'
 import Hero from '../components/hero'
-import Pingpong from '../components/pingpong'
-import Bumper from '../components/bumper'
 import styles from '../styles/Home.module.css'
 import IconFB from '../public/icon-fb.svg'
 import IconIG from '../public/icon-ig.svg'
@@ -14,7 +10,7 @@ export default function Home() {
         <div className={`page--home ${styles.home__body}`}>
             <Hero
                 title="Yankee Dahlia Society"
-                image="/bucket.jpg"
+                image="/purple-flowers.jpg"
                 overlay="false"
                 height="40vh"
             />

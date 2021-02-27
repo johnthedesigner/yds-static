@@ -2,15 +2,19 @@ import _ from 'lodash'
 import { useState } from 'react'
 import Link from 'next/link'
 
-import pages from '../pages'
+import pages from '../pages.json'
+import { getUrl } from '../utils'
 import Hamburger from '../public/hamburger.svg'
 import LogoMobile from '../public/logo-mobile.svg'
 import LogoDesktop from '../public/logo-desktop.svg'
 
-export const linkClass = (currentURL, linkedPage) =>
-    linkedPage.url === currentURL
+export const linkClass = (currentPath, linkedPage) => {
+    console.log(currentPath, linkedPage.path)
+
+    return linkedPage.path === currentPath
         ? 'navbar__link navbar__link--active'
         : 'navbar__link'
+}
 
 const Navbar = (props) => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -19,10 +23,10 @@ const Navbar = (props) => {
         return _.map(pages, (page) => {
             if (page.inMenu) {
                 return (
-                    <li className="navbar__item" key={page.url}>
-                        <Link href={page.url}>
+                    <li className="navbar__item" key={page.path}>
+                        <Link href={getUrl(page.path)}>
                             <a
-                                className={linkClass(props.currentUrl, page)}
+                                className={linkClass(props.currentPath, page)}
                                 title={page.title}
                             >
                                 {page.label}
@@ -39,7 +43,7 @@ const Navbar = (props) => {
     return (
         <div>
             <nav className="navbar--mobile">
-                <Link href={pages.home.url}>
+                <Link href={getUrl(pages.home.path)}>
                     <a
                         title="Yankee Dahlia Society | Home"
                         className="logo-link--mobile"
@@ -64,7 +68,7 @@ const Navbar = (props) => {
                 </div>
             </nav>
             <nav className="navbar--desktop">
-                <Link href={pages.home.url}>
+                <Link href={getUrl(pages.home.path)}>
                     <a
                         title="Yankee Dahlia Society | Home"
                         className="logo-link--desktop"

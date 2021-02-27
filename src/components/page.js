@@ -24,7 +24,7 @@ export default function Page(props) {
                 />
             </Head>
             <main className={`page__body ${props.backgroundClass}`}>
-                <Navbar currentUrl={props.page.url} />
+                <Navbar currentPath={props.page.path} />
                 {props.children}
             </main>
             <footer className="footer">

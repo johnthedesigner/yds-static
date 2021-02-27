@@ -1,6 +1,11 @@
+const _ = require('lodash')
 const fs = require('fs')
 const globby = require('globby')
 const prettier = require('prettier')
+
+const pages = require('../pages.json')
+
+console.log(pages.home.title)
 
 const getDate = new Date().toISOString()
 
@@ -9,31 +14,19 @@ const DOMAIN = 'http://yankeedahliasociety.com'
 const formatted = (sitemap) => prettier.format(sitemap, { parser: 'html' })
 
 ;(async () => {
-    const pages = await globby([
-        // include
-        'pages/**/*.js',
-        'pages/*.js',
-        // exclude
-        '!pages/_*.js',
-        '!pages/api/*',
-    ])
-
     const pagesSitemap = `
-    ${pages
-        .map((page) => {
-            const path = page
-                .replace('pages/', '')
-                .replace('.js', '')
-                .replace(/\/index/g, '')
-            const routePath = path === 'index' ? '' : path
+    ${_.map(pages, (page) => {
+        if (page.inSitemap) {
             return `
           <url>
-            <loc>${DOMAIN}/${routePath}</loc>
+            <loc>${DOMAIN}${page.url}</loc>
             <lastmod>${getDate}</lastmod>
           </url>
         `
-        })
-        .join('')}
+        } else {
+            return null
+        }
+    }).join('')}
   `
 
     const generatedSitemap = `

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Page from '../components/page'
-import pages from '../pages.js'
+import pages from '../pages.json'
 import styles from '../styles/Home.module.css'
 
 export default function Contact() {

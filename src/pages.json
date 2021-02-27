@@ -1,0 +1,58 @@
+{
+    "prelaunch": {
+        "label": "Coming Soon",
+        "title": "Coming Soon | Yankee Dahlia Society",
+        "description": "Promoting dahlia exhibition, hybridization, and education",
+        "path": "/",
+        "inMenu": false,
+        "inSitemap": true
+    },
+    "home": {
+        "label": "Home",
+        "title": "Home | Yankee Dahlia Society",
+        "description": "Lorem ipsum dolor sit amet.",
+        "path": "/home",
+        "inMenu": true,
+        "inSitemap": false
+    },
+    "membership": {
+        "label": "Membership",
+        "title": "Membership | Yankee Dahlia Society",
+        "description": "Lorem ipsum dolor sit amet.",
+        "path": "/membership",
+        "inMenu": true,
+        "inSitemap": false
+    },
+    "events": {
+        "label": "Events",
+        "title": "Events | Yankee Dahlia Society",
+        "description": "Lorem ipsum dolor sit amet.",
+        "path": "/events",
+        "inMenu": true,
+        "inSitemap": false
+    },
+    "tubers": {
+        "label": "Our Tubers",
+        "title": "YDS Tubers | Yankee Dahlia Society",
+        "description": "Lorem ipsum dolor sit amet.",
+        "path": "/tubers",
+        "inMenu": true,
+        "inSitemap": false
+    },
+    "about": {
+        "label": "About Us",
+        "title": "About Us | Yankee Dahlia Society",
+        "description": "Lorem ipsum dolor sit amet.",
+        "path": "/about",
+        "inMenu": true,
+        "inSitemap": false
+    },
+    "contact": {
+        "label": "Contact Us",
+        "title": "Contact Us | Yankee Dahlia Society",
+        "description": "Lorem ipsum dolor sit amet.",
+        "path": "/contact",
+        "inMenu": true,
+        "inSitemap": false
+    }
+}

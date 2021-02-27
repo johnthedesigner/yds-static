@@ -1,5 +1,5 @@
 import Page from '../components/page'
-import pages from '../pages.js'
+import pages from '../pages.json'
 import Hero from '../components/hero'
 import Pingpong from '../components/pingpong'
 import Bumper from '../components/bumper'

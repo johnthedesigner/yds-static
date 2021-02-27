@@ -2,7 +2,7 @@ import Page from '../components/page'
 import Hero from '../components/hero'
 import ImageList from '../components/imageList'
 import Bumper from '../components/bumper'
-import pages from '../pages.js'
+import pages from '../pages.json'
 import styles from '../styles/Events.module.css'
 
 export default function Events() {
