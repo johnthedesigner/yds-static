@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 
+import { getUrl } from '../utils'
 import Page from '../components/page'
 import pages from '../pages.json'
 import Hero from '../components/hero'
@@ -15,7 +16,7 @@ export default function Membership() {
                 <meta
                     property="og:image"
                     key="og:image"
-                    content="/android-chrome-512x512.png"
+                    content={getUrl('/android-chrome-512x512.png')}
                 />
             </Head>
             <div className={styles.home__body}>

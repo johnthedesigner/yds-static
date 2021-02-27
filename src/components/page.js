@@ -2,6 +2,7 @@ import _ from 'lodash'
 import Head from 'next/head'
 import Link from 'next/link'
 
+import { getUrl } from '../utils'
 import Navbar from '../components/navbar'
 import FooterLogo from '../public/logo-footer.svg'
 import IconFB from '../public/icon-fb.svg'
@@ -20,7 +21,7 @@ export default function Page(props) {
                 <meta
                     property="og:image"
                     key="og:image"
-                    content="/android-chrome-192x192.png"
+                    content={getUrl('/android-chrome-192x192.png')}
                 />
             </Head>
             <main className={`page__body ${props.backgroundClass}`}>
