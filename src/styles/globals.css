@@ -334,6 +334,22 @@ a {
     }
 }
 
+.compact-text__wrapper {
+    width: 60rem;
+    max-width: 90%;
+    margin: 6rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.compact-text__item {
+    flex: 1;
+    min-width: 40%;
+    text-align: center;
+    margin: 3rem;
+}
+
 .pingpong {
     width: 60rem;
     max-width: 90%;

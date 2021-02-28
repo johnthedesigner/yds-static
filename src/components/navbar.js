@@ -24,7 +24,7 @@ const Navbar = (props) => {
             if (page.inMenu) {
                 return (
                     <li className="navbar__item" key={page.path}>
-                        <Link href={getUrl(page.path)}>
+                        <Link href={page.path}>
                             <a
                                 className={linkClass(props.currentPath, page)}
                                 title={page.title}
