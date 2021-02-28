@@ -56,7 +56,7 @@ export default function Events() {
                 </ImageList>
                 <Bumper
                     text="Discover more ways to participate in YDS events & more."
-                    buttonUrl="/events/get-involved"
+                    buttonUrl="/get-involved"
                     buttonLabel="How to get more involved"
                 />
                 <Bumper
