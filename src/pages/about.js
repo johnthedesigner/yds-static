@@ -11,6 +11,7 @@ export default function About() {
             <div className={styles.about__body}>
                 <Hero title="About YDS" image="/garden-2.jpg" />
                 <Pingpong side="left" image="https://via.placeholder.com/900">
+                    <h3>YDS Founders Misty & Carol</h3>
                     <p>
                         Hi, we’re Misty and Carol, two friends who met growing
                         dahlias. So, when two friends who love dahlias want to
@@ -19,6 +20,7 @@ export default function About() {
                     </p>
                 </Pingpong>
                 <Pingpong side="right" image="https://via.placeholder.com/900">
+                    <h3>Our Vision for YDS</h3>
                     <p>
                         We had a vision of creating a fun space where people who
                         love dahlias could gather and connect, in person and
@@ -27,9 +29,9 @@ export default function About() {
                     </p>
                 </Pingpong>
                 <Bumper
-                    text="Aenean elementum quis ante sit amet elementum."
-                    buttonUrl="#"
-                    buttonLabel="Click Me"
+                    text="Does this sound like fun do you too?"
+                    buttonUrl="/membership"
+                    buttonLabel="Find out more about YDS membership"
                 />
             </div>
         </Page>

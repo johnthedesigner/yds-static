@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-import Page from '../../components/page'
-import Hero from '../../components/hero'
-import ImageList from '../../components/imageList'
-import Bumper from '../../components/bumper'
-import pages from '../../pages.json'
-import styles from '../../styles/Events.module.css'
+import Page from '../components/page'
+import Hero from '../components/hero'
+import ImageList from '../components/imageList'
+import Bumper from '../components/bumper'
+import pages from '../pages.json'
+import styles from '../styles/Events.module.css'
 
 export default function Events() {
     return (
@@ -55,9 +55,9 @@ export default function Events() {
                     </p>
                 </ImageList>
                 <Bumper
-                    text="Discover more ways to participate in YDS events."
+                    text="Discover more ways to participate in YDS events & more."
                     buttonUrl="/events/get-involved"
-                    buttonLabel="Get Involved"
+                    buttonLabel="How to get more involved"
                 />
                 <Bumper
                     text="Become a member to attend meetings & events"

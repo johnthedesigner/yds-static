@@ -340,13 +340,13 @@ a {
     margin: 6rem auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: top;
 }
 
 .compact-text__item {
     flex: 1;
     min-width: 40%;
-    text-align: center;
+    /* text-align: center; */
     margin: 3rem;
 }
 

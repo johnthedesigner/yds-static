@@ -57,9 +57,9 @@ export default function Membership() {
                     </Link>
                 </Pingpong>
                 <Bumper
-                    text="Aenean elementum quis ante sit amet elementum."
-                    buttonUrl="#"
-                    buttonLabel="Click Me"
+                    text="Already a member but interested in doing more?"
+                    buttonUrl="/get-involved"
+                    buttonLabel="Learn how to get more involved"
                 />
             </div>
         </Page>
