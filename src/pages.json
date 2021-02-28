@@ -23,6 +23,14 @@
         "inMenu": true,
         "inSitemap": false
     },
+    "get-involved": {
+        "label": "Get Involved",
+        "title": "Get Involved | Yankee Dahlia Society",
+        "description": "Get involved",
+        "path": "/events/get-involved",
+        "inMenu": false,
+        "inSitemap": true
+    },
     "events": {
         "label": "Events",
         "title": "Events | Yankee Dahlia Society",
