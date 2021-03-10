@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Page from '../components/page'
 import pages from '../pages.json'
 import Hero from '../components/hero'
@@ -16,33 +17,22 @@ export default function Home() {
                     height="40vh"
                 />
                 <Pingpong side="left" image="https://via.placeholder.com/900">
-                    <h3>Lorem Ipsum Dolor Sit Amet.</h3>
+                    <h3>
+                        <b>We want you!</b> for Yankee Dahlia Society!
+                    </h3>
                     <p>
-                        Nunc efficitur arcu non malesuada placerat. Vivamus a
-                        pharetra lectus. Aenean elementum quis ante sit amet
-                        elementum. In at enim id leo vulputate semper in eu
-                        nunc. Donec suscipit nibh a hendrerit mollis.
+                        YDS Memberships are available today for both individual
+                        and business members. Register soon to attend our first
+                        meeting!
                     </p>
-                    <a href="#" className="button">
-                        Click me
-                    </a>
-                </Pingpong>
-                <Pingpong side="right" image="https://via.placeholder.com/900">
-                    <h3>Lorem Ipsum Dolor Sit Amet.</h3>
-                    <p>
-                        Nunc efficitur arcu non malesuada placerat. Vivamus a
-                        pharetra lectus. Aenean elementum quis ante sit amet
-                        elementum. In at enim id leo vulputate semper in eu
-                        nunc. Donec suscipit nibh a hendrerit mollis.
-                    </p>
-                    <a href="#" className="button">
-                        Click me
-                    </a>
+                    <Link href="/membership">
+                        <a className="button">Find out more</a>
+                    </Link>
                 </Pingpong>
                 <Bumper
-                    text="Aenean elementum quis ante sit amet elementum."
-                    buttonUrl="#"
-                    buttonLabel="Click Me"
+                    text="Looking for our upcoming meetings & events?"
+                    buttonUrl="/events"
+                    buttonLabel="Show me"
                 />
             </div>
         </Page>

@@ -27,17 +27,26 @@ export default function Membership() {
                     ratioWidth="1"
                     ratioHeight="1.5"
                 >
-                    <h3>We want you! to join the Yankee Dahlia Society</h3>
+                    <h3>
+                        <b>We want you!</b> for Yankee Dahlia Society
+                    </h3>
                     <p>
-                        We will have monthly emails, member meetings, garden
-                        tours, presentations on all things dahlias and plenty of
-                        learning at our growing partner gadens.
+                        If you love dahlias, and love people who love dahlias,
+                        become part of Yankee Dahlia Society! We provide a fun,
+                        welcoming space for everyone to learn and to share
+                        knowledge about growing and enjoying dahlias.
                     </p>
                     <p>
-                        We would love to get to know you, so if you love dahlias
-                        and love people and would enjoy spending time learning
-                        and sharing knowledge about growing and showing dahlias
-                        then join our club!
+                        Whether you are new to growing dahlias or an experienced
+                        dahlia grower, Yankee Dahlia Society has something for
+                        everyone. Our membership year will open on August 1,
+                        2021. Until then, we invite everyone to freely
+                        participate in all of our activities! We will have
+                        monthly meetings and email newsletters to keep in touch
+                        with you, garden tours, presentations, and plenty of
+                        opportunities for hands-on learning in our society’s
+                        growing partner gardens. We’d love to get to know you.
+                        Join us!
                     </p>
                     <Link href="/membership/join">
                         <a className="button">Join YDS Today!</a>
@@ -56,11 +65,6 @@ export default function Membership() {
                         </a>
                     </Link>
                 </Pingpong>
-                <Bumper
-                    text="Already a member but interested in doing more?"
-                    buttonUrl=""
-                    buttonLabel="Learn how to get more involved"
-                />
             </div>
         </Page>
     )
