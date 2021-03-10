@@ -1,19 +1,20 @@
 import { useState } from 'react'
+import Link from 'next/link'
+
 import Page from '../components/page'
 import pages from '../pages.json'
 import Hero from '../components/hero'
 import Bumper from '../components/bumper'
 import { CompactTextWrapper, CompactText } from '../components/compactText'
+import IconFB from '../public/icon-fb.svg'
+import IconIG from '../public/icon-ig.svg'
 
 export default function Contact() {
-    const [isOther, setIsOther] = useState(false)
+    const [topic, setTopic] = useState('')
+    // const [isOther, setIsOther] = useState(false)
 
-    const checkForOther = (value) => {
-        if (value === 'other') {
-            setIsOther(true)
-        } else {
-            setIsOther(false)
-        }
+    const isOther = () => {
+        return topic === 'other'
     }
 
     const TextInput = (props) => {
@@ -30,7 +31,7 @@ export default function Contact() {
     }
 
     const OtherFormField = () => {
-        if (isOther) {
+        if (isOther()) {
             return (
                 <TextInput
                     label="If other, what category?"
@@ -46,15 +47,35 @@ export default function Contact() {
     return (
         <Page page={pages.contact} backgroundClass="page__body--flower1">
             <Hero title="Contact Us" image="/garden.jpg" />
-            <Bumper text="Want to get more involved in YDS? Get in touch, we'd love to talk about opportunities to help with meetings, newsletters, garden tours and more" />
             <CompactTextWrapper>
                 <CompactText>
+                    <h3>Want to get more involved in YDS?</h3>
                     <p>
-                        Lorem ipsum <a href="#">dolor</a> sit amet.
+                        Get in touch, we'd love to talk about opportunities to
+                        help with meetings, newsletters, garden tours and more
                     </p>
+                    <Link href="http://instagram.com/yankeedahliasociety">
+                        <a
+                            className="footer__social-icon"
+                            title="Yankee Dahlia Society on Instagram"
+                            target="_blank"
+                        >
+                            <IconIG />
+                        </a>
+                    </Link>
+                    <Link href="http://facebook.com/yankeedahliasociety">
+                        <a
+                            className="footer__social-icon"
+                            title="Yankee Dahlia Society on Facebook"
+                            target="_blank"
+                        >
+                            <IconFB />
+                        </a>
+                    </Link>
                 </CompactText>
                 <CompactText>
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfRp8mGPbFhr2s0N-somQ3bcfnjGgcM_KHXwmQ_v3oT7_sYpg/formResponse">
+                    <h3>Contact form</h3>
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeHRwqdeRYp6EOO4SEQpKQTHIYFwxb81mQi6HkLtPTp5RTUBw/formResponse">
                         <TextInput
                             label="Email Address"
                             name="entry.1132014782"
@@ -62,14 +83,14 @@ export default function Contact() {
                         />
                         <TextInput
                             label="Your Name"
-                            name="entry.1132014782"
+                            name="entry.605890569"
                             required={true}
                         />
                         <fieldset>
-                            <label>What would you like to talk about?</label>
+                            <label>What are you contacting us about?</label>
                             <select
-                                onChange={(e) => checkForOther(e.target.value)}
-                                value=""
+                                onChange={(e) => setTopic(e.target.value)}
+                                value={topic}
                                 name="entry.1748743079"
                             >
                                 <option value="">Select an option</option>
@@ -80,12 +101,10 @@ export default function Contact() {
                             </select>
                         </fieldset>
                         <OtherFormField />
-                        <TextInput
-                            label="If other, what topic?"
-                            name="entry.389562223"
-                            required={false}
-                        />
-                        <textarea name="entry.84551917" />
+                        <fieldset>
+                            <label>Your message</label>
+                            <textarea name="entry.84551917" />
+                        </fieldset>
                         <button className="button" type="submit">
                             Submit
                         </button>

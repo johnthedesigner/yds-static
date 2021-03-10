@@ -91,7 +91,7 @@ label {
 
 fieldset {
     border: none;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 input[type='text'],
@@ -122,6 +122,19 @@ input[type='checkbox'] {
 input[disabled] {
     background: #eee;
     color: #999;
+}
+
+textarea {
+    width: 100%;
+    display: block;
+    line-height: 2;
+    padding: 0 1rem;
+    font-family: 'Newsreader', serif;
+    font-size: 1.25rem;
+    color: #3d4549;
+    border: #ccc solid 1px;
+    box-shadow: 0 1px 5px inset rgba(63, 79, 99, 0.4);
+    border-radius: 0.25rem;
 }
 
 button[type='submit'] {
