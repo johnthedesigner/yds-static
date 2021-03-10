@@ -17,10 +17,25 @@ export default function Contact() {
         return topic === 'other'
     }
 
+    const RequiredMark = () => {
+        return <b className="required-mark">*</b>
+    }
+
     const TextInput = (props) => {
+        let MaybeRequiredMark = (props) => {
+            if (props.required) {
+                return <RequiredMark />
+            } else {
+                return null
+            }
+        }
+
         return (
             <fieldset>
-                <label>{props.label}</label>
+                <label>
+                    {props.label}
+                    <MaybeRequiredMark required="props.required" />
+                </label>
                 <input
                     type="text"
                     name={props.name}
@@ -109,6 +124,9 @@ export default function Contact() {
                             Submit
                         </button>
                     </form>
+                    <p>
+                        <em className="required-footnote">* Required field</em>
+                    </p>
                 </CompactText>
             </CompactTextWrapper>
         </Page>

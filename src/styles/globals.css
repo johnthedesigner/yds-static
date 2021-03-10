@@ -141,6 +141,14 @@ button[type='submit'] {
     margin-top: 2rem;
 }
 
+.required-mark {
+    color: #c65a60;
+}
+.required-footnote {
+    color: #c65a60;
+    font-size: 1rem;
+}
+
 /* Page Styles */
 
 .page {
