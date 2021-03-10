@@ -56,6 +56,7 @@ a {
     background: #fffbf1;
     border: #fffbf1 solid 0.5rem;
     padding: 0.5rem 1rem;
+    font-family: 'Newsreader', serif;
     font-size: 1.25rem;
     text-decoration: none;
     transition: all linear 0.15s;
@@ -74,6 +75,57 @@ a {
     bottom: 0;
     left: 0;
     border: #c65a60 solid 1px;
+}
+
+label {
+    display: block;
+    margin: 1rem;
+    font-size: 1.25rem;
+    color: #657177;
+}
+
+.inline-label {
+    display: inline;
+    color: #3d4549;
+}
+
+fieldset {
+    border: none;
+    padding: 1rem 0;
+}
+
+input[type='text'],
+select {
+    width: 100%;
+    height: 2.5rem;
+    display: block;
+    line-height: 2;
+    padding: 0 1rem;
+    font-family: 'Newsreader', serif;
+    font-size: 1.25rem;
+    color: #3d4549;
+    border: #ccc solid 1px;
+    box-shadow: 0 1px 5px inset rgba(63, 79, 99, 0.4);
+    border-radius: 0.25rem;
+}
+select {
+    box-shadow: 0 1px 10px rgba(63, 79, 99, 0.4);
+}
+
+input[type='checkbox'] {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: center;
+}
+
+input[disabled] {
+    background: #eee;
+    color: #999;
+}
+
+button[type='submit'] {
+    margin-top: 2rem;
 }
 
 /* Page Styles */
@@ -277,8 +329,8 @@ a {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.4);
-    /* background: rgba(198, 90, 98, 0.8); */
+    /* background: rgba(0, 0, 0, 0.4); */
+    background: rgba(63, 79, 99, 0.4);
 }
 
 .hero__content {
@@ -380,7 +432,6 @@ a {
 
 .pingpong__text {
     flex: 1;
-    text-align: center;
 }
 
 .pingpong--left .pingpong__text {
@@ -416,4 +467,30 @@ a {
     max-width: 90%;
     margin: 6rem auto;
     text-align: center;
+}
+
+.tally {
+    margin: 2rem 1rem;
+}
+
+.tally__item {
+    color: #657177;
+    font-size: 1.25rem;
+    text-align: right;
+    margin: 0;
+}
+
+.tally__figure {
+    color: #3d4549;
+    font-weight: 700;
+    display: inline-block;
+    width: 8rem;
+}
+
+.tally__total {
+    color: #3d4549;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    text-align: right;
+    border-top: #ddd solid 1px;
 }

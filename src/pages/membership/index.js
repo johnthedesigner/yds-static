@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import Head from 'next/head'
 
-import { getUrl } from '../utils'
-import Page from '../components/page'
-import pages from '../pages.json'
-import Hero from '../components/hero'
-import Pingpong from '../components/pingpong'
-import Bumper from '../components/bumper'
-import styles from '../styles/membership.module.css'
+import { getUrl } from '../../utils'
+import Page from '../../components/page'
+import pages from '../../pages.json'
+import Hero from '../../components/hero'
+import Pingpong from '../../components/pingpong'
+import Bumper from '../../components/bumper'
+import styles from '../../styles/membership.module.css'
 
 export default function Membership() {
     return (
@@ -39,9 +39,9 @@ export default function Membership() {
                         and sharing knowledge about growing and showing dahlias
                         then join our club!
                     </p>
-                    <a href="#" className="button">
-                        Join YDS Today!
-                    </a>
+                    <Link href="/membership/join">
+                        <a className="button">Join YDS Today!</a>
+                    </Link>
                 </Pingpong>
                 <Pingpong side="right" image="https://via.placeholder.com/900">
                     <h3>Come to a meeting!</h3>
@@ -58,7 +58,7 @@ export default function Membership() {
                 </Pingpong>
                 <Bumper
                     text="Already a member but interested in doing more?"
-                    buttonUrl="/get-involved"
+                    buttonUrl=""
                     buttonLabel="Learn how to get more involved"
                 />
             </div>

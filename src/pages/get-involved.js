@@ -14,7 +14,7 @@ export default function Events() {
                 <Hero title="Get Involved in YDS Events" image="/garden.jpg" />
                 <Bumper
                     text="Want to get more involved in YDS? Get in touch, we'd love to talk about opportunities to help with meetings, newsletters, garden tours and more"
-                    buttonUrl="#"
+                    buttonUrl="/contact"
                     buttonLabel="Get in Touch"
                 />
                 <CompactTextWrapper>

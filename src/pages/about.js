@@ -9,7 +9,7 @@ export default function About() {
     return (
         <Page page={pages.about}>
             <div className={styles.about__body}>
-                <Hero title="About YDS" image="/garden-2.jpg" />
+                <Hero title="About YDS" image="/purple-flowers.jpg" />
                 <Pingpong side="left" image="https://via.placeholder.com/900">
                     <h3>YDS Founders Misty & Carol</h3>
                     <p>

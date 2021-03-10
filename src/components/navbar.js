@@ -9,8 +9,6 @@ import LogoMobile from '../public/logo-mobile.svg'
 import LogoDesktop from '../public/logo-desktop.svg'
 
 export const linkClass = (currentPath, linkedPage) => {
-    console.log(currentPath, linkedPage.path)
-
     return linkedPage.path === currentPath
         ? 'navbar__link navbar__link--active'
         : 'navbar__link'
