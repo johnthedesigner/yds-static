@@ -13,7 +13,7 @@ export default function About() {
                     title="About Yankee Dahlia Society"
                     image="/purple-flowers.jpg"
                 />
-                <Pingpong side="left" image="https://via.placeholder.com/900">
+                <Pingpong side="left" image="/misty-carol.jpg">
                     <h3>YDS Founders Misty & Carol</h3>
                     <p>
                         Hi, we’re Misty and Carol, two friends who met growing
@@ -22,7 +22,7 @@ export default function About() {
                         a club!
                     </p>
                 </Pingpong>
-                <Pingpong side="right" image="https://via.placeholder.com/900">
+                <Pingpong side="right" image="/garden.jpg">
                     <h3>Our Vision for YDS</h3>
                     <p>
                         We had a vision of creating a fun space where people who

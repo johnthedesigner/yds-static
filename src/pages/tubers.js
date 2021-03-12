@@ -10,10 +10,7 @@ export default function Events() {
         <Page page={pages.tubers}>
             <div className={styles.tubers__body}>
                 <Hero title="Our Tubers" image="/dividing-dahlias.jpg" />
-                <Pingpong
-                    side="left"
-                    image="https://via.placeholder.com/900x1300"
-                >
+                <Pingpong side="left" image="/tubers.jpg">
                     <h3>We need tubers and your support!</h3>
                     <p>
                         Have you divided tubers and have what you need for your

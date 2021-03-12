@@ -16,7 +16,12 @@ export default function Home() {
                     overlay="false"
                     height="40vh"
                 />
-                <Pingpong side="left" image="https://via.placeholder.com/900">
+                <Pingpong
+                    side="left"
+                    image="planting-dahlias.jpg"
+                    ratioWidth={1}
+                    ratioHeight={1.5}
+                >
                     <h3>
                         <b>We want you!</b> for Yankee Dahlia Society!
                     </h3>
@@ -28,11 +33,19 @@ export default function Home() {
                     <Link href="/membership">
                         <a className="button">Find out more</a>
                     </Link>
+                    <h3>Come to a Meeting</h3>
+                    <p>
+                        Spring is just around the corner and we'll be having our
+                        first meetings soon.
+                    </p>
+                    <Link href="/meetings">
+                        <a className="button">Meeting Calendar</a>
+                    </Link>
                 </Pingpong>
                 <Bumper
-                    text="Looking for our upcoming meetings & events?"
-                    buttonUrl="/events"
-                    buttonLabel="Show me"
+                    text="Already a member and looking for ways to lend a hand within Yankee Dahlia Society?"
+                    buttonUrl="/get-involved"
+                    buttonLabel="More Ways to Get Involved"
                 />
             </div>
         </Page>

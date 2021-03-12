@@ -8,7 +8,7 @@ import pages from '../pages.json'
 
 export default function Events() {
     return (
-        <Page page={pages.events}>
+        <Page page={pages.getInvolved}>
             <Hero
                 title="Get Involved in Yankee Dahlia Society"
                 image="/garden.jpg"

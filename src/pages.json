@@ -23,7 +23,7 @@
         "inMenu": true,
         "inSitemap": false
     },
-    "get-involved": {
+    "getInvolved": {
         "label": "Get Involved",
         "title": "Get Involved | Yankee Dahlia Society",
         "description": "Get involved",
@@ -31,11 +31,11 @@
         "inMenu": true,
         "inSitemap": false
     },
-    "events": {
-        "label": "Events",
-        "title": "Events | Yankee Dahlia Society",
+    "meetings": {
+        "label": "Meetings",
+        "title": "Meetings | Yankee Dahlia Society",
         "description": "Lorem ipsum dolor sit amet.",
-        "path": "/events",
+        "path": "/meetings",
         "inMenu": true,
         "inSitemap": false
     },

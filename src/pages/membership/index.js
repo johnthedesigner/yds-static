@@ -23,9 +23,9 @@ export default function Membership() {
                 <Hero title="Memberships" image="/flowers.jpg" />
                 <Pingpong
                     side="left"
-                    image="https://via.placeholder.com/900x1350"
+                    image="/digging-tubers.jpg"
                     ratioWidth="1"
-                    ratioHeight="1.5"
+                    ratioHeight="1"
                 >
                     <h3>
                         <b>We want you!</b> for Yankee Dahlia Society
@@ -52,7 +52,7 @@ export default function Membership() {
                         <a className="button">Join YDS Today!</a>
                     </Link>
                 </Pingpong>
-                <Pingpong side="right" image="https://via.placeholder.com/900">
+                <Pingpong side="right" image="/root-ball.jpg">
                     <h3>Come to a meeting!</h3>
                     <p>
                         We will have monthly emails, member meetings, garden
