@@ -64,7 +64,7 @@ export default function Contact() {
             <Hero title="Contact Us" image="/garden.jpg" />
             <CompactTextWrapper>
                 <CompactText>
-                    <h3>Want to get more involved in YDS?</h3>
+                    <h3>Want to get more involved in Y.D.S.?</h3>
                     <p>
                         Get in touch, we'd love to talk about opportunities to
                         help with meetings, newsletters, garden tours and more

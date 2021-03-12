@@ -9,7 +9,7 @@ export default function Events() {
     return (
         <Page page={pages.tubers}>
             <div className={styles.tubers__body}>
-                <Hero title="YDS Tubers" image="/dividing-dahlias.jpg" />
+                <Hero title="Our Tubers" image="/dividing-dahlias.jpg" />
                 <Pingpong
                     side="left"
                     image="https://via.placeholder.com/900x1300"

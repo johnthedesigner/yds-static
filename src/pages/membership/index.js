@@ -20,7 +20,7 @@ export default function Membership() {
                 />
             </Head>
             <div className={styles.home__body}>
-                <Hero title="YDS Memberships" image="/flowers.jpg" />
+                <Hero title="Memberships" image="/flowers.jpg" />
                 <Pingpong
                     side="left"
                     image="https://via.placeholder.com/900x1350"
