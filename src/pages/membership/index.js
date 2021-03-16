@@ -31,33 +31,40 @@ export default function Membership() {
                         <b>We want you!</b> for Yankee Dahlia Society
                     </h3>
                     <p>
-                        If you love dahlias, and love people who love dahlias,
-                        become part of Yankee Dahlia Society! We provide a fun,
-                        welcoming space for everyone to learn and to share
-                        knowledge about growing and enjoying dahlias.
+                        We are a dahlia club based in Wocester and Middlesex
+                        county in Massachusetts and invite dahlia growers all
+                        throughout the New England area. Our club is a proud
+                        member of the American Dahlia Society, grateful that
+                        they support research and education about our favorite
+                        flower along with connecting and supporting dahlia clubs
+                        and dahlia growers across the country and around the
+                        world.
                     </p>
                     <p>
-                        Whether you are new to growing dahlias or an experienced
-                        dahlia grower, Yankee Dahlia Society has something for
-                        everyone. Our membership year will open on August 1,
-                        2021. Until then, we invite everyone to freely
-                        participate in all of our activities! We will have
-                        monthly meetings and email newsletters to keep in touch
-                        with you, garden tours, presentations, and plenty of
-                        opportunities for hands-on learning in our society’s
-                        growing partner gardens. We’d love to get to know you.
-                        Join us!
+                        We would love to get to know you. Whether you are new to
+                        growing dahlias or an experienced dahlia grower, Yankee
+                        Dahlia Society has something for everyone. So if you
+                        love dahlias and love people and would enjoy spending
+                        time learning and sharing knowledge about growing and
+                        showing dahlias then join our club!
+                    </p>
+                    <p>
+                        We will have monthly emails, member meetings, garden
+                        tours, presentations, and lots of opportunities for
+                        hands-on learning about all things dahlias.
                     </p>
                     <Link href="/membership/join">
                         <a className="button">Join YDS Today!</a>
                     </Link>
                 </Pingpong>
                 <Pingpong side="right" image="/root-ball.jpg">
-                    <h3>Come to a meeting!</h3>
+                    <h3>Visitors Welcome!</h3>
                     <p>
-                        We will have monthly emails, member meetings, garden
-                        tours, presentations on all things dahlias and plenty of
-                        learning at our growing partner gadens.
+                        Are you interested in learning more about dahlias and
+                        curious about joining a local dahlia club? We welcome
+                        you to join us for your first two meetings before you
+                        decide to take the plunge and join the club. Please
+                        simply sign up so we know you are coming!
                     </p>
                     <Link href="/events">
                         <a className="button" title="Explore Meetings & Events">
@@ -65,6 +72,11 @@ export default function Membership() {
                         </a>
                     </Link>
                 </Pingpong>
+                <Bumper
+                    text="It takes a village! Already a member and interested in lending an extra hand to the club?"
+                    buttonUrl="/get-involved"
+                    buttonLabel="How to Get More Involved"
+                />
             </div>
         </Page>
     )
