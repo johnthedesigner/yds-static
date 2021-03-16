@@ -372,6 +372,24 @@ button[type='submit'] {
     }
 }
 
+.event {
+    width: 60rem;
+    max-width: 90%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.event__date,
+.event__name {
+    margin: 0.5rem 0;
+}
+
+.event__description,
+.event__location {
+    margin: 0.5rem 0;
+}
+
 .imagelist__item {
     width: 60rem;
     max-width: 90%;
