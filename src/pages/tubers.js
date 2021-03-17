@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Page from '../components/page'
 import Hero from '../components/hero'
 import Pingpong from '../components/pingpong'
@@ -17,10 +18,6 @@ export default function Events() {
                 >
                     <h3>We need tubers and your support!</h3>
                     <p>
-                        Have you divided tubers and have what you need for your
-                        garden with some extra.
-                    </p>
-                    <p>
                         Naturally a dahlia club needs dahlias to support club
                         activities and education.
                     </p>
@@ -34,9 +31,7 @@ export default function Events() {
                         purchase of nearly 500 tubers from growers around the US
                         and in addition contributed 100 tubers from their
                         personal collections. We look forward to having close to
-                        200 varieties to offer for our first sale in 2021. We
-                        need some additional depth in stock as well as variety
-                        assortment so we can make 2022 a huge sale.
+                        200 varieties to offer for our first sale in 2022.
                     </p>
                     <p>
                         Our club has connected with several Growing Partners
@@ -47,14 +42,19 @@ export default function Events() {
                         to do with they wish while the club gets the tubers at
                         the end of the season.
                     </p>
-
-                    <a
-                        href="#"
-                        className="button"
-                        title="Contact Us About Tuber Sales"
-                    >
-                        Contact Us About Tuber Sales
-                    </a>
+                    <p>
+                        Do you have extra space to grow some of our tubers? If
+                        so, we'd love to talk with you about growing
+                        partnerships.
+                    </p>
+                    <Link href="/contact">
+                        <a
+                            className="button"
+                            title="Contact Us About Growing Partnerships"
+                        >
+                            Contact Us About Growing Partnerships
+                        </a>
+                    </Link>
                 </Pingpong>
                 <Bumper
                     text="Interested in Tuber Sales & Swaps? Become a Member to Get Updates!"

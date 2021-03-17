@@ -15,7 +15,7 @@ export default function Events() {
             />
             <Bumper
                 text="Want to get more involved in Y.D.S.? Get in touch, we'd love to talk about opportunities to help with meetings, newsletters, garden tours and more"
-                smallText="Time is our most valued asset.  We appreciate any amount of time you can contribute because running a successful club takes many hands, especially when it’s a brand new club.  If you would like to be at the forefront of making this club happen as a contributing member we welcome the assistance and expertise you can share.  Please see below ways to get involved.  Reach out to us via email (link to contact page) if you have any special skills or ideas on ways you can get involved."
+                smallText="Time is our most valued asset.  We appreciate any amount of time you can contribute because running a successful club takes many hands, especially when it’s a brand new club.  If you would like to be at the forefront of making this club happen as a contributing member we welcome the assistance and expertise you can share.  Please see below ways to get involved.  Reach out to us via our contact form if you have any special skills or ideas on ways you can get involved."
                 buttonUrl="/contact"
                 buttonLabel="Get in Touch"
             />
@@ -79,19 +79,20 @@ export default function Events() {
                         For our members that have some open space (small or
                         large) and would like to grow some dahlias for the club.
                         The club will buy and supply the tubers. The partner
-                        grower grows and maintains the plants and get the cut
-                        flowers through the seas to do as they wish. Then at the
-                        end of the season the club gets the clubs of tubers
-                        back. Each grower determines how many they can grow for
-                        the club. Having the tuberis a big source of funding for
-                        the club’s programs through the year.
+                        grower grows and maintains the plants and keeps the cut
+                        flowers through the season to do as they wish. Then at
+                        the end of the season the club gets the clumps of tubers
+                        back. Each grower determines how many they would like to
+                        grow for the club. Growing dahlias for tubers each
+                        season is a major source of funding for the club’s
+                        programs through the year.
                     </p>
-                    <Link href="#">
+                    <Link href="/contact">
                         <a
                             className="button"
-                            title="Apply as a Growing Partner"
+                            title="Use Our Contact Form for More Info"
                         >
-                            Apply as a Growing Partner
+                            Use Our Contact Form for More Info
                         </a>
                     </Link>
                 </CompactText>

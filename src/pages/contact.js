@@ -11,7 +11,10 @@ import IconIG from '../public/icon-ig.svg'
 
 export default function Contact() {
     const [topic, setTopic] = useState('')
-    // const [isOther, setIsOther] = useState(false)
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
+    const [otherTopic, setOtherTopic] = useState('')
 
     const isOther = () => {
         return topic === 'other'
@@ -40,7 +43,9 @@ export default function Contact() {
                     type="text"
                     name={props.name}
                     required={props.required}
-                ></input>
+                    onChange={props.onChange}
+                    value={props.value}
+                />
             </fieldset>
         )
     }
@@ -64,10 +69,18 @@ export default function Contact() {
             <Hero title="Contact Us" image="/garden.jpg" />
             <CompactTextWrapper>
                 <CompactText>
-                    <h3>Want to get more involved in Y.D.S.?</h3>
+                    <h3>
+                        Have questions, ideas or would like to get involved?
+                    </h3>
                     <p>
-                        Get in touch, we'd love to talk about opportunities to
-                        help with meetings, newsletters, garden tours and more
+                        Are you new to growing dahlias and have some questions?
+                        The best way to learn is by becoming a member.
+                    </p>
+                    <p>
+                        It takes a village to run a club and if you have a
+                        little time please reach out to us because we would
+                        greatly appreciate any time you have to support the
+                        club.
                     </p>
                     <Link href="http://instagram.com/yankeedahliasociety">
                         <a
@@ -89,17 +102,27 @@ export default function Contact() {
                     </Link>
                 </CompactText>
                 <CompactText>
-                    <h3>Contact form</h3>
+                    <h3>Contact Us</h3>
                     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeHRwqdeRYp6EOO4SEQpKQTHIYFwxb81mQi6HkLtPTp5RTUBw/formResponse">
                         <TextInput
                             label="Email Address"
                             name="entry.1132014782"
                             required={true}
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                        />
+                        <TextInput
+                            label="Phone Number"
+                            name="entry.537002206"
+                            onChange={(e) => setPhone(e.target.value)}
+                            value={phone}
                         />
                         <TextInput
                             label="Your Name"
                             name="entry.605890569"
                             required={true}
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
                         />
                         <fieldset>
                             <label>
