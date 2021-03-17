@@ -21,7 +21,7 @@ export default function Page(props) {
                 <meta
                     property="og:image"
                     key="og:image"
-                    content={getUrl('/android-chrome-192x192.png')}
+                    content={getUrl('/dividing-dahlias.png')}
                 />
             </Head>
             <main className={`page__body ${props.backgroundClass}`}>
