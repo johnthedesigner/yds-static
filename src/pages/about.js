@@ -14,21 +14,34 @@ export default function About() {
                     image="/purple-flowers.jpg"
                 />
                 <Pingpong side="left" image="/misty-carol.jpg">
-                    <h3>YDS Founders Misty & Carol</h3>
+                    <h3>Our Background</h3>
                     <p>
                         Hi, we’re Misty and Carol, two friends who met growing
                         dahlias. So, when two friends who love dahlias want to
                         make other new friends who also love dahlias, they start
                         a club!
                     </p>
-                </Pingpong>
-                <Pingpong side="right" image="/garden.jpg">
-                    <h3>Our Vision for YDS</h3>
                     <p>
                         We had a vision of creating a fun space where people who
                         love dahlias could gather and connect, in person and
                         through social media, to learn, have fun, and enjoy
                         growing dahlias together.
+                    </p>
+                </Pingpong>
+                <Pingpong side="right" image="/garden.jpg">
+                    <h3>Member of the American Dahlia Society</h3>
+                    <p>
+                        Yankee Dahlia Society is a proud member of the American
+                        Dahlia Society. Since 1915 the American Dahlia Society
+                        has been made up of local chapters around the United
+                        States and Canada. Today over 70 clubs are affiliated
+                        with ADS and their mission to stimulate interest while
+                        promoting the culture and the development of the dahlia.
+                        YDS looks forward to participating with ADS and the
+                        dahlia club community to enrich and share our dahlia
+                        knowledge and connect with growers across the country.
+                        We encourage our members to also join ADS. Learn more
+                        about ADS
                     </p>
                 </Pingpong>
                 <Bumper

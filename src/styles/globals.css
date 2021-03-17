@@ -8,7 +8,7 @@ body {
     /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
     font-family: 'Newsreader', serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #3d4549;
 }
 
@@ -147,6 +147,12 @@ button[type='submit'] {
 .required-footnote {
     color: #c65a60;
     font-size: 1rem;
+}
+
+.form-divider {
+    height: 1px;
+    border: none;
+    background: #ddd;
 }
 
 /* Page Styles */

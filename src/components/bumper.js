@@ -12,10 +12,27 @@ const BumperLink = (props) => {
     }
 }
 
+const BumperText = (props) => {
+    if (props.text) {
+        return <h3>{props.text}</h3>
+    } else {
+        return null
+    }
+}
+
+const BumperSmallText = (props) => {
+    if (props.text) {
+        return <p>{props.text}</p>
+    } else {
+        return null
+    }
+}
+
 const Bumper = (props) => {
     return (
         <div className="bumper">
-            <h3>{props.text}</h3>
+            <BumperText text={props.text} />
+            <BumperSmallText text={props.smallText} />
             <BumperLink
                 buttonUrl={props.buttonUrl}
                 buttonLabel={props.buttonLabel}

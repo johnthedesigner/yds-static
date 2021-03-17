@@ -1,10 +1,9 @@
-import Link from 'next/link'
-
 import Page from '../components/page'
 import Hero from '../components/hero'
-import ImageList from '../components/imageList'
 import Bumper from '../components/bumper'
 import pages from '../pages.json'
+import { CompactTextWrapper, CompactText } from '../components/compactText'
+import Link from 'next/link'
 
 const Event = (props) => {
     return (
@@ -30,9 +29,16 @@ export default function Events() {
             <Hero title="Meetings & Events" image="/garden.jpg" />
             <Bumper text="Club meetings will typically be held on the 1st Sunday of the month.  During the dahlia blooming season we will hold a few extra events." />
             <Event
+                date="April 11, 2021"
+                time="Time TBD"
+                name="April Zoom Meeting"
+                description="Our first meeting. Dahlia Q&A, a chance to get to meet each other and talk about cuttings."
+                location="Virtual Meeting (Zoom)"
+            />
+            <Event
                 date="May 30, 2021"
                 time="Time TBD"
-                name="Our First Meeting!"
+                name="Our First In-Person Meeting!"
                 description="Our very first in person meeting is
                     scheduled on Sunday, May 30, 2021 at Maple Brook Farmstead
                     in Sterling, MA. What a better way to spend your memorial
@@ -60,16 +66,26 @@ export default function Events() {
                 description="Agenda TBD"
                 location="Member's Home (TBD)"
             />
-            <Bumper
-                text="Discover more ways to participate in YDS events & more."
-                buttonUrl="/get-involved"
-                buttonLabel="How to get more involved"
-            />
-            <Bumper
-                text="Become a member to attend meetings & events"
-                buttonUrl="/membership"
-                buttonLabel="Learn About Memberships"
-            />
+            <CompactTextWrapper>
+                <CompactText>
+                    <h3>
+                        Become a member to attend meetings & events and much
+                        more!
+                    </h3>
+                    <Link href="/membership">
+                        <a className="button">Learn About Memberships</a>
+                    </Link>
+                </CompactText>
+                <CompactText>
+                    <h3>
+                        Interested in membership and want to try out a meeting?
+                        Drop us a line through the contact form.
+                    </h3>
+                    <Link href="/contact">
+                        <a className="button">Let us know to expect you</a>
+                    </Link>
+                </CompactText>
+            </CompactTextWrapper>
         </Page>
     )
 }

@@ -2,10 +2,7 @@ import { useState } from 'react'
 import Page from '../../components/page'
 import pages from '../../pages.json'
 import Hero from '../../components/hero'
-import Bumper from '../../components/bumper'
 import { CompactTextWrapper, CompactText } from '../../components/compactText'
-import { set } from 'lodash'
-import { loadGetInitialProps } from 'next/dist/next-server/lib/utils'
 
 export default function Contact() {
     // const [base, setBase] = useState(44)
@@ -27,6 +24,12 @@ export default function Contact() {
             itemName += `, Donation Amount: ${donation}`
         }
         return itemName
+    }
+
+    const getMembershipText = () => {
+        if (membershipType == 'individual') {
+            return <p>If</p>
+        }
     }
 
     const dollarize = (value) => `$${value}.00`
@@ -68,11 +71,10 @@ export default function Contact() {
                     <p>
                         It’s always a good time to join. Sign up today and have
                         an extended membership for 2021. Start receiving emails
-                        and join us as we launch. Our annual membership
-                        traditionally runs from August 1, 2021 through July 31,
-                        2022, but we are including the first few months as we
-                        get started. In the meantime, we invite everyone to
-                        participate.
+                        and join us as we launch. Our annual membership runs
+                        from August 1 through July 31, but we are including the
+                        first few months as we get started. In the meantime, we
+                        invite everyone to participate.
                     </p>
                 </CompactText>
                 <CompactText>
@@ -92,6 +94,12 @@ export default function Contact() {
                             </option>
                         </select>
                     </fieldset>
+                    <p>
+                        If you are the owner or representative of a dahlia or
+                        home gardening business, you must choose a business
+                        membership.
+                    </p>
+                    <hr className="form-divider" />
                     <fieldset>
                         <p>
                             Help us hit the ground running with an extra

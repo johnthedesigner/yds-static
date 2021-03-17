@@ -49,7 +49,7 @@ export default function Contact() {
         if (isOther()) {
             return (
                 <TextInput
-                    label="If other, what category?"
+                    label="If other, what subject?"
                     name="entry.389562223"
                     required={true}
                 />
@@ -102,23 +102,46 @@ export default function Contact() {
                             required={true}
                         />
                         <fieldset>
-                            <label>What are you contacting us about?</label>
+                            <label>
+                                What are you contacting us about?
+                                <RequiredMark />
+                            </label>
                             <select
                                 onChange={(e) => setTopic(e.target.value)}
                                 value={topic}
                                 name="entry.1748743079"
+                                required="true"
                             >
                                 <option value="">Select an option</option>
-                                <option value="article">
-                                    Newsletter article
+                                <option value="Membership Question">
+                                    Membership Question
+                                </option>
+                                <option value="Growing Partnership">
+                                    Growing Partnership
+                                </option>
+                                <option value="Getting Involved">
+                                    Getting Involved
+                                </option>
+                                <option value="Dahlia Questions">
+                                    Dahlia Questions
+                                </option>
+                                <option value="Try Out a Meeting">
+                                    Try Out a Meeting
+                                </option>
+                                <option value="Tuber Sale">Tuber Sale</option>
+                                <option value="Club Idea/Feedback">
+                                    Club Idea/Feedback
                                 </option>
                                 <option value="other">Other</option>
                             </select>
                         </fieldset>
                         <OtherFormField />
                         <fieldset>
-                            <label>Your message</label>
-                            <textarea name="entry.84551917" />
+                            <label>
+                                Your message
+                                <RequiredMark />
+                            </label>
+                            <textarea required name="entry.84551917" />
                         </fieldset>
                         <button className="button" type="submit">
                             Submit

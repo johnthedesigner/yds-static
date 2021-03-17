@@ -63,8 +63,11 @@ export default function Membership() {
                         Are you interested in learning more about dahlias and
                         curious about joining a local dahlia club? We welcome
                         you to join us for your first two meetings before you
-                        decide to take the plunge and join the club. Please
-                        simply sign up so we know you are coming!
+                        decide to take the plunge and join the club. Please{' '}
+                        <Link href="/contact">
+                            <a>drop us a line through the contact form</a>
+                        </Link>{' '}
+                        so we know you are coming!
                     </p>
                     <Link href="/events">
                         <a className="button" title="Explore Meetings & Events">

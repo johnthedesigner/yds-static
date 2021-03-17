@@ -15,6 +15,7 @@ export default function Events() {
             />
             <Bumper
                 text="Want to get more involved in Y.D.S.? Get in touch, we'd love to talk about opportunities to help with meetings, newsletters, garden tours and more"
+                smallText="Time is our most valued asset.  We appreciate any amount of time you can contribute because running a successful club takes many hands, especially when it’s a brand new club.  If you would like to be at the forefront of making this club happen as a contributing member we welcome the assistance and expertise you can share.  Please see below ways to get involved.  Reach out to us via email (link to contact page) if you have any special skills or ideas on ways you can get involved."
                 buttonUrl="/contact"
                 buttonLabel="Get in Touch"
             />

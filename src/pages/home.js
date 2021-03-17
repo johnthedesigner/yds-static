@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import Page from '../components/page'
 import pages from '../pages.json'
 import Hero from '../components/hero'
