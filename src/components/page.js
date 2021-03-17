@@ -21,7 +21,7 @@ export default function Page(props) {
                 <meta
                     property="og:image"
                     key="og:image"
-                    content={getUrl('/dividing-dahlias.png')}
+                    content={getUrl('/dividing-dahlias.jpg')}
                 />
             </Head>
             <main className={`page__body ${props.backgroundClass}`}>
