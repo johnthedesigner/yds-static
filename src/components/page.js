@@ -34,33 +34,35 @@ export default function Page(props) {
                     <ul className="footer__menu">
                         <li className="footer__menu-item">
                             <Link href="/home">
-                                <a title="Home | Yankee Dahlia Society">Home</a>
+                                <a title="Home | Yankee Dahlia Society, New England">
+                                    Home
+                                </a>
                             </Link>
                         </li>
                         <li className="footer__menu-item">
                             <Link href="/membership/">
-                                <a title="Membership | Yankee Dahlia Society">
+                                <a title="Membership | Yankee Dahlia Society, New England">
                                     Membership
                                 </a>
                             </Link>
                         </li>
                         <li className="footer__menu-item">
                             <Link href="/events/">
-                                <a title="Events | Yankee Dahlia Society">
+                                <a title="Events | Yankee Dahlia Society, New England">
                                     Events
                                 </a>
                             </Link>
                         </li>
                         <li className="footer__menu-item">
                             <Link href="/tubers/">
-                                <a title="Our Tubers | Yankee Dahlia Society">
+                                <a title="Our Tubers | Yankee Dahlia Society, New England">
                                     Our Tubers
                                 </a>
                             </Link>
                         </li>
                         <li className="footer__menu-item">
                             <Link href="/about/">
-                                <a title="About Us | Yankee Dahlia Society">
+                                <a title="About Us | Yankee Dahlia Society, New England">
                                     About Us
                                 </a>
                             </Link>

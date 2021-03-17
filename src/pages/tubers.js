@@ -10,7 +10,11 @@ export default function Events() {
         <Page page={pages.tubers}>
             <div className={styles.tubers__body}>
                 <Hero title="Our Tubers" image="/dividing-dahlias.jpg" />
-                <Pingpong side="left" image="/tubers.jpg">
+                <Pingpong
+                    side="left"
+                    image="/tubers.jpg"
+                    imageAlt="Dahlia tubers ready to be divided"
+                >
                     <h3>We need tubers and your support!</h3>
                     <p>
                         Have you divided tubers and have what you need for your
@@ -44,8 +48,12 @@ export default function Events() {
                         the end of the season.
                     </p>
 
-                    <a href="#" className="button">
-                        Click me
+                    <a
+                        href="#"
+                        className="button"
+                        title="Contact Us About Tuber Sales"
+                    >
+                        Contact Us About Tuber Sales
                     </a>
                 </Pingpong>
                 <Bumper

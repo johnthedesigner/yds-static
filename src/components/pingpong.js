@@ -10,6 +10,7 @@ const Pingpong = (props) => {
                     src={props.image}
                     width={props.ratioWidth || 1}
                     height={props.ratioHeight || 1}
+                    alt={props.imageAlt}
                 />
             </div>
             <div className="pingpong__text">{props.children}</div>

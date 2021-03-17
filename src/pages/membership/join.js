@@ -79,8 +79,11 @@ export default function Contact() {
                 </CompactText>
                 <CompactText>
                     <fieldset>
-                        <label>Select Membership Type</label>
+                        <label for="membership_type">
+                            Select Membership Type
+                        </label>
                         <select
+                            id="membership_type"
                             name="membership_type"
                             onChange={(e) => {
                                 setMembershipType(e.target.value)
@@ -108,17 +111,20 @@ export default function Contact() {
                             receive a special gift of appreciation.
                         </p>
                         <input
+                            id="include_donation"
+                            name="include_donation"
                             type="checkbox"
                             value={includeDonation}
                             onChange={() =>
                                 setIncludeDonation(!includeDonation)
                             }
                         />
-                        <label className="inline-label">
+                        <label className="inline-label" for="include_donation">
                             Include donation?
                         </label>
-                        <label>Donation Amount</label>
+                        <label for="donation_amount">Donation Amount</label>
                         <input
+                            id="donation_amount"
                             type="text"
                             value={donation}
                             onChange={(e) => setDonation(1 * e.target.value)}

@@ -87,7 +87,12 @@ export default function Events() {
                         the club’s programs through the year.
                     </p>
                     <Link href="#">
-                        <a className="button">Apply as a Growing Partner</a>
+                        <a
+                            className="button"
+                            title="Apply as a Growing Partner"
+                        >
+                            Apply as a Growing Partner
+                        </a>
                     </Link>
                 </CompactText>
             </CompactTextWrapper>

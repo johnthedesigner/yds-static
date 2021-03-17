@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 
 import Page from '../components/page'
 import pages from '../pages.json'
@@ -20,6 +21,7 @@ export default function Home() {
                 <Pingpong
                     side="left"
                     image="planting-dahlias.jpg"
+                    imageAlt="A garden with rows of dahlias being planted"
                     ratioWidth={1}
                     ratioHeight={1.5}
                 >
@@ -32,7 +34,12 @@ export default function Home() {
                         meeting!
                     </p>
                     <Link href="/membership">
-                        <a className="button">Find out more</a>
+                        <a
+                            className="button"
+                            title="Find out more about YDS memberships"
+                        >
+                            Find out more
+                        </a>
                     </Link>
                     <h3>Come to a Meeting</h3>
                     <p>
@@ -40,7 +47,12 @@ export default function Home() {
                         first meetings soon.
                     </p>
                     <Link href="/meetings">
-                        <a className="button">Meeting Calendar</a>
+                        <a
+                            className="button"
+                            title="Yankee Dahlia Society Meeting Calendar"
+                        >
+                            Meeting Calendar
+                        </a>
                     </Link>
                 </Pingpong>
                 <Bumper

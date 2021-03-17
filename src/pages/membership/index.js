@@ -12,18 +12,12 @@ import styles from '../../styles/membership.module.css'
 export default function Membership() {
     return (
         <Page page={pages.membership} backgroundClass="page__body--flower4">
-            <Head>
-                <meta
-                    property="og:image"
-                    key="og:image"
-                    content={getUrl('/android-chrome-512x512.png')}
-                />
-            </Head>
             <div className={styles.home__body}>
                 <Hero title="Memberships" image="/flowers.jpg" />
                 <Pingpong
                     side="left"
                     image="/digging-tubers.jpg"
+                    imageAlt="Dahlia plants being dug up with a pitchfork"
                     ratioWidth="1"
                     ratioHeight="1"
                 >
@@ -54,10 +48,16 @@ export default function Membership() {
                         hands-on learning about all things dahlias.
                     </p>
                     <Link href="/membership/join">
-                        <a className="button">Join YDS Today!</a>
+                        <a className="button" title="Membership Signup Page">
+                            Join YDS Today!
+                        </a>
                     </Link>
                 </Pingpong>
-                <Pingpong side="right" image="/root-ball.jpg">
+                <Pingpong
+                    side="right"
+                    image="/root-ball.jpg"
+                    imageAlt="Dahlia tubers ready to be divided"
+                >
                     <h3>Visitors Welcome!</h3>
                     <p>
                         Are you interested in learning more about dahlias and
@@ -65,7 +65,9 @@ export default function Membership() {
                         you to join us for your first two meetings before you
                         decide to take the plunge and join the club. Please{' '}
                         <Link href="/contact">
-                            <a>drop us a line through the contact form</a>
+                            <a title="Contact us">
+                                drop us a line through the contact form
+                            </a>
                         </Link>{' '}
                         so we know you are coming!
                     </p>

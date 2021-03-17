@@ -13,7 +13,11 @@ export default function About() {
                     title="About Yankee Dahlia Society"
                     image="/purple-flowers.jpg"
                 />
-                <Pingpong side="left" image="/misty-carol.jpg">
+                <Pingpong
+                    side="left"
+                    image="/misty-carol.jpg"
+                    imageAlt="Misty and Carol, founders of Yankee Dahlia Society"
+                >
                     <h3>Our Background</h3>
                     <p>
                         Hi, we’re Misty and Carol, two friends who met growing
@@ -28,7 +32,11 @@ export default function About() {
                         growing dahlias together.
                     </p>
                 </Pingpong>
-                <Pingpong side="right" image="/garden.jpg">
+                <Pingpong
+                    side="right"
+                    image="/garden.jpg"
+                    imageAlt="A garden full of dahlias"
+                >
                     <h3>Member of the American Dahlia Society</h3>
                     <p>
                         Yankee Dahlia Society is a proud member of the American

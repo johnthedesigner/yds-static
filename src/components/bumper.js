@@ -4,7 +4,9 @@ const BumperLink = (props) => {
     if (props.buttonUrl) {
         return (
             <Link href={props.buttonUrl}>
-                <a className="button">{props.buttonLabel}</a>
+                <a className="button" title={props.buttonLabel}>
+                    {props.buttonLabel}
+                </a>
             </Link>
         )
     } else {
