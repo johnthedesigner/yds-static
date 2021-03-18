@@ -28,7 +28,7 @@ export default function Contact() {
 
                 <input type="hidden" name="amount" value={donation} />
 
-                <label for="donation_amount">Donation Amount</label>
+                <label htmlFor="donation_amount">Donation Amount</label>
                 <div className="donation-form__field-wrapper">
                     <input
                         className="donation-form__amount-input"
