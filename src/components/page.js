@@ -7,6 +7,7 @@ import Navbar from '../components/navbar'
 import FooterLogo from '../public/logo-footer.svg'
 import IconFB from '../public/icon-fb.svg'
 import IconIG from '../public/icon-ig.svg'
+import Donate from '../components/donate'
 
 export default function Page(props) {
     return (
@@ -88,6 +89,9 @@ export default function Page(props) {
                             </Link>
                         </li>
                     </ul>
+                    <div className="donation-form__wrapper">
+                        <Donate />
+                    </div>
                 </div>
                 <div className="footer__bottom">
                     <p className="footer__legal-text">

@@ -196,6 +196,7 @@ button[type='submit'] {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex: 1;
 }
 
 .footer__menu-item {
@@ -215,6 +216,29 @@ button[type='submit'] {
     font-size: 0.75rem;
     text-align: center;
     margin: 1rem 2rem;
+}
+
+.donation-form__wrapper {
+    width: 30rem;
+    margin: 0 2rem 4rem;
+}
+
+.donation-form__wrapper h3 {
+    margin: 0;
+}
+
+.donation-form__field-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.donation-form__amount-input {
+    flex: 1;
+    margin: 0.5rem 1rem 0 0;
+}
+
+button[type='submit'].donation-form__submit-button {
+    margin-top: 0;
 }
 
 /* MOBILE NAV MENU */
