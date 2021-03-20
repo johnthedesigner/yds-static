@@ -15,7 +15,18 @@ export default function Home() {
                 height="40vh"
             />
             <div className="bumper">
-                <h3>Website under construction. Stay tuned.</h3>
+                <h3>
+                    YankeeDahliaSocity.com launches Sunday March 21, 2021, the
+                    first day of spring!
+                </h3>
+                <h3>
+                    Celebrate spring and the opening of our 2021 member
+                    registration.
+                </h3>
+                <h3>
+                    Become a member just in time for our very first meeting on
+                    April 11, 2021
+                </h3>
                 <Link href="http://instagram.com/yankeedahliasociety">
                     <a
                         className="footer__social-icon"
