@@ -15,10 +15,7 @@ export default function Home() {
                 height="40vh"
             />
             <div className="bumper">
-                <h3>
-                    YankeeDahliaSocity.com launches Sunday March 21, 2021, the
-                    first day of spring!
-                </h3>
+                <h3>YankeeDahliaSocity.com launches Sunday March 21, 2021!</h3>
                 <h3>
                     Celebrate spring and the opening of our 2021 member
                     registration.
