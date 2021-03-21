@@ -4,7 +4,7 @@ import pages from '../../pages.json'
 import Hero from '../../components/hero'
 import { CompactTextWrapper, CompactText } from '../../components/compactText'
 
-export default function Contact() {
+export default function Join() {
     // const [base, setBase] = useState(44)
     const [membershipType, setMembershipType] = useState('individual')
     const [donation, setDonation] = useState(25)
@@ -63,7 +63,7 @@ export default function Contact() {
     }
 
     return (
-        <Page page={pages.contact} backgroundClass="page__body--flower1">
+        <Page page={pages.join} backgroundClass="page__body--flower1">
             <Hero title="Join Yankee Dahlia Society" image="/flowers.jpg" />
             <CompactTextWrapper>
                 <CompactText>

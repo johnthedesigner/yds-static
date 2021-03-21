@@ -23,6 +23,14 @@
         "inMenu": true,
         "inSitemap": true
     },
+    "join": {
+        "label": "Join",
+        "title": "Membership Registration | Yankee Dahlia Society, New England",
+        "description": "Become a member of Yankee Dahlia Society to attend meetings, classes and garden tours.",
+        "path": "/membership/join/",
+        "inMenu": false,
+        "inSitemap": true
+    },
     "getInvolved": {
         "label": "Get Involved",
         "title": "Get Involved | Yankee Dahlia Society, New England",
