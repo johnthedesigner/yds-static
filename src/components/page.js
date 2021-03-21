@@ -34,7 +34,7 @@ export default function Page(props) {
                     <FooterLogo />
                     <ul className="footer__menu">
                         <li className="footer__menu-item">
-                            <Link href="/home">
+                            <Link href="/">
                                 <a title="Home | Yankee Dahlia Society, New England">
                                     Home
                                 </a>

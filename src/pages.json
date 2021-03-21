@@ -5,15 +5,15 @@
         "description": "Promoting dahlia exhibition, hybridization, and education",
         "path": "/",
         "inMenu": false,
-        "inSitemap": true
+        "inSitemap": false
     },
     "home": {
         "label": "Home",
         "title": "Home | Yankee Dahlia Society, New England",
         "description": "A New England dahlia club based in Wocester and Middlesex county in Massachusetts. We invite dahlia growers all throughout the New England area. Our club is a proud member of the American Dahlia Society",
-        "path": "/home",
+        "path": "/",
         "inMenu": true,
-        "inSitemap": false
+        "inSitemap": true
     },
     "membership": {
         "label": "Membership",
@@ -21,7 +21,7 @@
         "description": "Become a member of Yankee Dahlia Society to attend meetings, classes and garden tours.",
         "path": "/membership",
         "inMenu": true,
-        "inSitemap": false
+        "inSitemap": true
     },
     "getInvolved": {
         "label": "Get Involved",
@@ -29,7 +29,7 @@
         "description": "Get more involved with Yankee Dahlia Society, volunteer, let us tour your garden. There are plenty of fun ways to get more involved.",
         "path": "/get-involved",
         "inMenu": true,
-        "inSitemap": false
+        "inSitemap": true
     },
     "meetings": {
         "label": "Meetings",
@@ -37,7 +37,7 @@
         "description": "Find out when we are having our next meeting, event or garden tour and plan ahead to join in on the fun.",
         "path": "/meetings",
         "inMenu": true,
-        "inSitemap": false
+        "inSitemap": true
     },
     "tubers": {
         "label": "Our Tubers",
@@ -45,7 +45,7 @@
         "description": "Find out about our annual tuber sales and tuber swaps. Get some of your favorite dahlia varieties and help to support Yankee Dahlia Society at the same time",
         "path": "/tubers",
         "inMenu": true,
-        "inSitemap": false
+        "inSitemap": true
     },
     "about": {
         "label": "About Us",
@@ -53,7 +53,7 @@
         "description": "We had a vision of creating a fun space where people who love dahlias could gather and connect, in person and through social media, to learn, have fun, and enjoy growing dahlias together.",
         "path": "/about",
         "inMenu": true,
-        "inSitemap": false
+        "inSitemap": true
     },
     "contact": {
         "label": "Contact Us",
@@ -61,6 +61,6 @@
         "description": "Get in touch with Yankee Dahlia Society. Find us on Instagram or Facebook, ask dahlia growing questions or just let us know you're coming to a meeting.",
         "path": "/contact",
         "inMenu": true,
-        "inSitemap": false
+        "inSitemap": true
     }
 }
