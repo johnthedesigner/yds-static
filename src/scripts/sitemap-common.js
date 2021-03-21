@@ -19,7 +19,7 @@ const formatted = (sitemap) => prettier.format(sitemap, { parser: 'html' })
         if (page.inSitemap) {
             return `
           <url>
-            <loc>${DOMAIN}${page.url}</loc>
+            <loc>${DOMAIN}${page.path}</loc>
             <lastmod>${getDate}</lastmod>
           </url>
         `
