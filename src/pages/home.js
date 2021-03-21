@@ -41,10 +41,11 @@ export default function Home() {
                             Find out more
                         </a>
                     </Link>
-                    <h3>Come to a Meeting</h3>
+                    <h3>Save the Date: Sunday, April 11, 2021</h3>
                     <p>
-                        Spring is just around the corner and we'll be having our
-                        first meetings soon.
+                        Be sure to mark your calendar to join us for our very
+                        first meeting. It will be a virtual meeting. Stay tuned
+                        for more details.
                     </p>
                     <Link href="/meetings">
                         <a
