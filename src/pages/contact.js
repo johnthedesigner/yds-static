@@ -66,7 +66,7 @@ export default function Contact() {
 
     return (
         <Page page={pages.contact} backgroundClass="page__body--flower1">
-            <Hero title="Contact Us" image="/garden.jpg" />
+            <Hero title="Contact Us" image="/macro-dahlia.jpg" />
             <CompactTextWrapper>
                 <CompactText>
                     <h3>

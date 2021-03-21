@@ -13,7 +13,7 @@ export default function Membership() {
     return (
         <Page page={pages.membership} backgroundClass="page__body--flower4">
             <div className={styles.home__body}>
-                <Hero title="Memberships" image="/flowers.jpg" />
+                <Hero title="Membership" image="/flowers.jpg" />
                 <Pingpong
                     side="left"
                     image="/digging-tubers.jpg"
@@ -25,14 +25,14 @@ export default function Membership() {
                         <b>We want you!</b> for Yankee Dahlia Society
                     </h3>
                     <p>
-                        We are a dahlia club based in Wocester and Middlesex
-                        county in Massachusetts and invite dahlia growers all
-                        throughout the New England area. Our club is a proud
-                        member of the American Dahlia Society, grateful that
-                        they support research and education about our favorite
-                        flower along with connecting and supporting dahlia clubs
-                        and dahlia growers across the country and around the
-                        world.
+                        We are a dahlia club based in Worcester and Middlesex
+                        counties in Massachusetts and invite dahlia growers all
+                        throughout the New England area and beyond. Our club is
+                        a proud member of the American Dahlia Society, grateful
+                        that they support research and education about our
+                        favorite flower along with connecting and supporting
+                        dahlia clubs and dahlia growers across the country and
+                        around the world.
                     </p>
                     <p>
                         We would love to get to know you. Whether you are new to
@@ -43,13 +43,14 @@ export default function Membership() {
                         showing dahlias then join our club!
                     </p>
                     <p>
-                        We will have monthly emails, member meetings, garden
-                        tours, presentations, and lots of opportunities for
-                        hands-on learning about all things dahlias.
+                        We will have monthly emails newsletters, member
+                        meetings, garden tours, presentations, and lots of
+                        opportunities for hands-on learning about all things
+                        dahlias.
                     </p>
                     <Link href="/membership/join">
                         <a className="button" title="Membership Signup Page">
-                            Join YDS Today!
+                            Join Y.D.S. Today!
                         </a>
                     </Link>
                 </Pingpong>
@@ -71,7 +72,7 @@ export default function Membership() {
                         </Link>{' '}
                         so we know you are coming!
                     </p>
-                    <Link href="/events">
+                    <Link href="/meetings">
                         <a className="button" title="Explore Meetings & Events">
                             Explore Meetings & Events
                         </a>

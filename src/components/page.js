@@ -48,9 +48,9 @@ export default function Page(props) {
                             </Link>
                         </li>
                         <li className="footer__menu-item">
-                            <Link href="/events/">
-                                <a title="Events | Yankee Dahlia Society, New England">
-                                    Events
+                            <Link href="/meetings/">
+                                <a title="Meetings | Yankee Dahlia Society, New England">
+                                    Meetings
                                 </a>
                             </Link>
                         </li>

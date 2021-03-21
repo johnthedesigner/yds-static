@@ -11,8 +11,8 @@ export default function Contact() {
     const [includeDonation, setIncludeDonation] = useState(false)
 
     const baseRates = {
-        business: 75,
-        individual: 40,
+        business: 50,
+        individual: 35,
     }
     const getBase = () => {
         return baseRates[membershipType]
@@ -69,12 +69,12 @@ export default function Contact() {
                 <CompactText>
                     <h3>WE WANT YOU for Yankee Dahlia Society!</h3>
                     <p>
-                        It’s always a good time to join. Sign up today and have
-                        an extended membership for 2021. Start receiving emails
-                        and join us as we launch. Our annual membership runs
-                        from August 1 through July 31, but we are including the
-                        first few months as we get started. In the meantime, we
-                        invite everyone to participate.
+                        Sign up now and receive an extended membership for your
+                        first year. Our membership year normally runs from
+                        August 1 through July 31. Join anytime between now and
+                        August 1, and your membership will remain valid through
+                        July 31, 2022. It’s a great time to join us as we
+                        launch!
                     </p>
                 </CompactText>
                 <CompactText>
@@ -90,25 +90,25 @@ export default function Contact() {
                             }}
                         >
                             <option value="individual">
-                                Individual Membership – $40.00
+                                Individual Membership – $35.00
                             </option>
                             <option value="business">
-                                Business Membership – $75.00
+                                Business Membership – $50.00
                             </option>
                         </select>
                     </fieldset>
                     <p>
-                        If you are the owner or representative of a dahlia or
-                        home gardening business, you must choose a business
-                        membership.
+                        Business memberships get extra club perks. We love
+                        promoting our members’ businesses{' '}
+                        <em>(but it’s not required)</em>.
                     </p>
                     <hr className="form-divider" />
                     <fieldset>
                         <p>
                             Help us hit the ground running with an extra
                             donation. We appreciate anything else you can give.
-                            Founder's circle donations of $25 or more will
-                            receive a special gift of appreciation.
+                            Founders Circle donations of $25 or more will
+                            receive a special token of our appreciation.
                         </p>
                         <input
                             id="include_donation"

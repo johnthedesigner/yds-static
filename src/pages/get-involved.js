@@ -9,12 +9,9 @@ import pages from '../pages.json'
 export default function Events() {
     return (
         <Page page={pages.getInvolved}>
-            <Hero
-                title="Get Involved in Yankee Dahlia Society"
-                image="/garden.jpg"
-            />
+            <Hero title="Get Involved" image="/garden.jpg" />
             <Bumper
-                text="Want to get more involved in Y.D.S.? Get in touch, we'd love to talk about opportunities to help with meetings, newsletters, garden tours and more"
+                text="Want to get more involved in Y.D.S.? Get in touch, we'd love to talk about opportunities to help with meetings, newsletters, garden tours and more."
                 smallText="Time is our most valued asset.  We appreciate any amount of time you can contribute because running a successful club takes many hands, especially when it’s a brand new club.  If you would like to be at the forefront of making this club happen as a contributing member we welcome the assistance and expertise you can share.  Please see below ways to get involved.  Reach out to us via our contact form if you have any special skills or ideas on ways you can get involved."
                 buttonUrl="/contact"
                 buttonLabel="Get in Touch"
@@ -23,10 +20,14 @@ export default function Events() {
                 <CompactText>
                     <h3>Speakers Wanted</h3>
                     <p>
-                        Over the years what is interesting as we expand and
-                        share our knowledge and experience is that every grower
-                        has a slightly different technique to staking their
-                        plants and storing their tubers.
+                        Every gardener knows that every other gardener has their
+                        own unique growing methods. We’ve all gained our own
+                        first-hand experience, learned from the mistakes we’ve
+                        made and we all have had tons of questions along the
+                        way. What we learn from each other is priceless. Our
+                        shared knowledge within the club creates friendships and
+                        makes us better dahlia growers. Reach out if you would
+                        like to share your own gardening experience with us.
                     </p>
                 </CompactText>
                 <CompactText>
@@ -45,7 +46,7 @@ export default function Events() {
                         Would you have a little extra time you can spare and
                         would like to help the to help the club at one of our
                         Growing Partner Locations (Maplebrook Farm in Sterling,
-                        MA or at Wright Locke Farm in Winchester, MA).
+                        MA or at Wright-Locke Farm in Winchester, MA).
                         Seasonally we could use some help with tasks to plant
                         tubers, stake growing plants, dig tubers or divide
                         tubers. Please reach out to let us know that you would
@@ -80,19 +81,19 @@ export default function Events() {
                         large) and would like to grow some dahlias for the club.
                         The club will buy and supply the tubers. The partner
                         grower grows and maintains the plants and keeps the cut
-                        flowers through the season to do as they wish. Then at
-                        the end of the season the club gets the clumps of tubers
-                        back. Each grower determines how many they would like to
-                        grow for the club. Growing dahlias for tubers each
-                        season is a major source of funding for the club’s
-                        programs through the year.
+                        flowers through the season to do with as they wish,
+                        while the club gets the tubers at the end of the season.
+                        Each grower determines how many they would like to grow
+                        for the club. Growing dahlias for tubers each season is
+                        a major source of funding for the club’s programs
+                        through the year.
                     </p>
                     <Link href="/contact">
                         <a
                             className="button"
-                            title="Use Our Contact Form for More Info"
+                            title="Fill Out Our Contact Form to Inquire"
                         >
-                            Use Our Contact Form for More Info
+                            Fill Out Our Contact Form to Inquire
                         </a>
                     </Link>
                 </CompactText>

@@ -48,12 +48,10 @@ export default function About() {
                         YDS looks forward to participating with ADS and the
                         dahlia club community to enrich and share our dahlia
                         knowledge and connect with growers across the country.
-                        We encourage our members to also join ADS. Learn more
-                        about ADS
                     </p>
                 </Pingpong>
                 <Bumper
-                    text="Does this sound like fun do you too?"
+                    text="Does this sound like fun to you too?"
                     buttonUrl="/membership"
                     buttonLabel="Find out more about YDS membership"
                 />

@@ -468,7 +468,7 @@ button[type='submit'].donation-form__submit-button {
     flex: 1;
     min-width: 40%;
     /* text-align: center; */
-    margin: 3rem;
+    margin: 1rem 3rem;
 }
 
 .pingpong {
@@ -534,7 +534,7 @@ button[type='submit'].donation-form__submit-button {
 .bumper {
     width: 60rem;
     max-width: 90%;
-    margin: 6rem auto;
+    margin: 4rem auto;
     text-align: center;
 }
 

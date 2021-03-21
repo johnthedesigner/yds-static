@@ -11,8 +11,10 @@ export default function Contact() {
         <div>
             <h3>Donate to Yankee Dahlia Society</h3>
             <p>
-                Help us continue to produce fun, engaging programs, talks and
-                dahlia events.
+                Help Y.D.S. get off to a good start. We hope you will consider a
+                donation to support our short-term and long-term goals. Your
+                extra support will go a long way toward bringing in interesting
+                speakers and creating workshops that are both engaging and fun.
             </p>
 
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post">

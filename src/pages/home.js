@@ -14,7 +14,7 @@ export default function Home() {
             <div className={`page--home ${styles.home__body}`}>
                 <Hero
                     title="Yankee Dahlia Society"
-                    image="/bucket.jpg"
+                    image="/purple-flowers.jpg"
                     overlay="false"
                     height="40vh"
                 />
