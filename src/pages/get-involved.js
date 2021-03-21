@@ -44,13 +44,12 @@ export default function Events() {
                     <h3>Extra Set of Hands</h3>
                     <p>
                         Would you have a little extra time you can spare and
-                        would like to help the to help the club at one of our
-                        Growing Partner Locations (Maplebrook Farm in Sterling,
-                        MA or at Wright-Locke Farm in Winchester, MA).
-                        Seasonally we could use some help with tasks to plant
-                        tubers, stake growing plants, dig tubers or divide
-                        tubers. Please reach out to let us know that you would
-                        like to help.
+                        would like to help the club at one of our Growing
+                        Partner Locations (Maplebrook Farm in Sterling, MA or at
+                        Wright-Locke Farm in Winchester, MA). Seasonally we
+                        could use some help with tasks to plant tubers, stake
+                        growing plants, dig tubers or divide tubers. Please
+                        reach out to let us know that you would like to help.
                     </p>
                 </CompactText>
                 <CompactText>
@@ -58,7 +57,7 @@ export default function Events() {
                     <p>
                         Would you have extra time to put together articles to be
                         included in our Monthly Emails. Possibly you would like
-                        to work with other sand write a column in our monthly
+                        to work with others and write a column in our monthly
                         newsletters. Ideas include:
                         <ul>
                             <li>American Dahlia Society Quarterly Bulletins</li>
@@ -74,6 +73,12 @@ export default function Events() {
                         </ul>
                     </p>
                 </CompactText>
+                <Bumper
+                    text="Reach out to inquire about opportunities to get involved"
+                    buttonUrl="/contact"
+                    buttonLabel="Get in Touch"
+                />
+
                 <CompactText>
                     <h3>Become a Growing Partner</h3>
                     <p>

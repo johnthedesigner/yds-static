@@ -43,10 +43,9 @@ export default function Membership() {
                         showing dahlias then join our club!
                     </p>
                     <p>
-                        We will have monthly emails newsletters, member
-                        meetings, garden tours, presentations, and lots of
-                        opportunities for hands-on learning about all things
-                        dahlias.
+                        We will have monthly email newsletters, member meetings,
+                        garden tours, presentations, and lots of opportunities
+                        for hands-on learning about all things dahlias.
                     </p>
                     <Link href="/membership/join">
                         <a className="button" title="Membership Signup Page">
