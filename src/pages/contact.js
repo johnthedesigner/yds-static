@@ -9,6 +9,36 @@ import { CompactTextWrapper, CompactText } from '../components/compactText'
 import IconFB from '../public/icon-fb.svg'
 import IconIG from '../public/icon-ig.svg'
 
+const RequiredMark = () => {
+    return <b className="required-mark">*</b>
+}
+
+const TextInput = (props) => {
+    let MaybeRequiredMark = (props) => {
+        if (props.required) {
+            return <RequiredMark />
+        } else {
+            return null
+        }
+    }
+
+    return (
+        <fieldset>
+            <label>
+                {props.label}
+                <MaybeRequiredMark required="props.required" />
+            </label>
+            <input
+                type="text"
+                name={props.name}
+                required={props.required}
+                onChange={props.onChange}
+                value={props.value}
+            />
+        </fieldset>
+    )
+}
+
 export default function Contact() {
     const [topic, setTopic] = useState('')
     const [name, setName] = useState('')
@@ -18,36 +48,6 @@ export default function Contact() {
 
     const isOther = () => {
         return topic === 'other'
-    }
-
-    const RequiredMark = () => {
-        return <b className="required-mark">*</b>
-    }
-
-    const TextInput = (props) => {
-        let MaybeRequiredMark = (props) => {
-            if (props.required) {
-                return <RequiredMark />
-            } else {
-                return null
-            }
-        }
-
-        return (
-            <fieldset>
-                <label>
-                    {props.label}
-                    <MaybeRequiredMark required="props.required" />
-                </label>
-                <input
-                    type="text"
-                    name={props.name}
-                    required={props.required}
-                    onChange={props.onChange}
-                    value={props.value}
-                />
-            </fieldset>
-        )
     }
 
     const OtherFormField = () => {
@@ -107,19 +107,25 @@ export default function Contact() {
                         <TextInput
                             label="Email Address"
                             name="entry.1132014782"
+                            key="entry.1132014782"
                             required={true}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) => {
+                                setEmail(e.target.value)
+                                e.preventDefault()
+                            }}
                             value={email}
                         />
                         <TextInput
                             label="Phone Number"
                             name="entry.537002206"
+                            key="entry.537002206"
                             onChange={(e) => setPhone(e.target.value)}
                             value={phone}
                         />
                         <TextInput
                             label="Your Name"
                             name="entry.605890569"
+                            key="entry.605890569"
                             required={true}
                             onChange={(e) => setName(e.target.value)}
                             value={name}
@@ -133,7 +139,7 @@ export default function Contact() {
                                 onChange={(e) => setTopic(e.target.value)}
                                 value={topic}
                                 name="entry.1748743079"
-                                required="true"
+                                required={true}
                             >
                                 <option value="">Select an option</option>
                                 <option value="Membership Question">
