@@ -24,6 +24,10 @@ export default function Page(props) {
                     key="og:image"
                     content={getUrl('/dividing-dahlias.jpg')}
                 />
+                <link
+                    rel="canonical"
+                    href={`https://yankeedahliasociety.com${props.page.path}`}
+                />
             </Head>
             <main className={`page__body ${props.backgroundClass}`}>
                 <Navbar currentPath={props.page.path} />
