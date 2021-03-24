@@ -9,7 +9,7 @@ console.log(pages.home.title)
 
 const getDate = new Date().toISOString()
 
-const DOMAIN = 'http://yankeedahliasociety.com'
+const DOMAIN = 'https://yankeedahliasociety.com'
 
 const formatted = (sitemap) => prettier.format(sitemap, { parser: 'html' })
 

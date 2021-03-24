@@ -5,37 +5,42 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
   <url>
-    <loc>http://yankeedahliasociety.com/</loc>
-    <lastmod>2021-03-21T17:56:24.910Z</lastmod>
+    <loc>https://yankeedahliasociety.com/</loc>
+    <lastmod>2021-03-24T12:20:02.446Z</lastmod>
   </url>
 
   <url>
-    <loc>http://yankeedahliasociety.com/membership/</loc>
-    <lastmod>2021-03-21T17:56:24.910Z</lastmod>
+    <loc>https://yankeedahliasociety.com/membership/</loc>
+    <lastmod>2021-03-24T12:20:02.446Z</lastmod>
   </url>
 
   <url>
-    <loc>http://yankeedahliasociety.com/get-involved/</loc>
-    <lastmod>2021-03-21T17:56:24.910Z</lastmod>
+    <loc>https://yankeedahliasociety.com/membership/join/</loc>
+    <lastmod>2021-03-24T12:20:02.446Z</lastmod>
   </url>
 
   <url>
-    <loc>http://yankeedahliasociety.com/meetings/</loc>
-    <lastmod>2021-03-21T17:56:24.910Z</lastmod>
+    <loc>https://yankeedahliasociety.com/get-involved/</loc>
+    <lastmod>2021-03-24T12:20:02.446Z</lastmod>
   </url>
 
   <url>
-    <loc>http://yankeedahliasociety.com/tubers/</loc>
-    <lastmod>2021-03-21T17:56:24.910Z</lastmod>
+    <loc>https://yankeedahliasociety.com/meetings/</loc>
+    <lastmod>2021-03-24T12:20:02.446Z</lastmod>
   </url>
 
   <url>
-    <loc>http://yankeedahliasociety.com/about/</loc>
-    <lastmod>2021-03-21T17:56:24.910Z</lastmod>
+    <loc>https://yankeedahliasociety.com/tubers/</loc>
+    <lastmod>2021-03-24T12:20:02.446Z</lastmod>
   </url>
 
   <url>
-    <loc>http://yankeedahliasociety.com/contact/</loc>
-    <lastmod>2021-03-21T17:56:24.910Z</lastmod>
+    <loc>https://yankeedahliasociety.com/about/</loc>
+    <lastmod>2021-03-24T12:20:02.446Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://yankeedahliasociety.com/contact/</loc>
+    <lastmod>2021-03-24T12:20:02.446Z</lastmod>
   </url>
 </urlset>
