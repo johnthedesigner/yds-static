@@ -9,5 +9,7 @@ module.exports = {
     },
     publicRuntimeConfig: {
         DOMAIN: process.env.DOMAIN,
+        SHOPIFY_DOMAIN: process.env.SHOPIFY_DOMAIN,
+        SHOPIFY_TOKEN: process.env.SHOPIFY_TOKEN,
     },
 }

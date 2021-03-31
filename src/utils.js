@@ -1,7 +1,8 @@
 import getConfig from 'next/config'
+import Client from 'shopify-buy'
 
 const { publicRuntimeConfig } = getConfig()
-const { DOMAIN } = publicRuntimeConfig
+const { DOMAIN, SHOPIFY_DOMAIN, SHOPIFY_TOKEN } = publicRuntimeConfig
 
 export const pageTitle = (segment) => {
     let fragment = 'Yankee Dahlia Society'
@@ -11,3 +12,9 @@ export const pageTitle = (segment) => {
 export const getUrl = (path) => {
     return path ? DOMAIN + path : DOMAIN
 }
+
+// Shopify Client
+export const shopify = Client.buildClient({
+    domain: SHOPIFY_DOMAIN,
+    storefrontAccessToken: SHOPIFY_TOKEN,
+})

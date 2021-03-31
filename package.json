@@ -5,5 +5,8 @@
   "main": "src/index.js",
   "repository": "https://github.com/johnthedesigner/yds.git",
   "author": "johnthedesigner <john@johnthedesigner.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "shopify-buy": "^2.11.0"
+  }
 }
