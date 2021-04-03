@@ -18,7 +18,7 @@ export default function Contact() {
             </p>
 
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input type="hidden" name="cmd" value="_xclick" />
+                <input type="hidden" name="cmd" value="_donations" />
                 <input type="hidden" name="currency_code" value="USD" />
                 <input
                     type="hidden"
