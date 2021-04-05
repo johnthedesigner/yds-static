@@ -186,6 +186,8 @@ export default function Join() {
 
                         <input type="hidden" name="t3" value="Y" />
 
+                        <input type="hidden" name="src" value={0} />
+
                         <input
                             type="hidden"
                             name="a3"
