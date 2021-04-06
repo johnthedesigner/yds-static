@@ -153,11 +153,7 @@ export default function Join() {
                         action="https://www.paypal.com/cgi-bin/webscr"
                         method="post"
                     >
-                        <input
-                            type="hidden"
-                            name="cmd"
-                            value="_xclick-subscriptions"
-                        />
+                        <input type="hidden" name="cmd" value="_xclick" />
                         <input type="hidden" name="currency_code" value="USD" />
                         <input
                             type="hidden"
@@ -176,21 +172,17 @@ export default function Join() {
                             value={includeDonation ? donation : 0}
                         />
 
+                        <input type="hidden" name="no_shipping" value="1" />
+
                         <input
                             type="hidden"
                             name="item_name"
                             value={getItemName()}
                         />
 
-                        <input type="hidden" name="p3" value={1} />
-
-                        <input type="hidden" name="t3" value="Y" />
-
-                        <input type="hidden" name="src" value={0} />
-
                         <input
                             type="hidden"
-                            name="a3"
+                            name="amount"
                             value={
                                 includeDonation
                                     ? donation + getBase()
