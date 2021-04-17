@@ -70,5 +70,13 @@
         "path": "/contact/",
         "inMenu": true,
         "inSitemap": true
+    },
+    "products": {
+        "label": "Products",
+        "title": "Products | Yankee Dahlia Society, New England",
+        "description": "Buy dahlia tubers, shirts and bags from Yankee Dahlia Society",
+        "path": "/products/",
+        "inMenu": true,
+        "inSitemap": false
     }
 }
