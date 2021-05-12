@@ -31,6 +31,127 @@ export default function Events() {
             <Hero title="Meetings" image="/colorful-arrangement.jpg" />
             <Bumper text="Club meetings will typically be held on the 1st Sunday of the month.  During the dahlia blooming season we will hold a few extra events." />
             <Event
+                date="Sunday, April 11, 2021"
+                time="11:00 am – 1:00 pm"
+                name="Talking Dahlias with Paula from Garden Bee Flower Farm"
+                description={() => {
+                    return (
+                        <span>
+                            <p>
+                                Y.D.S is thrilled to have Paula Fisher from{' '}
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    title="Garden Bee Flower Farm Website"
+                                >
+                                    {' '}
+                                    Garden Bee Flower Farm
+                                </a>
+                                , located in the Piedmont Triad of North
+                                Carolina. Paula’s background includes
+                                volunteering as a master gardener since 2015.
+                                Her flower farming started six years ago with
+                                four 100-foot beds on her newly purchased
+                                property. After attending a flower farming
+                                workshop she jumped right into the role and
+                                since then her business has expanded to 10 times
+                                that original bed space.
+                            </p>
+                            <p>
+                                Dahlias have taken the lead in what Paula really
+                                loves to grow and that has motivated her to grow
+                                over 200 varieties. The farm encompasses one
+                                acre of seasonal flowers and dahlias and
+                                produces 500-1000 dahlias weekly to a large
+                                floral industry wholesaler. She enjoys taking
+                                notes on the varieties she grows to evaluate
+                                which ones grow well in hot humid conditions.
+                            </p>
+                            <p>
+                                Paula is also a member of the American Dahlia
+                                Society and her local chapter, Carolinas Dahlia
+                                Society in NC. She awaits the day for shows to
+                                resume and looks forward to showing dahlias.
+                                Paula will take us through her journey as a
+                                flower farmer, dahlia grower and enthusiast
+                                sharing a seasonal overview, some background
+                                behind the business and tips about growing
+                                dahlias from seed, cuttings and tubers. You
+                                don’t want to miss this opportunity to meet with
+                                Paula and join us for our first club meeting.
+                            </p>
+                            <p>
+                                (Please log in at 10:45 to say hello and get
+                                settled. Meeting will start promptly at 11:00am)
+                            </p>
+                        </span>
+                    )
+                }}
+                location={() => {
+                    return (
+                        <span>
+                            Virtual Meeting (Zoom meeting info will be emailed
+                            to members)
+                        </span>
+                    )
+                }}
+            />
+            <Event
+                date="Sunday, May 16, 2021"
+                time="11:00 am – 1:00 pm"
+                name="Dahlia Questions & Conversation"
+                description={() => {
+                    return (
+                        <span>
+                            <p>
+                                Whether you are an experienced dahlia grower or
+                                are new to growing dahlias, there will always be
+                                something new to learn. Everyone has questions
+                                about dahlias, and we invite you to come and
+                                share yours! As a club, together we all have
+                                decades of collective experience to draw on to
+                                help every one of us learn more about our
+                                favorite flower and have fun doing it! For those
+                                that are newer to growing please bring your
+                                questions, for those that have more experience
+                                please join us to help each other.
+                            </p>
+                            <p>
+                                In preparation, please send in your pictures
+                                with your questions so we can share images and
+                                help answer questions during the meeting.
+                                Experienced dahlia growers, please send in your
+                                dahlia tips and pictures of your current dahlia
+                                growing update as we would love to share.
+                            </p>
+                            <p>
+                                Email
+                                <a
+                                    href="mailto:info@yankeedahliasociety.com"
+                                    target="_blank"
+                                >
+                                    info@yankeedahliasociety.com
+                                </a>
+                                <br />
+                                Subject: Dahlia Questions or Dahlia Tip
+                            </p>
+                            <p>
+                                (Please log in at 10:45 to say hello and get
+                                settled. Meeting will start promptly at 11:00am)
+                            </p>
+                        </span>
+                    )
+                }}
+                location={() => {
+                    return (
+                        <span>
+                            Virtual Meeting (Zoom meeting info will be emailed
+                            to members)
+                        </span>
+                    )
+                }}
+            />
+            <Event
                 date="Sunday, May 30, 2021"
                 time="11:00 AM – 1:00 PM"
                 name="Our First In-Person Meeting!"
