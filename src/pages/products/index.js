@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import _ from 'lodash'
 
-import Page from '../components/page'
-import Hero from '../components/hero'
-import pages from '../pages.json'
-import { shopify } from '../utils'
+import Page from '../../components/page'
+import Hero from '../../components/hero'
+import pages from '../../pages.json'
+import { getCollections, getProducts } from '../../utils'
 
 export default function Products() {
     let [products, setProducts] = useState([])
@@ -36,20 +36,20 @@ export default function Products() {
     }
 
     useEffect(async () => {
-        let allProducts = []
-        await shopify.product.fetchAll().then((fetchedProducts) => {
-            // Do something with the products
-            allProducts = fetchedProducts
-        })
+        let allProducts = await getProducts()
+        // await shopify.product.fetchAll().then((fetchedProducts) => {
+        //     // Do something with the products
+        //     allProducts = fetchedProducts
+        // })
         setProducts(allProducts)
 
-        let allCollections = []
-        await shopify.collection
-            .fetchAllWithProducts()
-            .then((fetchedCollections) => {
-                // Do something with the collections
-                allCollections = fetchedCollections
-            })
+        let allCollections = await getCollections()
+        // await shopify.collection
+        //     .fetchAllWithProducts()
+        //     .then((fetchedCollections) => {
+        //         // Do something with the collections
+        //         allCollections = fetchedCollections
+        //     })
         setCollections(sortCollections(allCollections))
     }, [])
 
