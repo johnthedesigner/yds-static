@@ -152,14 +152,14 @@ export default function Events() {
                 }}
             />
             <Event
-                date="Sunday, May 30, 2021"
-                time="11:00 AM – 1:00 PM"
+                date="RESCHEDULED – Date TBD"
+                time="Time TBD"
                 name="Our First In-Person Meeting!"
                 description={() => {
                     return (
                         <span>
-                            Our very first in-person meeting is scheduled on
-                            Sunday, May 30, 2021 at{' '}
+                            We will be announcing the rescheduled date and time
+                            for our upcoming meeting at{' '}
                             <Link href="https://www.maplebrookfarmstead.com/">
                                 <a
                                     target="_blank"
