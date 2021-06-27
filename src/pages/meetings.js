@@ -258,7 +258,7 @@ export default function Events() {
 
         if (eventsType == 'upcoming') {
             _.map(events, (event) => {
-                if (moment().isBefore(event.date)) {
+                if (moment().isBefore(moment(event.date).add(1, 'days'))) {
                     eventsToDisplay.push(event)
                 }
             })
