@@ -36,21 +36,8 @@ export default function Products() {
     }
 
     useEffect(async () => {
-        let allProducts = await getProducts()
-        // await shopify.product.fetchAll().then((fetchedProducts) => {
-        //     // Do something with the products
-        //     allProducts = fetchedProducts
-        // })
-        setProducts(allProducts)
-
-        let allCollections = await getCollections()
-        // await shopify.collection
-        //     .fetchAllWithProducts()
-        //     .then((fetchedCollections) => {
-        //         // Do something with the collections
-        //         allCollections = fetchedCollections
-        //     })
-        setCollections(sortCollections(allCollections))
+        setProducts(await getProducts())
+        setCollections(sortCollections(await getCollections()))
     }, [])
 
     return (

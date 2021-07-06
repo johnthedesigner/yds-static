@@ -1,9 +1,9 @@
 import _ from 'lodash'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import pages from '../pages.json'
-import { getUrl } from '../utils'
+import { getUrl, getCart } from '../utils'
 import Hamburger from '../public/hamburger.svg'
 import LogoMobile from '../public/logo-mobile.svg'
 import LogoDesktop from '../public/logo-desktop.svg'
@@ -16,6 +16,11 @@ export const linkClass = (currentPath, linkedPage) => {
 
 const Navbar = (props) => {
     const [menuOpen, setMenuOpen] = useState(false)
+    const [cartId, setCartId] = useState(null)
+
+    useEffect(async () => {
+        setCartId(await getCart())
+    }, [])
 
     let Links = () => {
         return _.map(pages, (page) => {
@@ -77,6 +82,19 @@ const Navbar = (props) => {
                 <ul className="navbar__list--desktop">
                     <Links />
                 </ul>
+                <span
+                    style={{
+                        fontFamily: 'sans-serif',
+                        fontSize: '.5rem',
+                        color: 'red',
+                        zIndex: '1000',
+                        position: 'absolute',
+                        top: 0,
+                        right: 0,
+                    }}
+                >
+                    CartId: {cartId}
+                </span>
             </nav>
         </div>
     )
