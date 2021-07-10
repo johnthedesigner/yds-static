@@ -1,9 +1,9 @@
-import _ from 'lodash'
+import _, { update } from 'lodash'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import pages from '../pages.json'
-import { getUrl, getCart } from '../utils'
+import { getUrl, getCart, updateLineItems } from '../utils'
 import Hamburger from '../public/hamburger.svg'
 import LogoMobile from '../public/logo-mobile.svg'
 import LogoDesktop from '../public/logo-desktop.svg'
@@ -21,6 +21,15 @@ const Navbar = (props) => {
     const [cart, setCart] = useState([])
     const [cartId, setCartId] = useState('')
     const [cartUrl, setCartUrl] = useState('')
+
+    const updateQuantity = (cart, id, quantity) => {
+        updateLineItems(
+            _.map(cart.lineItems, (item) => {
+                if (item.id === id) item.quantity = quantity
+                return { id: item.id, quantity: item.quantity }
+            })
+        )
+    }
 
     useEffect(() => {
         let updateCart = async () => {
@@ -148,10 +157,31 @@ const Navbar = (props) => {
                                 <Link
                                     href={`/products/${item.variant.product.handle}`}
                                 >
-                                    <a>
-                                        {item.title} × {item.quantity}
-                                    </a>
+                                    <a>{item.title}</a>
                                 </Link>
+                                <button
+                                    onClick={() =>
+                                        updateQuantity(
+                                            cart,
+                                            item.id,
+                                            item.quantity - 1
+                                        )
+                                    }
+                                >
+                                    -
+                                </button>
+                                {item.quantity}
+                                <button
+                                    onClick={() =>
+                                        updateQuantity(
+                                            cart,
+                                            item.id,
+                                            item.quantity + 1
+                                        )
+                                    }
+                                >
+                                    +
+                                </button>
                             </li>
                         )
                     })}

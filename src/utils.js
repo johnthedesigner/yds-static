@@ -85,7 +85,6 @@ export const addToCart = async (item) => {
 
 export const updateLineItems = async (items) => {
     let openCart = await getCart()
-
     await shopify.checkout.updateLineItems(openCart.id, items).then((cart) => {
         setCart(cart)
     })
