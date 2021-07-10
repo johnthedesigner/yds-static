@@ -34,6 +34,7 @@ export const getProducts = async () => {
     await shopify.product.fetchAll().then((fetchedProducts) => {
         products = fetchedProducts
     })
+    console.log('Get Products', products)
     return products
 }
 
@@ -47,11 +48,12 @@ export const getCollections = async () => {
     return collections
 }
 
-export const getProductById = async (id) => {
+export const getProductByHandle = async (handle) => {
     let product
-    await shopify.product.fetch(id).then((fetchedProduct) => {
+    await shopify.product.fetchByHandle(handle).then((fetchedProduct) => {
         product = fetchedProduct
     })
+    console.log('Get Product', product)
     return product
 }
 
@@ -59,10 +61,12 @@ export const getCart = async () => {
     if (localStorage) {
         let cart = JSON.parse(localStorage.getItem('cart'))
         if (cart !== null) {
+            console.log('Get Cart', cart)
             return cart
         } else {
             await shopify.checkout.create().then((cart) => {
                 setCart(cart)
+                console.log('Get Cart', cart)
                 return cart
             })
         }

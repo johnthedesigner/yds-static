@@ -145,7 +145,9 @@ const Navbar = (props) => {
                     {_.map(cart.lineItems, (item) => {
                         return (
                             <li key={item.id}>
-                                <Link href={'/'}>
+                                <Link
+                                    href={`/products/${item.variant.product.handle}`}
+                                >
                                     <a>
                                         {item.title} × {item.quantity}
                                     </a>

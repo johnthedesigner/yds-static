@@ -5,22 +5,37 @@ import _ from 'lodash'
 import Page from '../../components/page'
 import Hero from '../../components/hero'
 import pages from '../../pages.json'
-import { addToCart, shopify } from '../../utils'
+import { addToCart, getProductByHandle, getProducts } from '../../utils'
 
-export default function Product() {
+export async function getStaticProps(context) {
+    let fetchedProduct = await getProductByHandle(context.params.productHandle)
+    return {
+        props: {
+            productHandle: context.params.productHandle,
+            title: fetchedProduct.title,
+        },
+    }
+}
+
+export async function getStaticPaths() {
+    let products = await getProducts()
+
+    return {
+        paths: _.map(products, (product) => {
+            return { params: { productHandle: product.handle } }
+        }),
+        fallback: true,
+    }
+}
+
+export default function Product(props) {
+    console.log(props)
     let [product, setProduct] = useState([])
-    const router = useRouter()
-    const { productHandle } = router.query
     useEffect(async () => {
-        if (productHandle) {
-            await shopify.product
-                .fetchByHandle(productHandle)
-                .then((fetchedProduct) => {
-                    // Do something with the products
-                    setProduct(fetchedProduct)
-                })
-        }
-    })
+        let fetchedProduct = await getProductByHandle(props.productHandle)
+        console.log(fetchedProduct)
+        setProduct(fetchedProduct)
+    }, [product.title, props])
 
     const wrapItem = (id) => {
         return [
