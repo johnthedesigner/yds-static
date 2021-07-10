@@ -53,12 +53,14 @@ export default function Events() {
                     </p>
                 </CompactText>
                 <CompactText>
-                    <h3>Do you like to write articles?</h3>
-                    <p>
-                        Would you have extra time to put together articles to be
-                        included in our Monthly Emails. Possibly you would like
-                        to work with others and write a column in our monthly
-                        newsletters. Ideas include:
+                    <div>
+                        <h3>Do you like to write articles?</h3>
+                        <p>
+                            Would you have extra time to put together articles
+                            to be included in our Monthly Emails. Possibly you
+                            would like to work with others and write a column in
+                            our monthly newsletters. Ideas include:
+                        </p>
                         <ul>
                             <li>American Dahlia Society Quarterly Bulletins</li>
                             <li>
@@ -71,7 +73,7 @@ export default function Events() {
                                 </ul>
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </CompactText>
                 <Bumper
                     text="Reach out to inquire about opportunities to get involved"

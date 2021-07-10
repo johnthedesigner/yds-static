@@ -5,7 +5,7 @@ import _ from 'lodash'
 import Page from '../../components/page'
 import Hero from '../../components/hero'
 import pages from '../../pages.json'
-import { shopify } from '../../utils'
+import { addToCart, shopify } from '../../utils'
 
 export default function Product() {
     let [product, setProduct] = useState([])
@@ -22,12 +22,28 @@ export default function Product() {
         }
     })
 
+    const wrapItem = (id) => {
+        return [
+            {
+                variantId: id,
+                quantity: 2,
+            },
+        ]
+    }
+
     return (
-        <div>
+        <Page page={pages.home}>
             <Hero title="Product" image="/purple-flowers.jpg" />
             <div>
                 <h2>{product.title}</h2>
+                <button
+                    onClick={() => {
+                        addToCart(wrapItem(product.variants[0].id))
+                    }}
+                >
+                    Add to Cart
+                </button>
             </div>
-        </div>
+        </Page>
     )
 }

@@ -7,6 +7,7 @@ import { getUrl, getCart } from '../utils'
 import Hamburger from '../public/hamburger.svg'
 import LogoMobile from '../public/logo-mobile.svg'
 import LogoDesktop from '../public/logo-desktop.svg'
+import CartIcon from '../public/cart.svg'
 
 export const linkClass = (currentPath, linkedPage) => {
     return linkedPage.path === currentPath
@@ -16,14 +17,42 @@ export const linkClass = (currentPath, linkedPage) => {
 
 const Navbar = (props) => {
     const [menuOpen, setMenuOpen] = useState(false)
-    const [cartId, setCartId] = useState(null)
+    const [cartOpen, setCartOpen] = useState(true)
+    const [cart, setCart] = useState([])
+    const [cartId, setCartId] = useState('')
+    const [cartUrl, setCartUrl] = useState('')
 
-    useEffect(async () => {
-        setCartId(await getCart())
+    useEffect(() => {
+        let updateCart = async () => {
+            let openCart = await getCart()
+            setCart(openCart)
+            setCartId(openCart.id)
+            setCartUrl(openCart.webUrl)
+        }
+
+        updateCart()
+
+        window.addEventListener('storage', updateCart)
+
+        return () => {
+            window.removeEventListener('storage', updateCart)
+        }
     }, [])
 
+    let cartOverlayStyles = {
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        bottom: 0,
+        width: '25%',
+        minWidth: '300px',
+        background: 'white',
+        boxShadow: '0 0 10px rgba(0,0,0,.4)',
+        zIndex: 100,
+    }
+
     let Links = () => {
-        return _.map(pages, (page) => {
+        let navItems = _.map(pages, (page) => {
             if (page.inMenu) {
                 return (
                     <li className="navbar__item" key={page.path}>
@@ -41,6 +70,14 @@ const Navbar = (props) => {
                 return null
             }
         })
+        return [
+            ...navItems,
+            <li key="cart">
+                <span className="cart__button">
+                    <CartIcon onClick={() => setCartOpen(!cartOpen)} />
+                </span>
+            </li>,
+        ]
     }
 
     return (
@@ -92,10 +129,33 @@ const Navbar = (props) => {
                         top: 0,
                         right: 0,
                     }}
-                >
-                    CartId: {cartId}
-                </span>
+                ></span>
             </nav>
+            <div
+                className="cart__overlay"
+                style={{
+                    ...cartOverlayStyles,
+                    pointerEvents: cartOpen ? 'all' : 'none',
+                    opacity: cartOpen ? 1 : 0,
+                }}
+            >
+                <h3>My Cart</h3>
+                <button onClick={() => setCartOpen(false)}>Close Cart</button>
+                <ul>
+                    {_.map(cart.lineItems, (item) => {
+                        return (
+                            <li key={item.id}>
+                                <Link href={'/'}>
+                                    <a>
+                                        {item.title} × {item.quantity}
+                                    </a>
+                                </Link>
+                            </li>
+                        )
+                    })}
+                </ul>
+                <a href={cartUrl}>Check Out</a>
+            </div>
         </div>
     )
 }

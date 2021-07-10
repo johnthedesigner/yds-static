@@ -8,6 +8,12 @@ if (typeof window !== 'undefined') {
     const localStorage = window.localStorage
 }
 
+const setCart = (cart) => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+    window.dispatchEvent(new Event('storage'))
+    console.log('Update Cart', cart)
+}
+
 export const pageTitle = (segment) => {
     let fragment = 'Yankee Dahlia Society'
     return segment ? `${fragment} | ${segment}` : fragment
@@ -50,24 +56,33 @@ export const getProductById = async (id) => {
 }
 
 export const getCart = async () => {
-    console.log('getting cart...')
     if (localStorage) {
-        console.log('local storage exists')
-        let checkoutId = localStorage.getItem('checkoutId')
-        if (checkoutId !== null) {
-            console.log('checkoutId isnt null', checkoutId)
-            return checkoutId
+        let cart = JSON.parse(localStorage.getItem('cart'))
+        if (cart !== null) {
+            return cart
         } else {
-            console.log('checkoutId is null', checkoutId)
-            await shopify.checkout.create().then((checkout) => {
-                // Do something with the checkout
-                console.log('requested new checkout from spotify', checkout.id)
-                localStorage.setItem('checkoutId', checkout.id)
-                return checkout
+            await shopify.checkout.create().then((cart) => {
+                setCart(cart)
+                return cart
             })
         }
     } else {
-        console.log('local storage does not exist')
         return null
     }
+}
+
+export const addToCart = async (item) => {
+    let openCart = await getCart()
+
+    await shopify.checkout.addLineItems(openCart.id, item).then((cart) => {
+        setCart(cart)
+    })
+}
+
+export const updateLineItems = async (items) => {
+    let openCart = await getCart()
+
+    await shopify.checkout.updateLineItems(openCart.id, items).then((cart) => {
+        setCart(cart)
+    })
 }
