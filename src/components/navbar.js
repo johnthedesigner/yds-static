@@ -160,6 +160,10 @@ const Navbar = (props) => {
                                     <a>{item.title}</a>
                                 </Link>
                                 <button
+                                    disabled={
+                                        item.quantity >=
+                                        item.variant.quantityAvailable
+                                    }
                                     onClick={() =>
                                         updateQuantity(
                                             cart,
