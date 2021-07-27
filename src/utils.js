@@ -58,51 +58,27 @@ export const getProductByHandle = async (handle) => {
 }
 
 export const getCart = async () => {
-    // const qtyQuery = shopify.graphQLClient.query((root) => {
-    //     root.add('cart', {}, (cart) => {
-    //         cart.add('id')
-    //         cart.addConnection('lineItems', {}, (lineItem) => {
-    //             lineItem.add('id')
-    //             lineItem.addConnection('variant', {}, (variant) => {
-    //                 variant.add(id)
-    //                 variant.add(quantityAvailable)
-    //             })
-    //         })
-    //         cart.add('id')
-    //         cart.addConnection(
-    //             'variants',
-    //             { args: { first: 99 } },
-    //             (variant) => {
-    //                 variant.add('id')
-    //                 variant.add('availableForSale')
-    //                 variant.add('quantityAvailable')
-    //             }
-    //         )
-    //     })
-    // })
-
-    // const cartQuery = client.graphQLClient.query((root) => {
-    //     root.addConnection('cart', {}, (cart) => {
-    //         cart.add('quantityAvailable')
-    //     })
-    // })
     if (localStorage) {
         let cart = JSON.parse(localStorage.getItem('cart'))
         if (cart !== null) {
+            let newCart = {}
             await shopify.checkout.fetch(cart.id).then((fetchedCart) => {
-                console.log('Get Cart', fetchedCart)
-                setCart(fetchedCart)
-                return fetchedCart
+                console.log('Fetched Cart', { ...fetchedCart })
+                // setCart(fetchedCart)
+                newCart = { ...fetchedCart }
             })
+            return newCart
         } else {
+            let newCart = {}
             await shopify.checkout.create().then((createdCart) => {
-                console.log('Create Cart', createdCart)
-                setCart(createdCart)
-                return createdCart
+                console.log('Create Cart', { ...createdCart })
+                setCart({ ...createdCart })
+                newCart = { ...createdCart }
             })
+            return newCart
         }
     } else {
-        return null
+        return { id: '', webUrl: '' }
     }
 }
 

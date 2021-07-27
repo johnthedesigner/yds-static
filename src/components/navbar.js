@@ -18,15 +18,15 @@ export const linkClass = (currentPath, linkedPage) => {
 const Navbar = (props) => {
     const [menuOpen, setMenuOpen] = useState(false)
     const [cartOpen, setCartOpen] = useState(true)
-    const [cart, setCart] = useState([])
-    const [cartId, setCartId] = useState('')
+    const [cart, setCart] = useState({ id: '', webUrl: '' })
     const [cartUrl, setCartUrl] = useState('')
 
     const updateQuantity = (cart, id, quantity) => {
         updateLineItems(
             _.map(cart.lineItems, (item) => {
-                if (item.id === id) item.quantity = quantity
-                return { id: item.id, quantity: item.quantity }
+                let currentItem = { id: item.id, quantity: item.quantity }
+                if (currentItem.id === id) currentItem.quantity = quantity
+                return currentItem
             })
         )
     }
@@ -34,8 +34,8 @@ const Navbar = (props) => {
     useEffect(() => {
         let updateCart = async () => {
             let openCart = await getCart()
+            console.log('openCart: ', openCart)
             setCart(openCart)
-            setCartId(openCart.id)
             setCartUrl(openCart.webUrl)
         }
 
@@ -46,7 +46,7 @@ const Navbar = (props) => {
         return () => {
             window.removeEventListener('storage', updateCart)
         }
-    }, [])
+    }, [cart.id])
 
     let cartOverlayStyles = {
         position: 'absolute',
