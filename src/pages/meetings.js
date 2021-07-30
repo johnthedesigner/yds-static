@@ -214,7 +214,7 @@ const events = [
         },
     },
     {
-        date: '20210829',
+        date: '20210828',
         time: 'TBD',
         name: 'Garden Walk, Potluck BBQ & Reading the ADS Classification Book',
         description: () => {
