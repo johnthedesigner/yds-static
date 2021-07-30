@@ -8,6 +8,7 @@ import Hamburger from '../public/hamburger.svg'
 import LogoMobile from '../public/logo-mobile.svg'
 import LogoDesktop from '../public/logo-desktop.svg'
 import CartIcon from '../public/cart.svg'
+import CloseIcon from '../public/close.svg'
 
 export const linkClass = (currentPath, linkedPage) => {
     return linkedPage.path === currentPath
@@ -83,7 +84,12 @@ const Navbar = (props) => {
             ...navItems,
             <li key="cart">
                 <span className="cart__button">
-                    <CartIcon onClick={() => setCartOpen(!cartOpen)} />
+                    <button
+                        className="icon-button cart-flyout__cart-button"
+                        onClick={() => setCartOpen(!cartOpen)}
+                    >
+                        <CartIcon />
+                    </button>
                 </span>
             </li>,
         ]
@@ -149,7 +155,12 @@ const Navbar = (props) => {
                 }}
             >
                 <h3>My Cart</h3>
-                <button onClick={() => setCartOpen(false)}>Close Cart</button>
+                <button
+                    className="icon-button cart-flyout__close-button"
+                    onClick={() => setCartOpen(false)}
+                >
+                    <CloseIcon />
+                </button>
                 <ul>
                     {_.map(cart.lineItems, (item) => {
                         return (
@@ -160,6 +171,7 @@ const Navbar = (props) => {
                                     <a>{item.title}</a>
                                 </Link>
                                 <button
+                                    className="icon-button"
                                     disabled={
                                         item.quantity >=
                                         item.variant.quantityAvailable
@@ -176,6 +188,7 @@ const Navbar = (props) => {
                                 </button>
                                 {item.quantity}
                                 <button
+                                    className="icon-button"
                                     onClick={() =>
                                         updateQuantity(
                                             cart,
