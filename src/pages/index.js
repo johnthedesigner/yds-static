@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import _ from 'lodash'
+import moment from 'moment'
 
 import Page from '../components/page'
 import pages from '../pages.json'
@@ -7,6 +9,14 @@ import Hero from '../components/hero'
 import Pingpong from '../components/pingpong'
 import Bumper from '../components/bumper'
 import styles from '../styles/Home.module.css'
+import events from '../components/eventsList'
+
+const upcomingEvents = []
+_.map(events, (event) => {
+    if (moment().isBefore(moment(event.date).add(1, 'days'))) {
+        upcomingEvents.push(event)
+    }
+})
 
 export default function Home() {
     return (
@@ -41,11 +51,16 @@ export default function Home() {
                             Find out more
                         </a>
                     </Link>
-                    <h3>Save the Date: Sunday, April 11, 2021</h3>
+                    <h3>
+                        Save the Date:{' '}
+                        {moment(upcomingEvents[0].date).format(
+                            'dddd, MMMM D, YYYY'
+                        )}
+                    </h3>
+                    <p>{upcomingEvents[0].name}</p>
                     <p>
-                        Be sure to mark your calendar to join us for our very
-                        first meeting. It will be a virtual meeting. Stay tuned
-                        for more details.
+                        Be sure to mark your calendar to join us for our next
+                        meeting.
                     </p>
                     <Link href="/meetings">
                         <a
