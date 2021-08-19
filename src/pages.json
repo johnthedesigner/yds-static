@@ -70,5 +70,13 @@
         "path": "/contact",
         "inMenu": true,
         "inSitemap": true
+    },
+    "businessMembers": {
+        "label": "Businesses",
+        "title": "Business Members | Yankee Dahlia Society, New England",
+        "description": "Get in touch with Yankee Dahlia Society. Find us on Instagram or Facebook, ask dahlia growing questions or just let us know you're coming to a meeting.",
+        "path": "/business-members",
+        "inMenu": false,
+        "inSitemap": true
     }
 }
