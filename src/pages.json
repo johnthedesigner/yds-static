@@ -78,5 +78,13 @@
         "path": "/business-members",
         "inMenu": false,
         "inSitemap": true
+    },
+    "shows": {
+        "label": "Dahlia Shows",
+        "title": "Dahlia Shows | Yankee Dahlia Society, New England",
+        "description": "A calendar of regional and international Dahlia shows.",
+        "path": "/shows",
+        "inMenu": false,
+        "inSitemap": true
     }
 }

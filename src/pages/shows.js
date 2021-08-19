@@ -1,50 +1,50 @@
 import { useState } from 'react'
 import _ from 'lodash'
+import Link from 'next/link'
 import moment from 'moment'
 
 import Page from '../components/page'
 import Hero from '../components/hero'
 import Bumper from '../components/bumper'
 import pages from '../pages.json'
-import events from '../components/eventsList'
+import shows from '../components/showsList'
 
-const Event = (props) => {
+const Show = (props) => {
     const Description = props.description
     const Location = props.location
 
     return (
         <div className="event">
-            <h4 className="event__date">
-                {props.date} | {props.time}
-            </h4>
+            <h4 className="event__date">{props.date}</h4>
             <h3 className="event__name">{props.name}</h3>
-            <div className="event__description">
-                <Description />
-            </div>
-            <div className="event__location">
-                <b>Location: </b> <Location />
+            <div className="event__location">Organization: {props.org}</div>
+            <div className="event__location">Location: {props.location}</div>
+            <div className="event__link">
+                <Link href={props.link}>
+                    <a target="_blank">{props.link}</a>
+                </Link>
             </div>
         </div>
     )
 }
 
-export default function Events() {
-    const [eventsType, setEventsType] = useState('upcoming')
+export default function Shows() {
+    const [showsType, setShowsType] = useState('upcoming')
 
-    const displayedEvents = () => {
-        let eventsToDisplay = []
+    const displayedShows = () => {
+        let showsToDisplay = []
 
-        if (eventsType == 'upcoming') {
-            _.map(events, (event) => {
-                if (moment().isBefore(moment(event.date).add(1, 'days'))) {
-                    eventsToDisplay.push(event)
+        if (showsType == 'upcoming') {
+            _.map(shows, (show) => {
+                if (moment().isBefore(moment(show.date).add(1, 'days'))) {
+                    showsToDisplay.push(show)
                 }
             })
-        } else if (eventsType == 'all') {
-            eventsToDisplay = [...events]
+        } else if (showsType == 'all') {
+            showsToDisplay = [...shows]
         }
 
-        return eventsToDisplay
+        return showsToDisplay
     }
 
     let buttonStyles = (type) => {
@@ -54,7 +54,7 @@ export default function Events() {
             fontFamily: 'inherit',
             fontSize: 'inherit',
         }
-        if (type == eventsType) {
+        if (type == showsType) {
             return {
                 ...defaultStyles,
                 color: '#3d4549',
@@ -69,9 +69,9 @@ export default function Events() {
     }
 
     return (
-        <Page page={pages.meetings}>
-            <Hero title="Meetings" image="/colorful-arrangement.jpg" />
-            <Bumper text="Club meetings will typically be held on the 1st Sunday of the month.  During the dahlia blooming season we will hold a few extra events." />
+        <Page page={pages.shows}>
+            <Hero title="Dahlia Shows" image="/colorful-arrangement.jpg" />
+            <Bumper text="Join us at one of these Dahlia shows to see beautiful blooms and maybe even enter some blooms of your own!" />
             <p
                 style={{
                     width: '60rem',
@@ -83,26 +83,27 @@ export default function Events() {
                 Showing:{' '}
                 <button
                     style={buttonStyles('upcoming')}
-                    onClick={() => setEventsType('upcoming')}
+                    onClick={() => setShowsType('upcoming')}
                 >
-                    Upcoming Events
+                    Upcoming Dahlia Shows
                 </button>{' '}
                 |{' '}
                 <button
                     style={buttonStyles('all')}
-                    onClick={() => setEventsType('all')}
+                    onClick={() => setShowsType('all')}
                 >
-                    All Events
+                    All Dahlia Shows
                 </button>
             </p>
-            {_.map(displayedEvents(), (event) => {
+            {_.map(displayedShows(), (show, index) => {
                 return (
-                    <Event
-                        date={moment(event.date).format('dddd, MMMM D, YYYY')}
-                        time={event.time}
-                        name={event.name}
-                        description={event.description}
-                        location={event.location}
+                    <Show
+                        key={index}
+                        date={moment(show.date).format('dddd, MMMM D, YYYY')}
+                        name={show.name}
+                        link={show.link}
+                        location={show.location}
+                        org={show.org}
                     />
                 )
             })}
