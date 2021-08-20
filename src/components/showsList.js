@@ -37,6 +37,24 @@ const events = [
         location: 'Bristol’s Garden Center, 7454 Route 96, Victor, NY 14564',
         file: '/pdf/2021_RDS-show.pdf',
     },
+    {
+        startDate: '20210925',
+        endDate: '20210926',
+        name: 'GDS Dahlia Show',
+        org: 'Greenwich Dahlia Society',
+        link: 'https://greenwichbotanicalcenter.org/gds/',
+        location: 'Greenwich Botanical Center, 130 Bible St, Cos Cob, CT 06807',
+        file: '',
+    },
+    {
+        startDate: '20210925',
+        endDate: '20210926',
+        name: 'NEDS Dahlia Show',
+        org: 'New England Dahlia Society',
+        link: 'http://newenglanddahliasociety.org',
+        location: 'Tower Hill Botanic Garden, 11 French Dr, Boylston MA 01505',
+        file: '',
+    },
 ]
 
 export default events

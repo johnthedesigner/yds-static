@@ -27,6 +27,20 @@ const Date = (props) => {
     }
 }
 
+const File = (props) => {
+    if (props.file) {
+        return (
+            <div className="event__link">
+                <Link href={props.file}>
+                    <a target="_blank">Download PDF Brochure</a>
+                </Link>
+            </div>
+        )
+    } else {
+        return null
+    }
+}
+
 const Show = (props) => {
     const Description = props.description
     const Location = props.location
@@ -43,11 +57,7 @@ const Show = (props) => {
                 </Link>
             </div>
             <br />
-            <div className="event__link">
-                <Link href={props.file}>
-                    <a target="_blank">Download PDF Brochure</a>
-                </Link>
-            </div>
+            <File file={props.file} />
         </div>
     )
 }
