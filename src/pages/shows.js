@@ -31,7 +31,9 @@ const File = (props) => {
     if (props.file) {
         return (
             <div className="event__link">
-                <a href={props.file}>Download PDF Brochure</a>
+                <a href={props.file} target="_blank">
+                    Download PDF Brochure
+                </a>
             </div>
         )
     } else {
