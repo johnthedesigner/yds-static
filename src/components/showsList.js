@@ -6,7 +6,7 @@ const events = [
         link: 'http://www.ctdahlia.org',
         location:
             'Elizabeth Park, 1561 Asylum Ave, West Hartford, CT 06117, USA',
-        file: '/pdf/2021_CDS-show.pdf',
+        file: '/pdf/2021_CDS-Show.pdf',
     },
     {
         startDate: '20210911',
@@ -16,7 +16,7 @@ const events = [
         link: 'https://rhodeislanddahliasociety.org',
         location:
             'North Kingston Community Center (formerly Coldspring Community Center), Beech Street, Wickford, RI',
-        file: '/pdf/2021_RIDS-show.pdf',
+        file: '/pdf/2021_RIDS-Show.pdf',
     },
     {
         startDate: '20210909',
@@ -27,7 +27,7 @@ const events = [
         link: 'https://www.dahlia.org',
         location:
             'Ohio Agricultural Research and Development Center, Wooster, OH',
-        file: '/pdf/2021_ADS-show.pdf',
+        file: '/pdf/2021_ADS-Show.pdf',
     },
     {
         startDate: '20210918',
@@ -35,7 +35,7 @@ const events = [
         org: 'Rochester Dahlia Society',
         link: 'https://www.rochesterdahlias.org',
         location: 'Bristol’s Garden Center, 7454 Route 96, Victor, NY 14564',
-        file: '/pdf/2021_RDS-show.pdf',
+        file: '/pdf/2021_RDS-Show.pdf',
     },
     {
         startDate: '20210925',
