@@ -32,7 +32,7 @@ const File = (props) => {
         return (
             <div className="event__link">
                 <Link href={props.file}>
-                    <a target="_blank">Download PDF Brochure</a>
+                    <a>Download PDF Brochure</a>
                 </Link>
             </div>
         )
