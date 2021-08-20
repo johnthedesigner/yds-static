@@ -103,9 +103,9 @@ export default function BusinessMembers() {
         <Page page={pages.businessMembers}>
             <Hero title="Member Businesses" image="/garden.jpg" />
             <CompactTextWrapper>
-                {_.map(sortedBizMembers, (member) => {
+                {_.map(sortedBizMembers, (member, index) => {
                     return (
-                        <CompactText>
+                        <CompactText key={index}>
                             <div
                                 style={{
                                     textAlign: 'center',
