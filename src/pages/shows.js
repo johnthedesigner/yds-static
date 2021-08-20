@@ -9,19 +9,43 @@ import Bumper from '../components/bumper'
 import pages from '../pages.json'
 import shows from '../components/showsList'
 
+const formatDate = (date) => {
+    return moment(date).format('dddd, MMMM D, YYYY')
+}
+
+const Date = (props) => {
+    if (props.startDate && props.endDate) {
+        return (
+            <h4 className="event__date">
+                {formatDate(props.startDate)} – {formatDate(props.endDate)}
+            </h4>
+        )
+    } else if (props.startDate) {
+        return <h4 className="event__date">{formatDate(props.startDate)}</h4>
+    } else {
+        return null
+    }
+}
+
 const Show = (props) => {
     const Description = props.description
     const Location = props.location
 
     return (
         <div className="event">
-            <h4 className="event__date">{props.date}</h4>
+            <Date startDate={props.startDate} endDate={props.endDate} />
             <h3 className="event__name">{props.name}</h3>
             <div className="event__location">Organization: {props.org}</div>
             <div className="event__location">Location: {props.location}</div>
             <div className="event__link">
                 <Link href={props.link}>
                     <a target="_blank">{props.link}</a>
+                </Link>
+            </div>
+            <br />
+            <div className="event__link">
+                <Link href={props.file}>
+                    <a target="_blank">Download PDF Brochure</a>
                 </Link>
             </div>
         </div>
@@ -99,11 +123,13 @@ export default function Shows() {
                 return (
                     <Show
                         key={index}
-                        date={moment(show.date).format('dddd, MMMM D, YYYY')}
+                        startDate={show.startDate}
+                        endDate={show.endDate}
                         name={show.name}
                         link={show.link}
                         location={show.location}
                         org={show.org}
+                        file={show.file}
                     />
                 )
             })}
