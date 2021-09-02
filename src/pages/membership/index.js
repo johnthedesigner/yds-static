@@ -53,6 +53,12 @@ export default function Membership() {
                         </a>
                     </Link>
                 </Pingpong>
+                <Bumper
+                    text="We're grateful for our long list of member businesses."
+                    smallText="Our business members are knowledgeable, engaged members of the New England dahlia growing community and we're so glad to have them as members and in our meetings."
+                    buttonUrl="/business-members"
+                    buttonLabel="See Our Member Businesses"
+                />
                 <Pingpong
                     side="right"
                     image="/root-ball.jpg"
