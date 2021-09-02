@@ -2,6 +2,7 @@ import _ from 'lodash'
 import Head from 'next/head'
 import Link from 'next/link'
 
+import pages from '../pages.json'
 import { getUrl } from '../utils'
 import Navbar from '../components/navbar'
 import FooterLogo from '../public/logo-footer.svg'
@@ -10,6 +11,33 @@ import IconIG from '../public/icon-ig.svg'
 import Donate from '../components/donate'
 
 export default function Page(props) {
+    let linkClass = (currentPath, linkedPage) => {
+        return linkedPage.path === currentPath
+            ? 'footer__link footer__link--active'
+            : 'footer__link'
+    }
+
+    let Links = () => {
+        return _.map(pages, (page) => {
+            if (page.inFooter) {
+                return (
+                    <li className="footer__menu-item" key={page.path}>
+                        <Link href={page.path}>
+                            <a
+                                className={linkClass(props.currentPath, page)}
+                                title={page.title}
+                            >
+                                {page.label}
+                            </a>
+                        </Link>
+                    </li>
+                )
+            } else {
+                return null
+            }
+        })
+    }
+
     return (
         <div className="page">
             <Head>
@@ -37,41 +65,7 @@ export default function Page(props) {
                 <div className="footer__body">
                     <FooterLogo />
                     <ul className="footer__menu">
-                        <li className="footer__menu-item">
-                            <Link href="/">
-                                <a title="Home | Yankee Dahlia Society, New England">
-                                    Home
-                                </a>
-                            </Link>
-                        </li>
-                        <li className="footer__menu-item">
-                            <Link href="/membership/">
-                                <a title="Membership | Yankee Dahlia Society, New England">
-                                    Membership
-                                </a>
-                            </Link>
-                        </li>
-                        <li className="footer__menu-item">
-                            <Link href="/meetings/">
-                                <a title="Meetings | Yankee Dahlia Society, New England">
-                                    Meetings
-                                </a>
-                            </Link>
-                        </li>
-                        <li className="footer__menu-item">
-                            <Link href="/tubers/">
-                                <a title="Our Tubers | Yankee Dahlia Society, New England">
-                                    Our Tubers
-                                </a>
-                            </Link>
-                        </li>
-                        <li className="footer__menu-item">
-                            <Link href="/about/">
-                                <a title="About Us | Yankee Dahlia Society, New England">
-                                    About Us
-                                </a>
-                            </Link>
-                        </li>
+                        <Links />
                         <li className="footer__menu-item">
                             <Link href="http://instagram.com/yankeedahliasociety">
                                 <a

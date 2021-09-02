@@ -5,6 +5,7 @@
         "description": "Promoting dahlia exhibition, hybridization, and education",
         "path": "/",
         "inMenu": false,
+        "inFooter": false,
         "inSitemap": false
     },
     "home": {
@@ -13,6 +14,7 @@
         "description": "A New England dahlia club based in Wocester and Middlesex county in Massachusetts. We invite dahlia growers all throughout the New England area. Our club is a proud member of the American Dahlia Society",
         "path": "/",
         "inMenu": true,
+        "inFooter": true,
         "inSitemap": true
     },
     "membership": {
@@ -21,6 +23,7 @@
         "description": "Become a member of Yankee Dahlia Society to attend meetings, classes and garden tours.",
         "path": "/membership",
         "inMenu": true,
+        "inFooter": true,
         "inSitemap": true
     },
     "join": {
@@ -29,6 +32,7 @@
         "description": "Become a member of Yankee Dahlia Society to attend meetings, classes and garden tours.",
         "path": "/membership/join",
         "inMenu": false,
+        "inFooter": false,
         "inSitemap": true
     },
     "getInvolved": {
@@ -36,7 +40,8 @@
         "title": "Get Involved | Yankee Dahlia Society, New England",
         "description": "Get more involved with Yankee Dahlia Society, volunteer, let us tour your garden. There are plenty of fun ways to get more involved.",
         "path": "/get-involved",
-        "inMenu": true,
+        "inMenu": false,
+        "inFooter": true,
         "inSitemap": true
     },
     "meetings": {
@@ -45,6 +50,16 @@
         "description": "Find out when we are having our next meeting, event or garden tour and plan ahead to join in on the fun.",
         "path": "/meetings",
         "inMenu": true,
+        "inFooter": true,
+        "inSitemap": true
+    },
+    "shows": {
+        "label": "Shows",
+        "title": "Dahlia Shows | Yankee Dahlia Society, New England",
+        "description": "A calendar of regional and international Dahlia shows.",
+        "path": "/shows",
+        "inMenu": true,
+        "inFooter": true,
         "inSitemap": true
     },
     "tubers": {
@@ -53,6 +68,7 @@
         "description": "Find out about our annual tuber sales and tuber swaps. Get some of your favorite dahlia varieties and help to support Yankee Dahlia Society at the same time",
         "path": "/tubers",
         "inMenu": true,
+        "inFooter": true,
         "inSitemap": true
     },
     "about": {
@@ -61,6 +77,7 @@
         "description": "We had a vision of creating a fun space where people who love dahlias could gather and connect, in person and through social media, to learn, have fun, and enjoy growing dahlias together.",
         "path": "/about",
         "inMenu": true,
+        "inFooter": true,
         "inSitemap": true
     },
     "contact": {
@@ -69,6 +86,7 @@
         "description": "Get in touch with Yankee Dahlia Society. Find us on Instagram or Facebook, ask dahlia growing questions or just let us know you're coming to a meeting.",
         "path": "/contact",
         "inMenu": true,
+        "inFooter": true,
         "inSitemap": true
     },
     "businessMembers": {
@@ -77,14 +95,7 @@
         "description": "Get in touch with Yankee Dahlia Society. Find us on Instagram or Facebook, ask dahlia growing questions or just let us know you're coming to a meeting.",
         "path": "/business-members",
         "inMenu": false,
-        "inSitemap": true
-    },
-    "shows": {
-        "label": "Dahlia Shows",
-        "title": "Dahlia Shows | Yankee Dahlia Society, New England",
-        "description": "A calendar of regional and international Dahlia shows.",
-        "path": "/shows",
-        "inMenu": false,
+        "inFooter": false,
         "inSitemap": true
     }
 }
