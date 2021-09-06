@@ -476,7 +476,7 @@ button[type='submit'].donation-form__submit-button {
     max-width: 90%;
     margin: 6rem auto;
     display: flex;
-    align-items: center;
+    align-items: top;
 }
 
 .pingpong--left {
