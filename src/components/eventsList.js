@@ -196,13 +196,36 @@ const events = [
     },
     {
         date: '20210919',
-        time: 'TBD',
+        time: '10:00am - 12:00pm',
         name: 'Garden Tour hosted by Robin Sears of Robin’s Nest Designs',
         description: () => {
-            return null
+            return (
+                <span>
+                    <p>
+                        Coffee, Scones, Garden Tour & Floral Arrangement
+                        Demonstration hosted by Robin Sears of{' '}
+                        <a href="https://www.robinsears.com/" target="_blank">
+                            Robin’s Nest Designs
+                        </a>
+                        . Bring your folding chair.
+                    </p>
+                    <span>
+                        <b>Rain Dates:</b>
+                    </span>
+                    <p>
+                        If needed our plan b will be a virtual meeting and a
+                        Zoom link will be sent out via email to notify members.
+                    </p>
+                </span>
+            )
         },
         location: () => {
-            return 'Robin Shear’s Garden, South Hamilton, MA'
+            return (
+                <p>
+                    Garden of Y.D.S. Member Robin Sears, South Hamilton, MA
+                    (Address emailed to Y.D.S. Members)
+                </p>
+            )
         },
     },
     {
@@ -213,7 +236,9 @@ const events = [
             return null
         },
         location: () => {
-            return 'Maplebrook Farmstead, 155 Tuttle Road, Sterling, MA 01564'
+            return (
+                <p>Maplebrook Farmstead, 155 Tuttle Road, Sterling, MA 01564</p>
+            )
         },
     },
 ]
