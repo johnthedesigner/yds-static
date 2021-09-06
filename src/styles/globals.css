@@ -26,8 +26,8 @@ h1 {
 }
 
 h3 {
-    line-height: 1.5;
-    font-size: 2rem;
+    line-height: 1.25;
+    font-size: 3rem;
     font-weight: 400;
 }
 
@@ -476,7 +476,7 @@ button[type='submit'].donation-form__submit-button {
     max-width: 90%;
     margin: 6rem auto;
     display: flex;
-    align-items: top;
+    align-items: center;
 }
 
 .pingpong--left {

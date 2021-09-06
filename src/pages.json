@@ -97,5 +97,23 @@
         "inMenu": false,
         "inFooter": false,
         "inSitemap": true
+    },
+    "businessMembershipInfo": {
+        "label": "Business Membership Info",
+        "title": "Get the most out of your business membership | Yankee Dahlia Society, New England",
+        "description": "We welcome our great business members. Now that you're a member, find out how to make the absolute most of your business membership.",
+        "path": "/business-member-info",
+        "inMenu": false,
+        "inFooter": false,
+        "inSitemap": true
+    },
+    "badgeInfo": {
+        "label": "Member Badge Usage Info",
+        "title": "Member Badge Usage Info | Yankee Dahlia Society, New England",
+        "description": "How to use the Y.D.S. membership badge on your website and marketing materials",
+        "path": "/badge-info",
+        "inMenu": false,
+        "inFooter": false,
+        "inSitemap": true
     }
 }
