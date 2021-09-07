@@ -75,7 +75,7 @@ export default function BusinessMemberInfo() {
             </Pingpong>
             <Pingpong
                 side="left"
-                image="/event-tent.jpg"
+                image="/group-photo.jpg"
                 imageAlt="Dahlia plants being dug up with a pitchfork"
                 ratioWidth="1"
                 ratioHeight="1"
