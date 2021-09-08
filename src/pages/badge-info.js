@@ -24,7 +24,13 @@ export default function BusinessMemberInfo() {
                     suit your own website or marketing materials.
                 </p>
                 <Link href="/badge-info">
-                    <a className="button">Download Here</a>
+                    <a
+                        href="https://drive.google.com/drive/folders/1cxbpgZ75AjyqWOXr-kfnhjYaYFLhlx60?usp=sharing"
+                        target="_blank"
+                        className="button"
+                    >
+                        Download Here
+                    </a>
                 </Link>
             </Pingpong>
             <Bumper text="How to use the Y.D.S. membership badge" />
