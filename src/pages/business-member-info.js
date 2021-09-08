@@ -91,7 +91,7 @@ export default function BusinessMemberInfo() {
             </Pingpong>
             <Pingpong
                 side="right"
-                image="/get-involved.jpg"
+                image="/growing-partners.jpg"
                 imageAlt="Dahlia plants being dug up with a pitchfork"
                 ratioWidth="1"
                 ratioHeight="1"
@@ -101,11 +101,11 @@ export default function BusinessMemberInfo() {
                     Have land in need of tubers? Grow some for Y.D.S. and enjoy
                     all the cut flowers you can grow. At the end of the season
                     we sell the tubers to raise much-needed funds for Y.D.S.!
-                    Email us (
+                    Email{' '}
                     <a href="mailto:info@yankeedahliasociety.com">
                         info@yankeedahliasociety.com
-                    </a>
-                    ) to find out more.
+                    </a>{' '}
+                    to find out more.
                 </p>
             </Pingpong>
             <Bumper

@@ -10,10 +10,7 @@ import _ from 'lodash'
 export default function BusinessMemberInfo() {
     return (
         <Page page={pages.businessMembers}>
-            <Hero
-                title="Show off your Y.D.S. membership."
-                image="/flowers.jpg"
-            />
+            <Hero title="Y.D.S. membership Badge" image="/flowers.jpg" />
             <Pingpong
                 side="right"
                 image="/badges.jpg"
