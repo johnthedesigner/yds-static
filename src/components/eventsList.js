@@ -207,25 +207,55 @@ const events = [
                         <a href="https://www.robinsears.com/" target="_blank">
                             Robin’s Nest Designs
                         </a>
-                        . Bring your folding chair.
+                        . Remember to bring your folding chair and a few blooms
+                        in a bud vase to show.
+                    </p>
+                    <p>
+                        We hope to see you for a beautiful end of summer meeting
+                        and Sunday morning tour of Robin’s garden. This
+                        whimsical cottage garden design is a treat to visit.
+                        Robin will take us on a tour of her garden sharing her
+                        favorite dahlias and her garden design style. Don’t
+                        forget to bring your folding chair because we will also
+                        be treated to a floral design demonstration arranged by
+                        Robin with dahlias and blooms from her garden. We’ll
+                        provide the coffee, fresh scones from a local bakery
+                        with cream & jam. It will be wonderful to hear how
+                        everyone’s dahlias are blooming so don’t forget to bring
+                        some of your blooms too as we will have a table set up
+                        and would love to see what favorite varieties you are
+                        growing.
                     </p>
                     <span>
                         <b>Rain Dates:</b>
                     </span>
                     <p>
-                        If needed our plan b will be a virtual meeting and a
-                        Zoom link will be sent out via email to notify members.
+                        Weather is looking good folks. We should be fine, but if
+                        needed our plan b will be a virtual meeting and a Zoom
+                        link will be sent out via email to notify members.
+                    </p>
+                    <span>
+                        <b>RSVP:</b>
+                    </span>
+                    <p>
+                        Not required. It would be wonderful to know if you are
+                        able to join us as we would like to make sure to have
+                        enough scones and coffee. Please sign up through the
+                        email Sign-Up Genius Link emailed to members.
+                    </p>
+                    <span>
+                        <b>Guests:</b>
+                    </span>
+                    <p>
+                        September blooming time is the perfect time to tell your
+                        friends about Y.D.S. We welcome guests and simply ask if
+                        they can R.S.V.P so we know they are coming.
                     </p>
                 </span>
             )
         },
         location: () => {
-            return (
-                <p>
-                    Garden of Y.D.S. Member Robin Sears, South Hamilton, MA
-                    (Address emailed to Y.D.S. Members)
-                </p>
-            )
+            return <p>Details Emailed to Y.D.S. Members</p>
         },
     },
     {
