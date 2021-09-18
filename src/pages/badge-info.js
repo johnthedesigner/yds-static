@@ -11,28 +11,6 @@ export default function BusinessMemberInfo() {
     return (
         <Page page={pages.businessMembers}>
             <Hero title="Y.D.S. membership Badge" image="/flowers.jpg" />
-            <Pingpong
-                side="right"
-                image="/badges.jpg"
-                imageAlt="Dahlia plants being dug up with a pitchfork"
-                ratioWidth="1"
-                ratioHeight="1"
-            >
-                <h3>Download Y.D.S. badges for your website</h3>
-                <p>
-                    We’ve got a variety of formats, colors and resolutions to
-                    suit your own website or marketing materials.
-                </p>
-                <Link href="/badge-info">
-                    <a
-                        href="https://drive.google.com/drive/folders/1cxbpgZ75AjyqWOXr-kfnhjYaYFLhlx60?usp=sharing"
-                        target="_blank"
-                        className="button"
-                    >
-                        Download Here
-                    </a>
-                </Link>
-            </Pingpong>
             <Bumper text="How to use the Y.D.S. membership badge" />
             <Pingpong
                 side="right"
@@ -60,6 +38,28 @@ export default function BusinessMemberInfo() {
                     Let people know <a href="/">where to go</a> to find out more
                     about Y.D.S.
                 </p>
+            </Pingpong>
+            <Pingpong
+                side="right"
+                image="/badges.jpg"
+                imageAlt="Dahlia plants being dug up with a pitchfork"
+                ratioWidth="1"
+                ratioHeight="1"
+            >
+                <h3>Download Y.D.S. badges for your website</h3>
+                <p>
+                    We’ve got a variety of formats, colors and resolutions to
+                    suit your own website or marketing materials.
+                </p>
+                <Link href="/badge-info">
+                    <a
+                        href="https://drive.google.com/drive/folders/1cxbpgZ75AjyqWOXr-kfnhjYaYFLhlx60?usp=sharing"
+                        target="_blank"
+                        className="button"
+                    >
+                        Download Here
+                    </a>
+                </Link>
             </Pingpong>
         </Page>
     )
