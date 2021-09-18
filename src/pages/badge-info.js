@@ -58,7 +58,7 @@ export default function BusinessMemberInfo() {
                 </p>
                 <Link href="/badge-info">
                     <a
-                        href="https://drive.google.com/drive/folders/1cxbpgZ75AjyqWOXr-kfnhjYaYFLhlx60?usp=sharing"
+                        href="https://drive.google.com/drive/folders/1Icruo22IOFhDubVIUvofXgLK998S5vEG?usp=sharing"
                         target="_blank"
                         className="button"
                     >
