@@ -10,7 +10,7 @@ import _ from 'lodash'
 export default function BusinessMemberInfo() {
     return (
         <Page page={pages.businessMembers}>
-            <Hero title="Y.D.S. membership Badge" image="/flowers.jpg" />
+            <Hero title="Y.D.S. Membership Badge" image="/flowers.jpg" />
             <Bumper text="How to use the Y.D.S. membership badge" />
             <Pingpong
                 side="right"
@@ -49,7 +49,12 @@ export default function BusinessMemberInfo() {
                 <h3>Download Y.D.S. badges for your website</h3>
                 <p>
                     We’ve got a variety of formats, colors and resolutions to
-                    suit your own website or marketing materials.
+                    suit your own website or marketing materials. If you have
+                    any questions, please email us at{' '}
+                    <a href="mailto:info@yankeedahliasociety.com">
+                        info@yankeedahliasociety.com
+                    </a>
+                    .
                 </p>
                 <Link href="/badge-info">
                     <a
