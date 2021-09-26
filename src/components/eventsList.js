@@ -260,10 +260,54 @@ const events = [
     },
     {
         date: '20211003',
-        time: 'TBD',
-        name: 'Come see the dahlias in bloom at Maplebrook Farmstead',
+        time: '10:00am - 12:00pm',
+        name:
+            'Coffee & Cider Donuts @ Maplebrook – Learning about fall dahlia culture.',
         description: () => {
-            return null
+            return (
+                <span>
+                    <p>
+                        Join us for mingling with coffee and cider donuts, a
+                        tour of the Farm in bloom (over 150 dahlia varieties to
+                        see). We’ll have a Dahlia Display Table to enrich our
+                        understanding and learn about forms and sizes as well as
+                        preview Seasonal Dahlia Culture for the Fall: digging,
+                        dividing and storing. It’s also a wonderful opportunity
+                        to see a selection of blooms in person and start making
+                        your wish list and preview dahlias for the 2022 club
+                        tuber sale.
+                    </p>
+                    <p>
+                        Remember to bring your folding chair and a few blooms in
+                        a bud vase to show.
+                    </p>
+                    <span>
+                        <b>Rain or Shine:</b>
+                    </span>
+                    <p>
+                        We will have a large canopy tent to host in case of rain
+                        or for shade.
+                    </p>
+                    <span>
+                        <b>RSVP:</b>
+                    </span>
+                    <p>
+                        Not required. It would be wonderful to know if you are
+                        able to join us as we would like to make sure to have
+                        enough coffee & cider donuts. Please sign up through the
+                        email Sign-Up Genius Link emailed to members.
+                    </p>
+                    <span>
+                        <b>Guests:</b>
+                    </span>
+                    <p>
+                        We're still fortunate to have blooms in October, so it's
+                        still the perfect time to tell your friends about Y.D.S.
+                        We welcome guests and simply ask if they can R.S.V.P so
+                        we know they are coming.
+                    </p>
+                </span>
+            )
         },
         location: () => {
             return (
