@@ -18,6 +18,34 @@ _.map(events, (event) => {
     }
 })
 
+const EventBlock = (props) => {
+    if (props.event) {
+        return (
+            <>
+                <h3>
+                    Save the Date:{' '}
+                    {moment(props.event.date).format('dddd, MMMM D, YYYY')}
+                </h3>
+                <p>{props.event.name}</p>
+                <p>
+                    Be sure to mark your calendar to join us for our next
+                    meeting.
+                </p>
+                <Link href="/meetings">
+                    <a
+                        className="button"
+                        title="Yankee Dahlia Society Meeting Calendar"
+                    >
+                        Meeting Calendar
+                    </a>
+                </Link>
+            </>
+        )
+    } else {
+        return null
+    }
+}
+
 export default function Home() {
     return (
         <Page page={pages.home}>
@@ -51,25 +79,7 @@ export default function Home() {
                             Find out more
                         </a>
                     </Link>
-                    <h3>
-                        Save the Date:{' '}
-                        {moment(upcomingEvents[0].date).format(
-                            'dddd, MMMM D, YYYY'
-                        )}
-                    </h3>
-                    <p>{upcomingEvents[0].name}</p>
-                    <p>
-                        Be sure to mark your calendar to join us for our next
-                        meeting.
-                    </p>
-                    <Link href="/meetings">
-                        <a
-                            className="button"
-                            title="Yankee Dahlia Society Meeting Calendar"
-                        >
-                            Meeting Calendar
-                        </a>
-                    </Link>
+                    <EventBlock event={upcomingEvents[0]} />
                 </Pingpong>
                 <Bumper
                     text="Already a member and looking for ways to lend a hand within Yankee Dahlia Society?"
