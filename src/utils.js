@@ -48,11 +48,38 @@ export const getCollections = async () => {
     return collections
 }
 
+// Build a custom product query using the unoptimized version of the SDK
+// Fetch product with total inventory
+const productQuery = shopify.graphQLClient.query((root) => {
+    root.addConnection(
+        'products',
+        {
+            args: {
+                first: 10,
+            },
+        },
+        (product) => {
+            console.log(product)
+            // Add fields to be returned
+            product.add('title')
+            product.add('tags')
+            product.add('totalInventory')
+        }
+    )
+})
+
 export const getProductByHandle = async (handle) => {
     let product
     await shopify.product.fetchByHandle(handle).then((fetchedProduct) => {
         product = fetchedProduct
     })
+
+    // Call the send method with the custom products query
+    await shopify.graphQLClient.send(productQuery).then(({ model, data }) => {
+        // Do something with the products
+        console.log('TEST QUERY', model, data)
+    })
+
     console.log('Get Product', product)
     return product
 }
@@ -84,7 +111,7 @@ export const getCart = async () => {
 
 export const addToCart = async (item) => {
     let openCart = await getCart()
-
+    console.log(item)
     await shopify.checkout.addLineItems(openCart.id, item).then((cart) => {
         setCart(cart)
     })
