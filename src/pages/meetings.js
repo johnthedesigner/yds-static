@@ -9,13 +9,14 @@ import pages from '../pages.json'
 // import events from '../components/eventsList'
 import { events, eventTypes } from '../components/newEventsList'
 
+const colors = {
+    blue: '#506F98',
+    red: '#C65A60',
+}
+
 const Event = (props) => {
     const [showMore, setShowMore] = useState(false)
 
-    let colors = {
-        blue: '#506F98',
-        red: '#C65A60',
-    }
     let eventLabelStyles = {
         background:
             props.label === eventTypes.meeting ? colors.blue : colors.red,
@@ -26,9 +27,13 @@ const Event = (props) => {
         height: '1.5rem',
         borderRadius: '.25rem',
         marginRight: 'auto',
+        marginBottom: 0,
         color: 'white',
     }
     let showMoreButtonStyles = {
+        fontFamily: "'Newsreader', serif",
+        textDecoration: 'underline',
+        cursor: 'pointer',
         display: 'inline',
         background: 'none',
         border: 'none',
@@ -73,6 +78,23 @@ const Event = (props) => {
 
 export default function Events() {
     const [showPastEvents, setShowPastEvents] = useState(false)
+    const [showMeetings, setShowMeetings] = useState(true)
+    const [showWorkdays, setShowWorkdays] = useState(true)
+
+    let eventTypeButtonStyles = {
+        fontFamily: "'Newsreader', serif",
+        textTransform: 'uppercase',
+        display: 'inline-block',
+        padding: '.5rem',
+        fontSize: '.75rem',
+        lineHeight: 1,
+        height: '1.5rem',
+        border: 'none',
+        borderRadius: '.25rem',
+        marginRight: 'auto',
+        color: 'white',
+        cursor: 'pointer',
+    }
 
     const displayedEvents = () => {
         let eventsToDisplay = []
@@ -118,37 +140,80 @@ export default function Events() {
         <Page page={pages.meetings}>
             <Hero title="Meetings & Events" image="/colorful-arrangement.jpg" />
             <Bumper text="Club meetings will typically be held on the 1st Sunday of the month.  During the dahlia blooming season we will hold a few extra events." />
-            <p
+            <div
                 style={{
                     width: '60rem',
                     maxWidth: '90%',
                     margin: '0 auto',
-                    textAlign: 'right',
+                    display: 'flex',
+                    flexDirection: 'row',
                 }}
             >
-                Showing:{' '}
-                <button
-                    style={buttonStyles('upcoming')}
-                    onClick={() => setShowPastEvents(false)}
+                <p
+                    style={{
+                        flex: 1,
+                    }}
                 >
-                    Upcoming Events
-                </button>{' '}
-                |{' '}
-                <button
-                    style={buttonStyles('all')}
-                    onClick={() => setShowPastEvents(true)}
+                    Event Type:{' '}
+                    <button
+                        style={{
+                            ...eventTypeButtonStyles,
+                            background: showMeetings ? colors.blue : 'gray',
+                        }}
+                        onClick={() => setShowMeetings(!showMeetings)}
+                    >
+                        Meetings
+                    </button>{' '}
+                    |{' '}
+                    <button
+                        style={{
+                            ...eventTypeButtonStyles,
+                            background: showWorkdays ? colors.red : 'gray',
+                        }}
+                        onClick={() => setShowWorkdays(!showWorkdays)}
+                    >
+                        Workdays
+                    </button>
+                </p>
+                <p
+                    style={{
+                        flex: 1,
+                        textAlign: 'right',
+                    }}
                 >
-                    All Events
-                </button>
-            </p>
+                    Event Date:{' '}
+                    <button
+                        style={buttonStyles('upcoming')}
+                        onClick={() => setShowPastEvents(false)}
+                    >
+                        Upcoming Events
+                    </button>{' '}
+                    |{' '}
+                    <button
+                        style={buttonStyles('all')}
+                        onClick={() => setShowPastEvents(true)}
+                    >
+                        All Events
+                    </button>
+                </p>
+            </div>
             {_.map(displayedEvents(), (event, index) => {
-                return (
-                    <Event
-                        {...event}
-                        key={event.date + index}
-                        date={moment(event.date).format('dddd, MMMM D, YYYY')}
-                    />
-                )
+                if (
+                    (event.label === eventTypes.meeting && showMeetings) ||
+                    (event.label === eventTypes.workday && showWorkdays)
+                ) {
+                    return (
+                        <Event
+                            {...event}
+                            key={event.date + index}
+                            date={moment(event.date).format(
+                                'dddd, MMMM D, YYYY'
+                            )}
+                        />
+                    )
+                } else {
+                    return null
+                }
             })}
             <Bumper
                 text="Become a member to attend meetings & events and much more!"
