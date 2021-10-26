@@ -6,42 +6,85 @@ import Page from '../components/page'
 import Hero from '../components/hero'
 import Bumper from '../components/bumper'
 import pages from '../pages.json'
-import events from '../components/eventsList'
+// import events from '../components/eventsList'
+import { events, eventTypes } from '../components/newEventsList'
 
 const Event = (props) => {
-    const Description = props.description
-    const Location = props.location
+    const [showMore, setShowMore] = useState(false)
+
+    let colors = {
+        blue: '#506F98',
+        red: '#C65A60',
+    }
+    let eventLabelStyles = {
+        background:
+            props.label === eventTypes.meeting ? colors.blue : colors.red,
+        display: 'inline-block',
+        padding: '.5rem',
+        fontSize: '.75rem',
+        lineHeight: 1,
+        height: '1.5rem',
+        borderRadius: '.25rem',
+        marginRight: 'auto',
+        color: 'white',
+    }
+    let showMoreButtonStyles = {
+        display: 'inline',
+        background: 'none',
+        border: 'none',
+        color: '#C65A60',
+        textAlign: 'left',
+        marginRight: 'auto',
+        padding: 0,
+    }
 
     return (
         <div className="event">
-            <h4 className="event__date">
-                {props.date} | {props.time}
+            <h4 className="event__label" style={eventLabelStyles}>
+                {props.label}
             </h4>
-            <h3 className="event__name">{props.name}</h3>
-            <div className="event__description">
-                <Description />
-            </div>
-            <div className="event__location">
-                <b>Location: </b> <Location />
+            <h3 className="event__date">
+                {props.date} | {props.time}
+            </h3>
+            <h4 className="event__name">{props.name}</h4>
+            <button
+                className="show-more__button"
+                style={showMoreButtonStyles}
+                onClick={() => setShowMore(!showMore)}
+            >
+                {showMore ? 'Show Less' : 'Show More'}
+            </button>
+            <div
+                className="show-more__content"
+                style={{ display: showMore ? 'block' : 'none' }}
+            >
+                {_.map(props.showMore, (item, index) => {
+                    return (
+                        <div key={index}>
+                            <h4>{item.name}</h4>
+                            <item.content />
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )
 }
 
 export default function Events() {
-    const [eventsType, setEventsType] = useState('upcoming')
+    const [showPastEvents, setShowPastEvents] = useState(false)
 
     const displayedEvents = () => {
         let eventsToDisplay = []
 
-        if (eventsType == 'upcoming') {
+        if (showPastEvents) {
+            eventsToDisplay = [...events]
+        } else {
             _.map(events, (event) => {
                 if (moment().isBefore(moment(event.date).add(1, 'days'))) {
                     eventsToDisplay.push(event)
                 }
             })
-        } else if (eventsType == 'all') {
-            eventsToDisplay = [...events]
         }
 
         return eventsToDisplay
@@ -54,7 +97,10 @@ export default function Events() {
             fontFamily: 'inherit',
             fontSize: 'inherit',
         }
-        if (type == eventsType) {
+        if (
+            (showPastEvents && type === 'all') ||
+            (!showPastEvents && type === 'upcoming')
+        ) {
             return {
                 ...defaultStyles,
                 color: '#3d4549',
@@ -70,7 +116,7 @@ export default function Events() {
 
     return (
         <Page page={pages.meetings}>
-            <Hero title="Meetings" image="/colorful-arrangement.jpg" />
+            <Hero title="Meetings & Events" image="/colorful-arrangement.jpg" />
             <Bumper text="Club meetings will typically be held on the 1st Sunday of the month.  During the dahlia blooming season we will hold a few extra events." />
             <p
                 style={{
@@ -83,26 +129,24 @@ export default function Events() {
                 Showing:{' '}
                 <button
                     style={buttonStyles('upcoming')}
-                    onClick={() => setEventsType('upcoming')}
+                    onClick={() => setShowPastEvents(false)}
                 >
                     Upcoming Events
                 </button>{' '}
                 |{' '}
                 <button
                     style={buttonStyles('all')}
-                    onClick={() => setEventsType('all')}
+                    onClick={() => setShowPastEvents(true)}
                 >
                     All Events
                 </button>
             </p>
-            {_.map(displayedEvents(), (event) => {
+            {_.map(displayedEvents(), (event, index) => {
                 return (
                     <Event
+                        {...event}
+                        key={event.date + index}
                         date={moment(event.date).format('dddd, MMMM D, YYYY')}
-                        time={event.time}
-                        name={event.name}
-                        description={event.description}
-                        location={event.location}
                     />
                 )
             })}
