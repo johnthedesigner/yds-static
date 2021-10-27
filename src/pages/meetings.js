@@ -52,13 +52,6 @@ const Event = (props) => {
                 {props.date} | {props.time}
             </h3>
             <h4 className="event__name">{props.name}</h4>
-            <button
-                className="show-more__button"
-                style={showMoreButtonStyles}
-                onClick={() => setShowMore(!showMore)}
-            >
-                {showMore ? 'Show Less' : 'Show More'}
-            </button>
             <div
                 className="show-more__content"
                 style={{ display: showMore ? 'block' : 'none' }}
@@ -66,12 +59,30 @@ const Event = (props) => {
                 {_.map(props.showMore, (item, index) => {
                     return (
                         <div key={index}>
-                            <h4>{item.name}</h4>
+                            <h4
+                                style={{
+                                    fontSize: '.75rem',
+                                    fontWeight: 'bold',
+                                    margin: '1.5rem 0 0',
+                                }}
+                            >
+                                {item.name}
+                            </h4>
                             <item.content />
                         </div>
                     )
                 })}
             </div>
+            <button
+                className="show-more__button"
+                style={{
+                    ...showMoreButtonStyles,
+                    display: props.showMore ? 'inline' : 'none',
+                }}
+                onClick={() => setShowMore(!showMore)}
+            >
+                {showMore ? 'Show Less' : 'Show More'}
+            </button>
         </div>
     )
 }
