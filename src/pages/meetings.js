@@ -6,12 +6,29 @@ import Page from '../components/page'
 import Hero from '../components/hero'
 import Bumper from '../components/bumper'
 import pages from '../pages.json'
-// import events from '../components/eventsList'
-import { events, eventTypes } from '../components/newEventsList'
+import { events, eventTypes } from '../components/eventsList'
 
 const colors = {
     blue: '#506F98',
     red: '#C65A60',
+}
+
+const formatDate = (date) => {
+    return moment(date).format('dddd, MMM D, YYYY')
+}
+
+const Date = (props) => {
+    if (props.startDate && props.endDate) {
+        return (
+            <span>
+                {formatDate(props.startDate)} – {formatDate(props.endDate)}
+            </span>
+        )
+    } else if (props.startDate) {
+        return <span>{formatDate(props.startDate)}</span>
+    } else {
+        return null
+    }
 }
 
 const Event = (props) => {
@@ -48,8 +65,9 @@ const Event = (props) => {
             <h4 className="event__label" style={eventLabelStyles}>
                 {props.label}
             </h4>
-            <h3 className="event__date">
-                {props.date} | {props.time}
+            <h3 className="event__date" style={{ fontSize: '2rem' }}>
+                <Date startDate={props.date} endDate={props.dateEnd} /> |{' '}
+                {props.time}
             </h3>
             <h4 className="event__name">{props.name}</h4>
             <div
