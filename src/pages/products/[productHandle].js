@@ -29,11 +29,9 @@ export async function getStaticPaths() {
 }
 
 export default function Product(props) {
-    console.log(props)
     let [product, setProduct] = useState([])
     useEffect(async () => {
         let fetchedProduct = await getProductByHandle(props.productHandle)
-        console.log(fetchedProduct)
         setProduct(fetchedProduct)
     }, [product.title, props])
 
@@ -41,7 +39,7 @@ export default function Product(props) {
         return [
             {
                 variantId: id,
-                quantity: 2,
+                quantity: 1,
             },
         ]
     }
@@ -49,15 +47,39 @@ export default function Product(props) {
     return (
         <Page page={pages.home}>
             <Hero title="Product" image="/purple-flowers.jpg" />
-            <div>
-                <h2>{product.title}</h2>
-                <button
-                    onClick={() => {
-                        addToCart(wrapItem(product.variants[0].id))
-                    }}
-                >
-                    Add to Cart
-                </button>
+            <div className="product-page__body">
+                <div className="product-page__images">
+                    {_.map(product.images, (image) => {
+                        return (
+                            <img
+                                key={image.id}
+                                src={image.originalSrc}
+                                alt={image.altText}
+                            />
+                        )
+                    })}
+                </div>
+                <div className="product-page__details">
+                    <h4>{product.productType}</h4>
+                    <h2>{product.title}</h2>
+                    <p>{product.totalInventory} left in stock.</p>
+                    {_.map(product.collections, (collection) => {
+                        let collectionParts = collection.title.split(': ')
+                        return (
+                            <p key={collectionParts[0] + collectionParts[1]}>
+                                <b>{collectionParts[0]}:</b>{' '}
+                                {collectionParts[1]}
+                            </p>
+                        )
+                    })}
+                    <button
+                        onClick={() => {
+                            addToCart(wrapItem(product.variants[0].id))
+                        }}
+                    >
+                        Add to Cart
+                    </button>
+                </div>
             </div>
         </Page>
     )

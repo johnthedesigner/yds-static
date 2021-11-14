@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import pages from '../pages.json'
-import { getUrl, getCart, updateLineItems } from '../utils'
+import { getUrl, getCart, getProducts, updateLineItems } from '../utils'
 import Hamburger from '../public/hamburger.svg'
 import LogoMobile from '../public/logo-mobile.svg'
 import LogoDesktop from '../public/logo-desktop.svg'
@@ -20,6 +20,7 @@ const Navbar = (props) => {
     const [menuOpen, setMenuOpen] = useState(false)
     const [cartOpen, setCartOpen] = useState(true)
     const [cart, setCart] = useState({ id: '', webUrl: '' })
+    const [itemInfo, setItemInfo] = useState([])
     const [cartUrl, setCartUrl] = useState('')
 
     const updateQuantity = (cart, id, quantity) => {
@@ -34,10 +35,25 @@ const Navbar = (props) => {
 
     useEffect(() => {
         let updateCart = async () => {
+            // Get the latest cart and products
             let openCart = await getCart()
-            console.log('openCart: ', openCart)
+            let products = await getProducts()
             setCart(openCart)
             setCartUrl(openCart.webUrl)
+
+            let itemsWithAvailability = _.map(openCart.lineItems, (item) => {
+                return {
+                    id: item.id,
+                    inventory: _.find(products, {
+                        id: item.variant.product.id,
+                    }).totalInventory,
+                    product: _.find(products, {
+                        id: item.variant.product.id,
+                    }),
+                }
+            })
+
+            setItemInfo(itemsWithAvailability)
         }
 
         updateCart()
@@ -163,6 +179,18 @@ const Navbar = (props) => {
                 </button>
                 <ul>
                     {_.map(cart.lineItems, (item) => {
+                        let inventory = ''
+                        let productImage = ''
+                        if (itemInfo.length > 0) {
+                            let currentItemInfo = _.keyBy(itemInfo, 'id')[
+                                item.id
+                            ]
+                            if (currentItemInfo) {
+                                inventory = currentItemInfo.inventory
+                                console.log(currentItemInfo.product.images)
+                                productImage = currentItemInfo.product.images[0]
+                            }
+                        }
                         return (
                             <li key={item.id}>
                                 <Link
@@ -170,12 +198,15 @@ const Navbar = (props) => {
                                 >
                                     <a>{item.title}</a>
                                 </Link>
+                                <img
+                                    key={productImage.id}
+                                    src={productImage.originalSrc}
+                                    alt={productImage.altText}
+                                    width={100}
+                                />
                                 <button
                                     className="icon-button"
-                                    disabled={
-                                        item.quantity >=
-                                        item.variant.quantityAvailable
-                                    }
+                                    disabled={item.quantity <= 1}
                                     onClick={() =>
                                         updateQuantity(
                                             cart,
@@ -189,6 +220,7 @@ const Navbar = (props) => {
                                 {item.quantity}
                                 <button
                                     className="icon-button"
+                                    disabled={item.quantity >= inventory}
                                     onClick={() =>
                                         updateQuantity(
                                             cart,
@@ -199,6 +231,18 @@ const Navbar = (props) => {
                                 >
                                     +
                                 </button>
+                                <button
+                                    className="icon-button"
+                                    disabled={item.quantity >= inventory}
+                                    onClick={() =>
+                                        updateQuantity(cart, item.id, 0)
+                                    }
+                                >
+                                    Remove
+                                </button>
+                                <span>
+                                    out of {inventory ? inventory : '?'}
+                                </span>
                             </li>
                         )
                     })}

@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import getConfig from 'next/config'
 import Client from 'shopify-buy/index.unoptimized.umd'
 
@@ -29,15 +30,6 @@ export const shopify = Client.buildClient({
     storefrontAccessToken: SHOPIFY_TOKEN,
 })
 
-export const getProducts = async () => {
-    let products = []
-    await shopify.product.fetchAll().then((fetchedProducts) => {
-        products = fetchedProducts
-    })
-    console.log('Get Products', products)
-    return products
-}
-
 export const getCollections = async () => {
     let collections
     await shopify.collection
@@ -59,28 +51,61 @@ const productQuery = shopify.graphQLClient.query((root) => {
             },
         },
         (product) => {
-            console.log(product)
             // Add fields to be returned
+            product.add('descriptionHtml')
+            product.add('handle')
+            product.add('options')
             product.add('title')
             product.add('tags')
             product.add('totalInventory')
+            product.addConnection(
+                'variants',
+                { args: { first: 10 } },
+                (variant) => {
+                    variant.add('price')
+                }
+            )
+            product.addConnection(
+                'images',
+                { args: { first: 10 } },
+                (image) => {
+                    image.add('id')
+                    image.add('altText')
+                    image.add('originalSrc')
+                }
+            )
+            product.addConnection(
+                'collections',
+                { args: { first: 10 } },
+                (collection) => {
+                    collection.add('handle')
+                    collection.add('title')
+                }
+            )
         }
     )
 })
 
+export const getProducts = async () => {
+    let products
+    // Call the send method with the custom products query
+    await shopify.graphQLClient.send(productQuery).then(({ model }) => {
+        // Do something with the products
+        products = model.products
+    })
+    return products
+}
+
 export const getProductByHandle = async (handle) => {
     let product
-    await shopify.product.fetchByHandle(handle).then((fetchedProduct) => {
-        product = fetchedProduct
-    })
-
     // Call the send method with the custom products query
-    await shopify.graphQLClient.send(productQuery).then(({ model, data }) => {
+    await shopify.graphQLClient.send(productQuery).then(({ model }) => {
         // Do something with the products
-        console.log('TEST QUERY', model, data)
+        product = _.find(model.products, (product) => {
+            return product.handle == handle
+        })
     })
 
-    console.log('Get Product', product)
     return product
 }
 
@@ -90,7 +115,7 @@ export const getCart = async () => {
         if (cart !== null) {
             let newCart = {}
             await shopify.checkout.fetch(cart.id).then((fetchedCart) => {
-                console.log('Fetched Cart', { ...fetchedCart })
+                // console.log('Fetched Cart', { ...fetchedCart })
                 // setCart(fetchedCart)
                 newCart = { ...fetchedCart }
             })
@@ -98,7 +123,7 @@ export const getCart = async () => {
         } else {
             let newCart = {}
             await shopify.checkout.create().then((createdCart) => {
-                console.log('Create Cart', { ...createdCart })
+                // console.log('Create Cart', { ...createdCart })
                 setCart({ ...createdCart })
                 newCart = { ...createdCart }
             })
@@ -111,7 +136,6 @@ export const getCart = async () => {
 
 export const addToCart = async (item) => {
     let openCart = await getCart()
-    console.log(item)
     await shopify.checkout.addLineItems(openCart.id, item).then((cart) => {
         setCart(cart)
     })
