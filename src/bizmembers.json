@@ -180,5 +180,21 @@
         "facebook url": "https://www.facebook.com/lakesunapeeflowerfarm/",
         "business name": "Lake Sunapee Flower Farm",
         "business url": "https://www.facebook.com/lakesunapeeflowerfarm/"
+    },
+    {
+        "city": "Winchester",
+        "state": "MA",
+        "member since": "03-23-2021",
+        "ig handle": "maplebrookfarmstead",
+        "facebook url": "https://www.facebook.com/MaplebrookFarmstead",
+        "business name": "Maplebrook Farmstead",
+        "business url": "https://www.maplebrookfarmstead.com/"
+    },
+    {
+        "city": "Dudley",
+        "state": "MA",
+        "member since": "09-04-2021",
+        "ig handle": "ArmstrongAcresMA",
+        "business name": "Armstrong Acres"
     }
 ]
