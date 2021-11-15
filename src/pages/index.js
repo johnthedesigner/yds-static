@@ -9,7 +9,7 @@ import Hero from '../components/hero'
 import Pingpong from '../components/pingpong'
 import Bumper from '../components/bumper'
 import styles from '../styles/Home.module.css'
-import events from '../components/eventsList'
+import { events } from '../components/eventsList'
 
 const upcomingEvents = []
 _.map(events, (event) => {
