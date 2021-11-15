@@ -503,8 +503,7 @@ export const events = [
     },
     {
         date: '2021-11-20',
-        dateEnd: '2021-11-21',
-        time: '9am-2pm',
+        time: '10am-2pm',
         name: 'Dividing Club Tubers @ Westwood, MA',
         label: eventTypes.workday,
         showMore: [
@@ -527,6 +526,108 @@ export const events = [
                                 To RSVP for this work day look for the Signup
                                 Genius link in the monthly club newsletter.
                             </p>
+                        </>
+                    )
+                },
+            },
+            {
+                name: 'Location',
+                content: () => {
+                    return (
+                        <>
+                            <p>Westwood Library</p>
+                            <p>660 High Street</p>
+                            <p>Westwood, MA 02090</p>
+                            <p>1st Floor Meeting Space</p>
+                        </>
+                    )
+                },
+            },
+        ],
+    },
+    {
+        date: '2021-11-21',
+        time: '12am-4pm',
+        name: 'Dividing Club Tubers @ Framingham, MA',
+        label: eventTypes.workday,
+        showMore: [
+            {
+                name: 'Details',
+                content: () => {
+                    return (
+                        <>
+                            <p>
+                                We need your help dividing our many club tubers
+                                for our January Tuber Sale. Everyone is
+                                welcomed! Both new and experienced members who
+                                can and want to learn how to divide are welcomed
+                                as there are many other steps to help out with
+                                as well; Dividing, labeling, cleaning tubers &
+                                inventory. Please sign up so we can have an
+                                awesome 2022 Tuber Sale.
+                            </p>
+                            <p>
+                                To RSVP for this work day look for the Signup
+                                Genius link in the monthly club newsletter.
+                            </p>
+                        </>
+                    )
+                },
+            },
+            {
+                name: 'Location',
+                content: () => {
+                    return (
+                        <>
+                            <p>Framingham Library</p>
+                            <p>McAuliffe Branch</p>
+                            <p>746 Water Street</p>
+                            <p>Framingham, MA 01701</p>
+                            <p>Craft Room</p>
+                        </>
+                    )
+                },
+            },
+        ],
+    },
+    {
+        date: '2021-11-22',
+        time: '10am-2pm',
+        name: 'Dividing Club Tubers @ Westwood, MA',
+        label: eventTypes.workday,
+        showMore: [
+            {
+                name: 'Details',
+                content: () => {
+                    return (
+                        <>
+                            <p>
+                                We need your help dividing our many club tubers
+                                for our January Tuber Sale. Everyone is
+                                welcomed! Both new and experienced members who
+                                can and want to learn how to divide are welcomed
+                                as there are many other steps to help out with
+                                as well; Dividing, labeling, cleaning tubers &
+                                inventory. Please sign up so we can have an
+                                awesome 2022 Tuber Sale.
+                            </p>
+                            <p>
+                                To RSVP for this work day look for the Signup
+                                Genius link in the monthly club newsletter.
+                            </p>
+                        </>
+                    )
+                },
+            },
+            {
+                name: 'Location',
+                content: () => {
+                    return (
+                        <>
+                            <p>Westwood Library</p>
+                            <p>660 High Street</p>
+                            <p>Westwood, MA 02090</p>
+                            <p>1st Floor Meeting Space</p>
                         </>
                     )
                 },
